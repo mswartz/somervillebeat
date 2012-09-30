@@ -5,3 +5,4 @@ wp-config.php
 wp-content/uploads/
 
 #stop the cache from sassing us
+wp-content/themes/_design/.sass-cache
