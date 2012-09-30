@@ -1,2 +1,4 @@
 #ignore image files for now
 wp-content/uploads/
+
+#stop the cache from sassing us
