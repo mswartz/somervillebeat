@@ -1509,6 +1509,7 @@ body {
   padding: 0 10px;
   font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
   font-size: 15px;
+  background-color: #000;
 }
 @media (min-width:1200px) {
   body {
