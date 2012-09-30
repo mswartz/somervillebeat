@@ -15,7 +15,6 @@ get_header(); ?>
 						<h1 class="h1"><?php the_title(); ?></h1>
 						<div class="entry-meta">
 							<?php boilerplate_posted_on(); ?>
-							<div class="fb-like" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
 						</div><!-- .entry-meta -->
 						<div class="entry-content">
 							<?php the_content(); ?>
