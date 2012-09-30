@@ -1936,12 +1936,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     display: table;
     clear: both;
   }
-  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles .single-content .single-related ul li, .single-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-content .single-related ul li, .page-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li, .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li {
+  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles .single-content .single-related ul li, .single-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-content .single-related ul li, .page-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li, .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .footer .xoxo, .footer .home-zones-cat .home-zones-tiles .xoxo {
     float: left;
     padding-left: 10px;
     width: 20%;
   }
-  .home-zones-cat .home-zones-tiles .media-block:nth-child(5n+6), .home-zones-cat .home-zones-tiles .single-content .single-related ul li:nth-child(5n+6), .single-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-content .single-related ul li:nth-child(5n+6), .page-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li:nth-child(5n+6), .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li:nth-child(5n+6) {
+  .home-zones-cat .home-zones-tiles .media-block:nth-child(5n+6), .home-zones-cat .home-zones-tiles .single-content .single-related ul li:nth-child(5n+6), .single-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-content .single-related ul li:nth-child(5n+6), .page-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li:nth-child(5n+6), .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .footer .xoxo:nth-child(5n+6), .footer .home-zones-cat .home-zones-tiles .xoxo:nth-child(5n+6) {
     clear: left;
   }
 }
@@ -2011,12 +2011,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   display: table;
   clear: both;
 }
-.single-content .single-related ul .media-block, .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .single-content .single-related ul li, .page-content .single-related ul .media-block, .page-content .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li {
+.single-content .single-related ul .media-block, .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .footer .xoxo, .footer .single-content .single-related ul .xoxo, .page-content .single-related ul .media-block, .page-content .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .footer .xoxo, .footer .page-content .single-related ul .xoxo {
   float: left;
   padding-left: 10px;
   width: 25%;
 }
-.single-content .single-related ul .media-block:nth-child(4n+5), .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .media-block:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5) {
+.single-content .single-related ul .media-block:nth-child(4n+5), .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .footer .xoxo:nth-child(4n+5), .footer .single-content .single-related ul .xoxo:nth-child(4n+5), .page-content .single-related ul .media-block:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .footer .xoxo:nth-child(4n+5), .footer .page-content .single-related ul .xoxo:nth-child(4n+5) {
   clear: left;
 }
 .single-content .single-related ul li a, .page-content .single-related ul li a {
@@ -2183,12 +2183,12 @@ ol {
     display: table;
     clear: both;
   }
-  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
     float: left;
     padding-left: 20px;
     width: 50%;
   }
-  .page-grid .entry-content .grid .media-block:nth-child(2n+3), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid li:nth-child(2n+3) {
+  .page-grid .entry-content .grid .media-block:nth-child(2n+3), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer .xoxo:nth-child(2n+3), .footer .page-grid .entry-content .grid .xoxo:nth-child(2n+3) {
     clear: left;
   }
 }
@@ -2202,12 +2202,12 @@ ol {
     display: table;
     clear: both;
   }
-  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
     float: left;
     padding-left: 20px;
     width: 25%;
   }
-  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5) {
+  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer .xoxo:nth-child(4n+5), .footer .page-grid .entry-content .grid .xoxo:nth-child(4n+5) {
     clear: left;
   }
 }
@@ -2291,10 +2291,59 @@ ol {
   margin: 0 20px 20px 0;
 }
 
+/***************************************/
+/*       Footer.php
+
+/***************************************/
 .footer {
   width: 100%;
-  background-color: #EEE;
-  height: 60px;
+  border-top: 10px solid #87d7e3;
+  padding: 20px;
+  margin: 20px 0 0 20px;
+  *zoom: 1;
+}
+.footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .footer {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .footer .media-block, .footer .single-content .single-related ul li, .single-content .single-related ul .footer li, .footer .page-content .single-related ul li, .page-content .single-related ul .footer li, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
+    float: left;
+    padding-left: 20px;
+    width: 50%;
+  }
+  .footer .media-block:nth-child(2n+3), .footer .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .footer li:nth-child(2n+3), .footer .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .footer li:nth-child(2n+3), .footer .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer li:nth-child(2n+3), .footer .xoxo:nth-child(2n+3) {
+    clear: left;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .footer .media-block, .footer .single-content .single-related ul li, .single-content .single-related ul .footer li, .footer .page-content .single-related ul li, .page-content .single-related ul .footer li, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
+    float: left;
+    padding-left: 20px;
+    width: 25%;
+  }
+  .footer .media-block:nth-child(4n+5), .footer .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .footer li:nth-child(4n+5), .footer .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .footer li:nth-child(4n+5), .footer .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer li:nth-child(4n+5), .footer .xoxo:nth-child(4n+5) {
+    clear: left;
+  }
 }
 
 /* ============================================= */

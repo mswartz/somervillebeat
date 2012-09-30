@@ -1,7 +1,7 @@
 3.1.16 (Brainy Betty)
-2131b7297bdd5a72c70f363238ad9a89626f681b
+5f84f837d3aa7fdcdea1ea61def01cda72624d97
 o:Sass::Tree::RootNode
-:@template"(0/* ## Bring in all Compass Helpers */ 
+:@template"‰1/* ## Bring in all Compass Helpers */ 
 @import "partials/base";
 
 /* ## Base CSS */
@@ -809,10 +809,31 @@ ol {
 	}
 }
 
+
+/***************************************/
+
+/*       Footer.php
+
+/***************************************/
+
 .footer {
 	width: 100%;
-	background-color: #EEE;
-	height: 60px;
+	border-top: 10px solid $b-blue;
+	padding: 20px;
+	margin: 20px 0 0 20px;
+	@include pie-clearfix;
+
+	@media (min-width: 480px) and (max-width: 767px){
+		@include media-grid(2, 20px);
+	}
+
+	@media (min-width: 768px){
+		@include media-grid(4, 20px);
+	}
+
+	.xoxo {
+		@extend .media-block;
+	}
 }
 
 
@@ -822,7 +843,7 @@ ol {
 /* ============================================= */
 
 // Import Print Styles
-@import "project/print";:@has_childrenT:@options{ :@children[Uo:Sass::Tree::CommentNode;@:
+@import "project/print";:@has_childrenT:@options{ :@children[Wo:Sass::Tree::CommentNode;@:
 @loud0;	[ :@value["*/* ## Bring in all Compass Helpers */:
 @linei:@silent0o:Sass::Tree::ImportNode
 ;0;@:@imported_filename"partials/base;	[ ;io;
@@ -1088,11 +1109,17 @@ serif;i;i;i;"i o;;;;@;["
 color;	[ ;o;#	;$"text_black;@;"text-black;i;i;"i ;i;"i o;;T;[".entry-title;@;o;;" ;i;[o;;[o;;@;i;[o;';["entry-title;@;i;	[o;?	;@;@["."h2;	[ ;i;i;"i o;;T;[" .entry-summary, .entry-meta;@;o;;" ;i;[o;;[o;;@%;i;[o;';["entry-summary;@%;io;;[o;;@%;i;[o;';["entry-meta;@%;i;	[o;;T;["a;@;o;;" ;i;[o;;[o;;@:;i;[o;	;["a;@:;i;0;	[o;;;;@;["
 color;	[ ;o;#	;$"	link;@;"	link;i;i;"i ;i;"i ;i;"i o;;T;[".entry-utility;@;o;;" ;i;[o;;[o;;@O;i;[o;';["entry-utility;@O;i;	[	o;;;;@;["border-top;	[ ;o;; ;!;@;"3px solid #EEE;i;"i o;;;;@;["padding;	[ ;o;; ;!;@;"10px 0;i;"i o;;;;@;["font-size;	[ ;o;; ;!;@;"	14px;i;"i o;;T;["a;@;o;;" ;i;[o;;[o;;@o;i;[o;	;["a;@o;i;0;	[o;;;;@;["
 color;	[ ;o;#	;$"	link;@;"	link;i;i;"i ;i;"i ;i;"i o;;T;[".entry-image;@;o;;" ;i;[o;;[o;;@„;i;[o;';["entry-image;@„;i;	[o;;;;@;["
-float;	[ ;o;; ;!;@;"	left;i;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 20px 20px 0;i;"i ;i;"i o;;T;[".entry-text;@;o;;" ;i;[o;;[o;;@ž;i;[o;';["entry-text;@ž;i;	[ ;i;"i ;iþ;"i o;;T;[".tag-content;@;o;;" ;i#;[o;;[o;;@¬;i#;[o;';["tag-content;@¬;i#;	[o;;T;["h1;@;o;;" ;i$;[o;;[o;;@º;i$;[o;	;["h1;@º;i$;0;	[o;?	;@;@["."h2;	[ ;i%;i$;"i ;i#;"i o;;T;[".footer;@;o;;" ;i);[o;;[o;;@Í;i);[o;';["footer;@Í;i);	[o;;;;@;["
-width;	[ ;o;; ;!;@;"	100%;i*;"i o;;;;@;["background-color;	[ ;o;; ;!;@;"	#EEE;i+;"i o;;;;@;["height;	[ ;o;; ;!;@;"	60px;i,;"i ;i);"i o;
-;@;0;	[ ;["8/* ============================================= */;i0;0o;
+float;	[ ;o;; ;!;@;"	left;i;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 20px 20px 0;i;"i ;i;"i o;;T;[".entry-text;@;o;;" ;i;[o;;[o;;@ž;i;[o;';["entry-text;@ž;i;	[ ;i;"i ;iþ;"i o;;T;[".tag-content;@;o;;" ;i#;[o;;[o;;@¬;i#;[o;';["tag-content;@¬;i#;	[o;;T;["h1;@;o;;" ;i$;[o;;[o;;@º;i$;[o;	;["h1;@º;i$;0;	[o;?	;@;@["."h2;	[ ;i%;i$;"i ;i#;"i o;
+;@;0;	[ ;["./***************************************/;i*;0o;
+;@;0;	[ ;["C/*       Footer.php
+
+/***************************************/;i,;0o;;T;[".footer;@;o;;" ;i0;[o;;[o;;@Õ;i0;[o;';["footer;@Õ;i0;	[o;;;;@;["
+width;	[ ;o;; ;!;@;"	100%;i1;"i o;;;;@;["border-top;	[ ;o;(	;);*;@;[o;+;,["px;@;-"	10px;.[ ;i;i2o;	; ;!;@;"
+solid;i2o;#	;$"b_blue;@;"b-blue;i2;i2;i2;"i o;;;;@;["padding;	[ ;o;; ;!;@;"	20px;i3;"i o;;;;@;["margin;	[ ;o;; ;!;@;"20px 0 0 20px;i4;"i o;3;0{ ;@;"pie-clearfix;	[ ;i5;1[ o;%;T;&[".(min-width: 480px) and (max-width: 767px);@;	[o;3;0{ ;@;"media-grid;	[ ;i8;1[o;+;,[ ;@;-"2;.@5;i;i8o;+;,["px;@;-"	20px;.[ ;i;i8;" ;i7;"i o;%;T;&["(min-width: 768px);@;	[o;3;0{ ;@;"media-grid;	[ ;i<;1[o;+;,[ ;@;-"4;.@5;i	;i<o;+;,["px;@;-"	20px;.[ ;i;i<;" ;i;;"i o;;T;["
+.xoxo;@;o;;" ;i?;[o;;[o;;@.;i?;[o;';["	xoxo;@.;i?;	[o;?	;@;@["."media-block;	[ ;i@;i?;"i ;i0;"i o;
+;@;0;	[ ;["8/* ============================================= */;iE;0o;
 ;@;0;	[ ;["Q/*	Print Styles							     
-	Inline to avoid required HTTP connection     */;i1;0o;
-;@;0;	[ ;["8/* ============================================= */;i3;0o;
-;@;0;	[ ;["/* Import Print Styles */;i5;i o;
-;0;@;"project/print;	[ ;i6;i
+	Inline to avoid required HTTP connection     */;iF;0o;
+;@;0;	[ ;["8/* ============================================= */;iH;0o;
+;@;0;	[ ;["/* Import Print Styles */;iJ;i o;
+;0;@;"project/print;	[ ;iK;i

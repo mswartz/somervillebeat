@@ -806,10 +806,31 @@ ol {
 	}
 }
 
+
+/***************************************/
+
+/*       Footer.php
+
+/***************************************/
+
 .footer {
 	width: 100%;
-	background-color: #EEE;
-	height: 60px;
+	border-top: 10px solid $b-blue;
+	padding: 20px;
+	margin: 20px 0 0 20px;
+	@include pie-clearfix;
+
+	@media (min-width: 480px) and (max-width: 767px){
+		@include media-grid(2, 20px);
+	}
+
+	@media (min-width: 768px){
+		@include media-grid(4, 20px);
+	}
+
+	.xoxo {
+		@extend .media-block;
+	}
 }
 
 
