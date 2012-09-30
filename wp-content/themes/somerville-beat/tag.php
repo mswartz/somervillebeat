@@ -23,7 +23,7 @@ get_header(); ?>
 	 get_template_part( 'loop', 'tag' );
 	?>
 	</section>
-	<section class="ui-block-2">
+	<section id="sidebar" class="ui-block-2">
 	<?php get_sidebar(); ?>
 	</section>
 </section>

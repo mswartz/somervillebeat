@@ -1516,26 +1516,26 @@ body {
   }
 }
 
-h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1, h3, .h3, .home-zones-cat .home-zones-title, .single-content .single-related ul li a, .page-content .single-related ul li a, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1, h3, .h3, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
 }
-h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, .home-tz .entry-title a a, .home-zones-cat .home-zones-hdr a, .post .entry-title a, .tag-content h1 a, h3 a, .h3 a, .home-zones-cat .home-zones-title a, .single-content .single-related ul li a a, .page-content .single-related ul li a a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
-  color: #222222;
+h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, .hdr-box a, .single-content .single-related .related-hdr a, .page-content .single-related .related-hdr a, #comments-title a, .respond-header a, .home-tz .entry-title a a, .home-zones-cat .home-zones-hdr a, .post .entry-title a, .tag-content h1 a, h3 a, .h3 a, .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+  color: #2e2e2e;
 }
 
 .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1 {
   font-size: 32px;
-  color: #222222;
+  color: #2e2e2e;
 }
 
-.h2, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1 {
+.h2, .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1 {
   font-size: 24px;
-  color: #222222;
+  color: #2e2e2e;
 }
 
-.h3, .home-zones-cat .home-zones-title, .single-content .single-related ul li a, .page-content .single-related ul li a, h3 {
+.h3, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h3 {
   font-size: 18px;
-  color: #222222;
+  color: #2e2e2e;
   font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
   font-weight: bold;
 }
@@ -1551,13 +1551,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 /**************************************/
 .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header {
   padding: 10px;
-  background-color: #87d7e3;
-  border-bottom: 2px solid #5ec9d9;
-  color: #1e7380;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
-  margin-bottom: 10px;
+  border-bottom: 8px solid #87d7e3;
 }
 
 /***************************************/
@@ -1742,7 +1736,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     color: #34bbd0;
     border-bottom: 5px solid #000;
   }
-  #access .menu-header ul li.current-menu-item a, #access .menu-header ul li.current-post-parent a {
+  #access .menu-header ul li.current-menu-item a, #access .menu-header ul li.current-post-parent a, #access .menu-header ul li.current-category-ancestor a {
     color: #34bbd0;
     border-bottom: 5px solid #000;
   }
@@ -1805,8 +1799,37 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 /*              Sidebar.php
 
 /***************************************/
-.xoxo {
+#sidebar .xoxo {
   margin-bottom: 30px;
+  border-top: 5px solid #EEE;
+  padding: 20px 0 0 0;
+}
+#sidebar .xoxo .widget-container {
+  margin: 0 0 20px 0;
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  #sidebar .xoxo {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  #sidebar .xoxo:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #sidebar .xoxo .media-block, #sidebar .xoxo .widget-container, #sidebar .xoxo .page-grid .entry-content .grid li, .page-grid .entry-content .grid #sidebar .xoxo li, #sidebar .xoxo .footer .xoxo, .footer #sidebar .xoxo .xoxo {
+    float: left;
+    padding-left: 20px;
+    width: 50%;
+  }
+  #sidebar .xoxo .media-block:nth-child(2n+3), #sidebar .xoxo .widget-container:nth-child(2n+3), #sidebar .xoxo .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid #sidebar .xoxo li:nth-child(2n+3), #sidebar .xoxo .footer .xoxo:nth-child(2n+3), .footer #sidebar .xoxo .xoxo:nth-child(2n+3) {
+    clear: left;
+  }
+}
+@media (min-width: 900px) {
+  #sidebar .xoxo {
+    border: 0;
+  }
 }
 
 .tweets li {
@@ -1828,7 +1851,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 
 /***************************************/
 #home-cover {
-  margin: 0 0 20px 0;
+  margin: 0 0 0px 0;
 }
 
 #home-cover-img {
@@ -1864,12 +1887,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 #home-cover-txt .cover-entry-title {
   font-size: 20px;
   line-height: 34px;
-  color: #222222;
+  color: #2e2e2e;
 }
 @media (min-width: 600px) {
   #home-cover-txt .cover-entry-title {
     font-size: 32px;
-    color: #222222;
+    color: #2e2e2e;
     margin-bottom: 10px;
   }
 }
@@ -1887,30 +1910,42 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   color: #1d78af;
 }
 
-.home-tz-img img {
-  max-width: 100%;
-  height: auto;
+.home-tz-img {
+  display: none;
+}
+@media (min-width: 480px) {
+  .home-tz-img {
+    display: block;
+  }
+  .home-tz-img img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .home-tz-mod {
-  padding: 10px;
-  *zoom: 1;
+  margin: 0 0 20px 0;
 }
-.home-tz-mod:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.home-tz-mod > .ui-block-1, .home-tz-mod > .ui-block.first {
-  width: 25%;
-  display: inline;
-  float: left;
-}
-.home-tz-mod > .ui-block-2, .home-tz-mod > .ui-block.second {
-  width: 75%;
-  display: inline;
-  float: right;
-  margin-right: 0;
+@media (min-width: 480px) {
+  .home-tz-mod {
+    *zoom: 1;
+  }
+  .home-tz-mod:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .home-tz-mod > .ui-block-1, .home-tz-mod > .ui-block.first {
+    width: 24%;
+    display: inline;
+    float: left;
+  }
+  .home-tz-mod > .ui-block-2, .home-tz-mod > .ui-block.second {
+    width: 74%;
+    display: inline;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 @media (min-width:900px) {
@@ -1923,12 +1958,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   margin: 0 0 20px 0;
 }
 .home-zones-cat .home-zones-hdr {
-  border-bottom: 3px solid #EEE;
+  border-bottom: 8px solid #87d7e3;
   margin: 0 0 20px 0;
 }
 @media (min-width:500px) {
   .home-zones-cat .home-zones-tiles {
-    margin-left: -10px;
+    margin-left: -20px;
     *zoom: 1;
   }
   .home-zones-cat .home-zones-tiles:after {
@@ -1936,14 +1971,18 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     display: table;
     clear: both;
   }
-  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles .single-content .single-related ul li, .single-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-content .single-related ul li, .page-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li, .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .footer .xoxo, .footer .home-zones-cat .home-zones-tiles .xoxo {
+  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles #sidebar .xoxo .widget-container, #sidebar .xoxo .home-zones-cat .home-zones-tiles .widget-container, .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li, .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .footer .xoxo, .footer .home-zones-cat .home-zones-tiles .xoxo {
     float: left;
-    padding-left: 10px;
-    width: 20%;
+    padding-left: 20px;
+    width: 25%;
   }
-  .home-zones-cat .home-zones-tiles .media-block:nth-child(5n+6), .home-zones-cat .home-zones-tiles .single-content .single-related ul li:nth-child(5n+6), .single-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-content .single-related ul li:nth-child(5n+6), .page-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li:nth-child(5n+6), .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .footer .xoxo:nth-child(5n+6), .footer .home-zones-cat .home-zones-tiles .xoxo:nth-child(5n+6) {
+  .home-zones-cat .home-zones-tiles .media-block:nth-child(4n+5), .home-zones-cat .home-zones-tiles #sidebar .xoxo .widget-container:nth-child(4n+5), #sidebar .xoxo .home-zones-cat .home-zones-tiles .widget-container:nth-child(4n+5), .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li:nth-child(4n+5), .home-zones-cat .home-zones-tiles .footer .xoxo:nth-child(4n+5), .footer .home-zones-cat .home-zones-tiles .xoxo:nth-child(4n+5) {
     clear: left;
   }
+}
+.home-zones-cat .home-zones-title {
+  font-weight: normal;
+  font-size: 20px;
 }
 @media (min-width:500px) {
   .home-zones-cat .home-zones-title {
@@ -2002,25 +2041,13 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content .single-related, .page-content .single-related {
   margin: 20px 0 30px 0;
 }
-.single-content .single-related ul, .page-content .single-related ul {
-  margin-left: -10px;
-  *zoom: 1;
-}
-.single-content .single-related ul:after, .page-content .single-related ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.single-content .single-related ul .media-block, .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .footer .xoxo, .footer .single-content .single-related ul .xoxo, .page-content .single-related ul .media-block, .page-content .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .footer .xoxo, .footer .page-content .single-related ul .xoxo {
-  float: left;
-  padding-left: 10px;
-  width: 25%;
-}
-.single-content .single-related ul .media-block:nth-child(4n+5), .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .footer .xoxo:nth-child(4n+5), .footer .single-content .single-related ul .xoxo:nth-child(4n+5), .page-content .single-related ul .media-block:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .footer .xoxo:nth-child(4n+5), .footer .page-content .single-related ul .xoxo:nth-child(4n+5) {
-  clear: left;
+.single-content .single-related ul li, .page-content .single-related ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #EEE;
 }
 .single-content .single-related ul li a, .page-content .single-related ul li a {
-  color: #222222;
+  color: #2e2e2e;
+  font-size: 20px;
 }
 .single-content .entry-utility, .page-content .entry-utility {
   border-top: 3px solid #EEE;
@@ -2064,8 +2091,8 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content .alignleft, .page-content .alignleft {
   float: left;
 }
-.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .single-content .home-zones-hdr a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h3 a, .single-content .home-zones-cat .home-zones-title a, .home-zones-cat .single-content .home-zones-title a, .single-content .single-related ul li a a, .single-content .page-content .single-related ul li a a, .page-content .single-related ul li .single-content a a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .page-content .home-zones-hdr a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h3 a, .page-content .home-zones-cat .home-zones-title a, .home-zones-cat .page-content .home-zones-title a, .page-content .single-content .single-related ul li a a, .single-content .single-related ul li .page-content a a, .page-content .single-related ul li a a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
-  color: #222222;
+.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content .hdr-box a, .single-content .single-related .related-hdr a, .single-content .page-content .single-related .related-hdr a, .page-content .single-related .single-content .related-hdr a, .single-content #comments-title a, .single-content .respond-header a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .single-content .home-zones-hdr a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h3 a, .single-content .category-content .child-cats .cat-item a, .category-content .child-cats .single-content .cat-item a, .single-content .search-content .child-cats .cat-item a, .search-content .child-cats .single-content .cat-item a, .single-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .single-content .cat-item a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content .hdr-box a, .page-content .single-content .single-related .related-hdr a, .single-content .single-related .page-content .related-hdr a, .page-content .single-related .related-hdr a, .page-content #comments-title a, .page-content .respond-header a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .page-content .home-zones-hdr a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h3 a, .page-content .category-content .child-cats .cat-item a, .category-content .child-cats .page-content .cat-item a, .page-content .search-content .child-cats .cat-item a, .search-content .child-cats .page-content .cat-item a, .page-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .page-content .cat-item a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
+  color: #2e2e2e;
 }
 .single-content a, .page-content a {
   color: #1d78af;
@@ -2073,7 +2100,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content p, .page-content p {
   margin: 0 0 20px 0;
   font: normal 16px/29px "Georgia", Times, Times New Roman, serif;
-  color: #222222;
+  color: #2e2e2e;
 }
 
 ol {
@@ -2183,12 +2210,12 @@ ol {
     display: table;
     clear: both;
   }
-  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid #sidebar .xoxo .widget-container, #sidebar .xoxo .page-grid .entry-content .grid .widget-container, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
     float: left;
     padding-left: 20px;
     width: 50%;
   }
-  .page-grid .entry-content .grid .media-block:nth-child(2n+3), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer .xoxo:nth-child(2n+3), .footer .page-grid .entry-content .grid .xoxo:nth-child(2n+3) {
+  .page-grid .entry-content .grid .media-block:nth-child(2n+3), .page-grid .entry-content .grid #sidebar .xoxo .widget-container:nth-child(2n+3), #sidebar .xoxo .page-grid .entry-content .grid .widget-container:nth-child(2n+3), .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer .xoxo:nth-child(2n+3), .footer .page-grid .entry-content .grid .xoxo:nth-child(2n+3) {
     clear: left;
   }
 }
@@ -2202,12 +2229,12 @@ ol {
     display: table;
     clear: both;
   }
-  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid #sidebar .xoxo .widget-container, #sidebar .xoxo .page-grid .entry-content .grid .widget-container, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
     float: left;
     padding-left: 20px;
     width: 25%;
   }
-  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer .xoxo:nth-child(4n+5), .footer .page-grid .entry-content .grid .xoxo:nth-child(4n+5) {
+  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid #sidebar .xoxo .widget-container:nth-child(4n+5), #sidebar .xoxo .page-grid .entry-content .grid .widget-container:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer .xoxo:nth-child(4n+5), .footer .page-grid .entry-content .grid .xoxo:nth-child(4n+5) {
     clear: left;
   }
 }
@@ -2215,10 +2242,6 @@ ol {
   margin-bottom: 20px;
 }
 
-/* ---------------------------------------------- */
-/*	Dropdowns						 			  */
-/* ---------------------------------------------- */
-/* !Universal Dropdown Styles */
 /***************************************/
 .gallery .gallery-item {
   float: left;
@@ -2232,33 +2255,50 @@ ol {
 /*       Category.php
 
 /***************************************/
-.category-content h1, .search-content h1, .tag-content h1 {
+.category-content h1, .search-content h1, .tag-content h1, .search-content h1 {
   font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
   border-bottom: 3px solid #EEE;
   margin: 0 0 20px 0;
 }
-.category-content #nav-below, .category-content #nav-above, .search-content #nav-below, .search-content #nav-above, .tag-content #nav-below, .tag-content #nav-above {
+.category-content #nav-below, .category-content #nav-above, .search-content #nav-below, .search-content #nav-above, .tag-content #nav-below, .tag-content #nav-above, .search-content #nav-below, .search-content #nav-above {
   *zoom: 1;
   border-top: 3px solid #EEE;
   border-bottom: 3px solid #EEE;
   margin: 0 0 20px 0;
 }
-.category-content #nav-below:after, .category-content #nav-above:after, .search-content #nav-below:after, .search-content #nav-above:after, .tag-content #nav-below:after, .tag-content #nav-above:after {
+.category-content #nav-below:after, .category-content #nav-above:after, .search-content #nav-below:after, .search-content #nav-above:after, .tag-content #nav-below:after, .tag-content #nav-above:after, .search-content #nav-below:after, .search-content #nav-above:after {
   content: "";
   display: table;
   clear: both;
 }
-.category-content .nav-previous, .search-content .nav-previous, .tag-content .nav-previous {
+.category-content .nav-previous, .search-content .nav-previous, .tag-content .nav-previous, .search-content .nav-previous {
   float: left;
   width: 50%;
   border-right: 1px solid #EEE;
   padding: 10px;
 }
-.category-content .nav-next, .search-content .nav-next, .tag-content .nav-next {
+.category-content .nav-next, .search-content .nav-next, .tag-content .nav-next, .search-content .nav-next {
   float: right;
   text-align: right;
   width: 50%;
   padding: 10px;
+}
+.category-content .child-cats, .search-content .child-cats, .tag-content .child-cats, .search-content .child-cats {
+  margin: -10px 0 20px 0;
+}
+.category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, .search-content .child-cats .cat-item {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  margin: 0 20px 20px 0;
+}
+.category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, .search-content .child-cats .cat-item {
+  *display: inline;
+}
+.category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, .search-content .child-cats .cat-item a {
+  color: #1d78af;
 }
 
 .post {
@@ -2273,7 +2313,7 @@ ol {
 .post p {
   margin: 0 0 20px 0;
   font: normal 16px/24px "Georgia", Times, Times New Roman, serif;
-  color: #222222;
+  color: #2e2e2e;
 }
 .post .entry-summary a, .post .entry-meta a {
   color: #1d78af;
@@ -2298,8 +2338,8 @@ ol {
 .footer {
   width: 100%;
   border-top: 10px solid #87d7e3;
-  padding: 20px;
-  margin: 20px 0 0 20px;
+  padding: 20px 0;
+  margin: 20px 0;
   *zoom: 1;
 }
 .footer:after {
@@ -2317,12 +2357,12 @@ ol {
     display: table;
     clear: both;
   }
-  .footer .media-block, .footer .single-content .single-related ul li, .single-content .single-related ul .footer li, .footer .page-content .single-related ul li, .page-content .single-related ul .footer li, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
+  .footer .media-block, .footer #sidebar .xoxo .widget-container, #sidebar .xoxo .footer .widget-container, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
     float: left;
     padding-left: 20px;
     width: 50%;
   }
-  .footer .media-block:nth-child(2n+3), .footer .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .footer li:nth-child(2n+3), .footer .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .footer li:nth-child(2n+3), .footer .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer li:nth-child(2n+3), .footer .xoxo:nth-child(2n+3) {
+  .footer .media-block:nth-child(2n+3), .footer #sidebar .xoxo .widget-container:nth-child(2n+3), #sidebar .xoxo .footer .widget-container:nth-child(2n+3), .footer .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .footer li:nth-child(2n+3), .footer .xoxo:nth-child(2n+3) {
     clear: left;
   }
 }
@@ -2336,12 +2376,12 @@ ol {
     display: table;
     clear: both;
   }
-  .footer .media-block, .footer .single-content .single-related ul li, .single-content .single-related ul .footer li, .footer .page-content .single-related ul li, .page-content .single-related ul .footer li, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
+  .footer .media-block, .footer #sidebar .xoxo .widget-container, #sidebar .xoxo .footer .widget-container, .footer .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer li, .footer .xoxo {
     float: left;
     padding-left: 20px;
     width: 25%;
   }
-  .footer .media-block:nth-child(4n+5), .footer .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .footer li:nth-child(4n+5), .footer .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .footer li:nth-child(4n+5), .footer .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer li:nth-child(4n+5), .footer .xoxo:nth-child(4n+5) {
+  .footer .media-block:nth-child(4n+5), .footer #sidebar .xoxo .widget-container:nth-child(4n+5), #sidebar .xoxo .footer .widget-container:nth-child(4n+5), .footer .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer li:nth-child(4n+5), .footer .xoxo:nth-child(4n+5) {
     clear: left;
   }
 }

@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-	<section class="ui-block-1">
+	<section class="ui-block-1 search-content">
 
 	<?php if ( have_posts() ) : ?>
-		<h1><?php printf( __( 'Search Results for: %s', 'boilerplate' ), '' . get_search_query() . '' ); ?></h1>
+		<h1 class="h2"><?php printf( __( 'Search Results for: %s', 'boilerplate' ), '' . get_search_query() . '' ); ?></h1>
 		<?php
 		/* Run the loop for the search to output the results.
 		 * If you want to overload this in a child theme then include a file
@@ -27,7 +27,7 @@ get_header(); ?>
 	<?php endif; ?>
 	</section>
 
-	<section class="ui-block-2">
+	<section id="sidebar" class="ui-block-2">
 	<?php get_sidebar(); ?>
 	</section>
 </section><!-- #main -->

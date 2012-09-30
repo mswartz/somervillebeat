@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php // Get the category ID and store it
 		$cat = get_query_var('cat'); ?>
 
-		<?php wp_list_categories('title_li&hide_empty=1&child_of='.$cat); ?>
+		<ul class="child-cats"><?php wp_list_categories('title_li&hide_empty=1&child_of='.$cat); ?></ul>
 
 		<?php
 			$category_description = category_description();
@@ -33,7 +33,7 @@ get_header(); ?>
 		?>
 	</section>
 
-	<section class="ui-block-2">
+	<section id="sidebar" class="ui-block-2">
 		<?php get_sidebar(); ?>
 	</section>
 </section><!-- #main -->

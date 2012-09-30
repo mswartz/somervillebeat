@@ -41,7 +41,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: $ff-tisa;
 
 	a {
-		color: $text-black;
+		color: $txt-black;
 	}
 }
 
@@ -76,14 +76,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .hdr-box {
 	padding: 10px;
-	// background-color: #f4f4f4;
-	background-color: $b-blue;
-	border-bottom: 2px solid darken($b-blue, 10%);
-	color: darken($b-blue, 40%);
-	font-size: 18px;
-	text-transform: uppercase;
-	font-family: $ff-meta;
-	margin-bottom: 10px;
+	@extend .h2;
+	border-bottom: 8px solid $b-blue;
+
 }
 
 /***************************************/
@@ -247,7 +242,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 					}
 				}
 
-				&.current-menu-item a, &.current-post-parent a{
+				&.current-menu-item a, &.current-post-parent a, &.current-category-ancestor a{
 					color: darken($b-blue, 20%);
 					border-bottom: 5px solid #000;
 				}
@@ -300,8 +295,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /***************************************/
 
-.xoxo {
+#sidebar .xoxo {
 	margin-bottom: 30px;
+	border-top: 5px solid #EEE;
+	padding: 20px 0 0 0;
+
+	.widget-container {
+		margin: 0 0 20px 0;
+	}
+
+	@media (min-width: 600px) and (max-width: 900px){
+		@include media-grid(2,20px);
+
+		.widget-container {
+			@extend .media-block;
+		}
+	}
+
+	@media (min-width: 900px){
+		border: 0;
+	}
 }
 
 .tweets {
@@ -331,7 +344,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /***************************************/
 
 #home-cover {
-	margin: 0 0 20px 0;
+	margin: 0 0 0px 0;
 }
 
 #home-cover-img {
@@ -397,14 +410,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .home-tz-img {
-	img {
-		max-width: 100%;
-		height: auto;
+	display: none;
+
+	@media (min-width: 480px){
+		display: block;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 .home-tz-mod {
-	padding: 10px;
-	@include ui-grid-lr(25%, 75%, 0);
+	margin: 0 0 20px 0;
+	@media (min-width: 480px){
+		@include ui-grid-lr(25%, 75%, 2%);
+	}
 }
 
 .home-zones {
@@ -418,18 +439,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 	.home-zones-hdr {
 		@extend .h2;
-		border-bottom: 3px solid #EEE;
+		border-bottom: 8px solid $b-blue;
 		margin: 0 0 20px 0;
 	}
 
 	.home-zones-tiles {
 		@media (min-width:500px) {
-			@include media-grid(5, 10px);
+			@include media-grid(4, 20px);
 		}
 	}
 
 	.home-zones-title {
-		@extend .h3;
+		// @extend .h3;
+		font-weight: normal;
+		font-size: 20px;
 
 		@media (min-width:500px) {
 			border-top: 10px solid rgba(255,255,255,.25);
@@ -499,14 +522,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		}
 
 		ul {
-			@include media-grid(4,10px);
+			// @include media-grid(4,10px);
 
 			li {
-				@extend .media-block;
+				// @extend .media-block;
+				padding: 5px 0;
+				border-bottom: 1px solid #EEE;
 
 				a {
-					color: $text-black;
-					@extend .h3;
+					color: $txt-black;
+					font-size: 20px;
+					// @extend .h3;
 				}
 			}
 		}
@@ -696,17 +722,6 @@ ol {
 }
 
 
-/* ---------------------------------------------- */
-
-/*	Dropdowns						 			  */ 
-
-/* ---------------------------------------------- */
-
-/* !Universal Dropdown Styles */
-
-
-
-
 
 /***************************************/
 
@@ -733,7 +748,7 @@ ol {
 
 /***************************************/
 
-.category-content, .search-content, .tag-content {
+.category-content, .search-content, .tag-content, .search-content {
 
 	h1 {
 		@extend .h1;
@@ -760,6 +775,18 @@ ol {
 		text-align: right;
 		width: 50%;
 		padding: 10px;
+	}
+
+	.child-cats {
+		margin: -10px 0 20px 0;
+		.cat-item {
+			@extend .h3;
+			@include inline-block;
+			margin: 0 20px 20px 0;
+			a {
+				color: $link;
+			}
+		}
 	}
 }
 
@@ -816,8 +843,8 @@ ol {
 .footer {
 	width: 100%;
 	border-top: 10px solid $b-blue;
-	padding: 20px;
-	margin: 20px 0 0 20px;
+	padding: 20px 0;
+	margin: 20px 0;
 	@include pie-clearfix;
 
 	@media (min-width: 480px) and (max-width: 767px){

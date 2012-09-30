@@ -51,7 +51,7 @@ get_header(); ?>
 					</div>
 	<?php endwhile; // end of the loop. ?>
 	</section>
-	<section class="ui-block-2">
+	<section id="sidebar" class="ui-block-2">
 	<?php get_sidebar(); ?>
 	</section>
 </section>

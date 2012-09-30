@@ -32,7 +32,7 @@ get_header(); ?>
 						<?php comments_template( '', true ); ?>
 		<?php endwhile; ?>
 	</section>
-	<section class="ui-block-2">
+	<section id="sidebar" class="ui-block-2">
 	<?php get_sidebar(); ?>
 	</section>
 </section><!-- main -->
