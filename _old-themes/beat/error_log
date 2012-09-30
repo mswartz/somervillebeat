@@ -1,0 +1,1 @@
+[15-May-2012 02:30:14] PHP Fatal error:  Call to undefined function  get_header() in /home4/hoaxdevi/public_html/somervillebeat/wp-content/themes/beat/index.php on line 16
