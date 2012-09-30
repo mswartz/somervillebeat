@@ -1,3 +1,6 @@
+#dont want to mess up WPEngine's wp-config file
+wp-config.php
+
 #ignore image files for now
 wp-content/uploads/
 
