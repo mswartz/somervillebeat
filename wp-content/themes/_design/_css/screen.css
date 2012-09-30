@@ -1936,12 +1936,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     display: table;
     clear: both;
   }
-  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles .single-content .single-related ul li, .single-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-content .single-related ul li, .page-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-grid .entry-content ul li, .page-grid .entry-content ul .home-zones-cat .home-zones-tiles li {
+  .home-zones-cat .home-zones-tiles .media-block, .home-zones-cat .home-zones-tiles .single-content .single-related ul li, .single-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-content .single-related ul li, .page-content .single-related ul .home-zones-cat .home-zones-tiles li, .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li, .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li {
     float: left;
     padding-left: 10px;
     width: 20%;
   }
-  .home-zones-cat .home-zones-tiles .media-block:nth-child(5n+6), .home-zones-cat .home-zones-tiles .single-content .single-related ul li:nth-child(5n+6), .single-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-content .single-related ul li:nth-child(5n+6), .page-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-grid .entry-content ul li:nth-child(5n+6), .page-grid .entry-content ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6) {
+  .home-zones-cat .home-zones-tiles .media-block:nth-child(5n+6), .home-zones-cat .home-zones-tiles .single-content .single-related ul li:nth-child(5n+6), .single-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-content .single-related ul li:nth-child(5n+6), .page-content .single-related ul .home-zones-cat .home-zones-tiles li:nth-child(5n+6), .home-zones-cat .home-zones-tiles .page-grid .entry-content .grid li:nth-child(5n+6), .page-grid .entry-content .grid .home-zones-cat .home-zones-tiles li:nth-child(5n+6) {
     clear: left;
   }
 }
@@ -2011,12 +2011,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   display: table;
   clear: both;
 }
-.single-content .single-related ul .media-block, .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-content .single-related ul li, .single-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content .single-content .single-related ul li, .page-content .single-related ul .media-block, .page-content .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-related ul li, .page-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content .page-content .single-related ul li {
+.single-content .single-related ul .media-block, .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .single-content .single-related ul li, .page-content .single-related ul .media-block, .page-content .single-content .single-related ul li, .single-content .page-content .single-related ul li, .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li {
   float: left;
   padding-left: 10px;
   width: 25%;
 }
-.single-content .single-related ul .media-block:nth-child(4n+5), .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related .page-grid .entry-content ul li:nth-child(4n+5), .page-grid .entry-content .single-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .media-block:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related .page-grid .entry-content ul li:nth-child(4n+5), .page-grid .entry-content .page-content .single-related ul li:nth-child(4n+5) {
+.single-content .single-related ul .media-block:nth-child(4n+5), .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .media-block:nth-child(4n+5), .page-content .single-content .single-related ul li:nth-child(4n+5), .single-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5) {
   clear: left;
 }
 .single-content .single-related ul li a, .page-content .single-related ul li a {
@@ -2170,48 +2170,48 @@ ol {
 .page-grid .entry-content h3 {
   margin: 0 0 20px 0;
 }
-.page-grid .entry-content ul {
+.page-grid .entry-content .grid {
   margin: 0 0 20px 0;
 }
 @media (max-width: 599px) {
-  .page-grid .entry-content ul {
+  .page-grid .entry-content .grid {
     margin-left: -20px;
     *zoom: 1;
   }
-  .page-grid .entry-content ul:after {
+  .page-grid .entry-content .grid:after {
     content: "";
     display: table;
     clear: both;
   }
-  .page-grid .entry-content ul .media-block, .page-grid .entry-content .single-content .single-related ul li, .single-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content .page-content .single-related ul li, .page-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content ul li {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li {
     float: left;
     padding-left: 20px;
     width: 50%;
   }
-  .page-grid .entry-content ul .media-block:nth-child(2n+3), .page-grid .entry-content .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related .page-grid .entry-content ul li:nth-child(2n+3), .page-grid .entry-content .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related .page-grid .entry-content ul li:nth-child(2n+3), .page-grid .entry-content ul li:nth-child(2n+3) {
+  .page-grid .entry-content .grid .media-block:nth-child(2n+3), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(2n+3), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(2n+3), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid li:nth-child(2n+3) {
     clear: left;
   }
 }
 @media (min-width: 600px) {
-  .page-grid .entry-content ul {
+  .page-grid .entry-content .grid {
     margin-left: -20px;
     *zoom: 1;
   }
-  .page-grid .entry-content ul:after {
+  .page-grid .entry-content .grid:after {
     content: "";
     display: table;
     clear: both;
   }
-  .page-grid .entry-content ul .media-block, .page-grid .entry-content .single-content .single-related ul li, .single-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content .page-content .single-related ul li, .page-content .single-related .page-grid .entry-content ul li, .page-grid .entry-content ul li {
+  .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid .single-content .single-related ul li, .single-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-content .single-related ul li, .page-content .single-related ul .page-grid .entry-content .grid li, .page-grid .entry-content .grid li {
     float: left;
     padding-left: 20px;
     width: 25%;
   }
-  .page-grid .entry-content ul .media-block:nth-child(4n+5), .page-grid .entry-content .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related .page-grid .entry-content ul li:nth-child(4n+5), .page-grid .entry-content .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related .page-grid .entry-content ul li:nth-child(4n+5), .page-grid .entry-content ul li:nth-child(4n+5) {
+  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid .single-content .single-related ul li:nth-child(4n+5), .single-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .page-content .single-related ul li:nth-child(4n+5), .page-content .single-related ul .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5) {
     clear: left;
   }
 }
-.page-grid .entry-content ul li {
+.page-grid .entry-content .grid li {
   margin-bottom: 20px;
 }
 
