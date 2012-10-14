@@ -1721,7 +1721,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   #access .menu-header ul li a {
     font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     color: #FFF;
     padding: 15px 5px;
     height: 50px;
@@ -1772,7 +1772,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 }
 @media (min-width: 700px) and (min-width: 768px) {
   #access .menu-header ul li a {
-    padding: 15px 10px;
+    padding: 15px 5px;
+  }
+}
+@media (min-width: 700px) and (min-width: 930px) {
+  #access .menu-header ul li a {
+    font-size: 18px;
   }
 }
 
@@ -2243,11 +2248,14 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .page-grid .entry-content {
   width: 100%;
 }
-.page-grid .entry-content h3 {
+.page-grid .entry-content .h2, .page-grid .entry-content #home-cover-txt .cover-entry-title, #home-cover-txt .page-grid .entry-content .cover-entry-title, .page-grid .entry-content .home-tz .entry-title a, .home-tz .entry-title .page-grid .entry-content a, .page-grid .entry-content .post .entry-title, .post .page-grid .entry-content .entry-title, .page-grid .entry-content .tag-content h1, .tag-content .page-grid .entry-content h1 {
   margin: 0 0 20px 0;
 }
 .page-grid .entry-content .grid {
   margin: 0 0 20px 0;
+}
+.page-grid .entry-content .grid li p {
+  font: normal 16px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 599px) {
   .page-grid .entry-content .grid {
@@ -2289,6 +2297,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 }
 .page-grid .entry-content .grid li {
   margin-bottom: 20px;
+  list-style-type: none;
 }
 
 /***************************************/

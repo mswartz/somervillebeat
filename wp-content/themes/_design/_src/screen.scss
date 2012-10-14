@@ -223,7 +223,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 				a {
 					font-family: $ff-meta;
 					font-weight: bold;
-					font-size: 18px;
+					font-size: 15px;
 					color: #FFF;
 					padding: 15px 5px;
 					height: 50px;
@@ -236,7 +236,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 					}
 
 					@media (min-width: 768px){
-						padding: 15px 10px;
+						padding: 15px 5px;
 					}
 				}
 
@@ -245,6 +245,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 					border-bottom: 5px solid #000;
 				}
 
+			}
+		}
+
+		@media (min-width: 930px){
+			.menu-header ul li a {
+				font-size: 18px;
 			}
 		}
 
@@ -770,12 +776,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	.entry-content{
 		width: 100%;
 
-		h3 {
+		.h2 {
 			margin: 0 0 20px 0;
 		}
+
 		
 		.grid {
 			margin: 0 0 20px 0;
+			li p {
+				font: normal 16px/20px $ff-meta;
+			}
 
 			@media (max-width: 599px){
 				@include media-grid(2, 20px);
@@ -788,6 +798,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			li {
 				@extend .media-block;
 				margin-bottom: 20px;
+				list-style-type: none;
 			}
 		}
 	}
