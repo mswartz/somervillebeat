@@ -1753,7 +1753,6 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   }
   #access #searchform #s {
     width: 50%;
-    height: 50px;
   }
   #access #searchform #searchsubmit {
     background-color: #5ec9d9;
