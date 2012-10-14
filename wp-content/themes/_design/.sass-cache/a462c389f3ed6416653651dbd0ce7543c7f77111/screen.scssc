@@ -1,7 +1,7 @@
 3.1.16 (Brainy Betty)
-16121cbb09edbd42afad2517f9ef8e4aef473a05
+9e9711acbe38f1447e9ff259356ac2f8e5ee61f9
 o:Sass::Tree::RootNode
-:@template"Û8/* ## Bring in all Compass Helpers */ 
+:@template"Ü8/* ## Bring in all Compass Helpers */ 
 @import "partials/base";
 
 /* ## Base CSS */
@@ -953,7 +953,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 	.xoxo {
 		@extend .media-block;
-		margin: 0 0 20px 0;
+		margin-bottom: 20px;
 	}
 }
 
@@ -1271,7 +1271,7 @@ right;i†;"i o;;T;["img;@;o;;" ;iˆ;[o;;[o;;@U;iˆ;
 ;5{ ;@;"url;i¥;6[o;	; ;7;@;"3/wp-content/themes/_design/_img/beat-heart.png;i¥o;	; ;!;@;"no-repeat;i¥o;	; ;!;@;"center;i¥o;	; ;!;@;"center;i¥;i¥o;(	;);*;@;[	o;4
 ;5{ ;@;"url;i¥;6[o;	; ;7;@;"4/wp-content/themes/_design/_img/beat-footer.png;i¥o;	; ;!;@;"repeat-x;i¥o;	; ;!;@;"center;i¥o;	; ;!;@;"center;i¥;i¥;i¥;i¥;"i o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	10px;i¦;"i ;i¢;"i o;;T;[".footer;@;o;;" ;i©;[o;;[o;;@ê;i©;[o;';["footer;@ê;i©;	[o;;;;@;["
 width;	[ ;o;; ;!;@;"	100%;iª;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 0 20px 0;i«;"i o;;;;@;["padding;	[ ;o;; ;!;@;"10 0 20px 0;i¬;"i o;8;5{ ;@;"pie-clearfix;	[ ;i­;6[ o;%;T;&[".(min-width: 480px) and (max-width: 767px);@;	[o;8;5{ ;@;"media-grid;	[ ;i°;6[o;-;.[ ;@;/"2;0@;i;i°o;-;.["px;@;/"	20px;0[ ;i;i°;" ;i¯;"i o;%;T;&["(min-width: 768px);@;	[o;8;5{ ;@;"media-grid;	[ ;i´;6[o;-;.[ ;@;/"4;0@;i	;i´o;-;.["px;@;/"	20px;0[ ;i;i´;" ;i³;"i o;;T;["
-.xoxo;@;o;;" ;i·;[o;;[o;;@3;i·;[o;';["	xoxo;@3;i·;	[o;D	;@;E["."media-block;	[ ;i¸o;;;;@;["margin;	[ ;o;; ;!;@;"0 0 20px 0;i¹;"i ;i·;"i ;i©;"i o;
+.xoxo;@;o;;" ;i·;[o;;[o;;@3;i·;[o;';["	xoxo;@3;i·;	[o;D	;@;E["."media-block;	[ ;i¸o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	20px;i¹;"i ;i·;"i ;i©;"i o;
 ;@;0;	[ ;["8/* ============================================= */;i¾;0o;
 ;@;0;	[ ;["Q/*	Print Styles							     
 	Inline to avoid required HTTP connection     */;i¿;0o;
