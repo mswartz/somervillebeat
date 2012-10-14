@@ -266,8 +266,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		    border: 0 none;
 		    font: normal 14px $ff-meta;
 		    color: #666;
-		    width: 130px;
-		    padding: 6px 15px 6px 35px;
+		    width: 100%;
+		    padding: 3px 15px 3px 35px;
 
 		    @include border-radius(20px);
 		    @include box-shadow(0 1px 0 #EEE inset);
@@ -308,7 +308,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	padding: 20px 0 0 0;
 
 	.widget-container {
-		margin: 0 0 20px 0;
+		margin: 0 0 30px 0;
+	}
+
+	.sidebar-housead {
+		border: 5px solid #EEE;
+		@include border-radius(5px);
+		padding: 10px;
 	}
 
 	@media (min-width: 600px) and (max-width: 900px){
@@ -469,9 +475,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 	.tile {
 
-		&:hover .home-zones-title {
-			border: 0;
-			margin-top: -10px;
+		@media (min-width: 500px){
+			&:hover .home-zones-title {
+				border: 0;
+				margin-top: -10px;
+			}
 		}
 
 		.home-zones-title {

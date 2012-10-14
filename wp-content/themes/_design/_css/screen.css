@@ -1747,8 +1747,8 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     border: 0 none;
     font: normal 14px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
     color: #666;
-    width: 130px;
-    padding: 6px 15px 6px 35px;
+    width: 100%;
+    padding: 3px 15px 3px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -1820,7 +1820,16 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   padding: 20px 0 0 0;
 }
 #sidebar .xoxo .widget-container {
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
+}
+#sidebar .xoxo .sidebar-housead {
+  border: 5px solid #EEE;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
 }
 @media (min-width: 600px) and (max-width: 900px) {
   #sidebar .xoxo {
@@ -1999,9 +2008,11 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     clear: left;
   }
 }
-.home-zones-cat .tile:hover .home-zones-title {
-  border: 0;
-  margin-top: -10px;
+@media (min-width: 500px) {
+  .home-zones-cat .tile:hover .home-zones-title {
+    border: 0;
+    margin-top: -10px;
+  }
 }
 .home-zones-cat .tile .home-zones-title {
   font-size: 18px;
