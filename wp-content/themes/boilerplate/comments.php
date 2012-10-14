@@ -28,8 +28,6 @@
 	// You can start editing here -- including this comment!
 ?>
 
-<?php comment_form(); ?>
-
 <?php if ( have_comments() ) : ?>
 			<!-- STARKERS NOTE: The following h3 id is left intact so that comments can be referenced on the page -->
 			<h3 id="comments-title"><?php
@@ -70,3 +68,5 @@
 <?php endif; // end ! comments_open() ?>
 
 <?php endif; // end have_comments() ?>
+
+<?php comment_form(); ?>

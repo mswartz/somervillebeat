@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-<section class="ui-block-1 search-content">
-
 <?php if ( have_posts() ) : ?>
 				<h1><?php printf( __( 'Search Results for: %s', 'boilerplate' ), '' . get_search_query() . '' ); ?></h1>
 				<?php
@@ -26,13 +24,5 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 <?php endif; ?>
 
-	</section>
-
-	<section class="ui-block-2">
-
-	<?php get_sidebar(); ?>
-
-	</section>
-</section><!-- #main -->
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

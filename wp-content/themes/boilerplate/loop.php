@@ -68,8 +68,8 @@
 			<div class="entry-content">
 <?php if ( post_password_required() ) : ?>
 				<?php the_content(); ?>
-<?php else : ?>			
-				<?php 
+<?php else : ?>
+				<?php
 					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 					if ( $images ) :
 						$total_images = count( $images );
@@ -166,7 +166,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 	<nav id="nav-below" class="navigation">
-		<div class="nav-next"><?php next_posts_link( __( '&larr; Older posts', 'boilerplate' ) ); ?></div>
-		<div class="nav-previous"><?php previous_posts_link( __( 'Newer posts &rarr;', 'boilerplate' ) ); ?></div>
+		<?php next_posts_link( __( '&larr; Older posts', 'boilerplate' ) ); ?>
+		<?php previous_posts_link( __( 'Newer posts &rarr;', 'boilerplate' ) ); ?>
 	</nav><!-- #nav-below -->
 <?php endif; ?>
