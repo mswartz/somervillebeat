@@ -75,10 +75,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /**************************************/
 
 .hdr-box {
-	padding: 10px;
-	@extend .h2;
+	font: bold 18px/20px $ff-meta;
 	border-bottom: 8px solid $b-blue;
-
+	padding: 10px 0;
+	margin: 0 0 10px 0;
 }
 
 /***************************************/
@@ -211,7 +211,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		max-width: 1200px;
 		height: 50px;
 		margin: 0 0 20px 0;
-		background-color: $b-blue;
+		background-color: darken($b-blue, 10%);
 		border-bottom: 5px solid darken($b-blue, 20%);
 
 		.menu-header {
@@ -233,7 +233,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 					text-overflow:ellipsis;
 
 					&:hover {
-						color: darken($b-blue, 20%);
+						color: darken($b-blue, 30%);
 						border-bottom: 5px solid #000;
 					}
 
@@ -243,7 +243,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 				}
 
 				&.current-menu-item a, &.current-post-parent a, &.current-category-ancestor a{
-					color: darken($b-blue, 20%);
+					color: darken($b-blue, 30%);
 					border-bottom: 5px solid #000;
 				}
 
@@ -344,7 +344,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /***************************************/
 
 #home-cover {
-	margin: 0 0 0px 0;
+	margin: 0 0 20px 0;
+	border-bottom: 5px solid $b-blue;
 }
 
 #home-cover-img {
@@ -352,7 +353,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	overflow: hidden;
 
 	img {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 	}
 
@@ -376,18 +377,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		color: $link;
 	}
 
+	.cover-cat {
+		font: normal 14px/20px $ff-meta;
+	}
+
 	.cover-entry-title {
-		font-size: 20px;
-		line-height: 34px;
-		color: $txt-black;
+		@extend .h2;
 	}
 
 	@media (min-width: 600px) {
 		.cover-entry-title {
 			font-size: 32px;
+			line-height: 38px;
 			color: $txt-black;
 			margin-bottom: 10px;
-
 		}
 	}
 }
@@ -438,9 +441,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 20px 0;
 
 	.home-zones-hdr {
-		@extend .h2;
-		border-bottom: 8px solid $b-blue;
+		font: bold 18px/20px $ff-meta;
+		text-transform: uppercase;
+		// border-bottom: 8px solid $b-blue;
 		margin: 0 0 20px 0;
+
+		a {
+			display: block;
+			padding: 8px;
+			color: #FFF;
+			background-color: darken($b-blue, 10%);
+
+			&:hover {
+				background-color: $b-blue;
+			}
+		}
 	}
 
 	.home-zones-tiles {
@@ -449,31 +464,38 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		}
 	}
 
-	.home-zones-title {
-		// @extend .h3;
-		font-weight: normal;
-		font-size: 20px;
+	.tile {
 
-		@media (min-width:500px) {
-			border-top: 10px solid rgba(255,255,255,.25);
+		&:hover .home-zones-title {
+			border: 0;
 			margin-top: -10px;
-			background-color: rgba(255,255,255,.75);
-			@include box-shadow(0 0 30px #FFF inset);
-			position: relative;
 		}
-	}
 
-	.home-zones-img {
-		display: none;
+		.home-zones-title {
+			// @extend .h3;
+			// font-weight: normal;
+			font-size: 18px;
 
-		@media (min-width:500px) {
-			display: block;
-			margin-bottom: 10px;
-			max-height: 150px;
-			overflow: hidden;
-			img{
-				width: 100%;
-				height: auto;
+			@media (min-width:500px) {
+				font-size: 18px;
+				border-top: 10px solid rgba(255,255,255,.5);
+				margin-top: -20px;
+				position: relative;
+			}
+		}
+
+		.home-zones-img {
+			display: none;
+
+			@media (min-width:500px) {
+				display: block;
+				margin-bottom: 10px;
+				max-height: 150px;
+				overflow: hidden;
+				img{
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 	}
@@ -522,17 +544,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		}
 
 		ul {
-			// @include media-grid(4,10px);
-
 			li {
-				// @extend .media-block;
-				padding: 5px 0;
+				padding: 10px 0;
+				margin: 0;
 				border-bottom: 1px solid #EEE;
+				list-style-type: none;
 
 				a {
 					color: $txt-black;
-					font-size: 20px;
-					// @extend .h3;
+					font-size: 18px;
+					@extend .h3;
+
+					&:hover {
+						color: $link;
+					}
 				}
 			}
 		}
@@ -598,8 +623,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		font: normal 16px/29px "Georgia", Times, Times New Roman, serif;
 		color: $text-black;
 	}
+
+	ul {
+		li {
+			list-style-type: disc;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	ol {
+		li {
+			list-style-type: decimal;
+			margin: 0 0 20px 0;
+		}
+	}
 }
 
+/***************************************/
+
+/*       COMMENTS
+
+/***************************************/
+
+.comments {
+	ol {
+		li { 
+			list-style-type: none;
+			margin: 0;
+		}
+	}
+
+	ul {
+		li {
+			list-style-type: none;
+			margin: 0;
+		}
+	}
+}
 
 #comments-title {
 	@extend .hdr-box;
@@ -609,9 +669,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	@extend .hdr-box;
 }
 
-ol {
-	list-style-type: none;
-}
 
 .pingback p{
 	font-style: italic;
@@ -623,16 +680,28 @@ ol {
 	margin-bottom: 20px;
 	padding: 0 10%;
 	@include pie-clearfix;
+
+	p {
+		margin: 0 0 10px 0;
+	}
 	.comment-author {
-		border: 1px solid #EEE;
+		border-top: 1px solid #EEE;
+		margin: 0 0 20px 0;
 	}
 
-	.comment-meta {
+	.comment-meta, .reply {
 		position: relative;
 		float: right;
 		top: -30px;
 		right: 10px;
 	}
+
+	.children {
+		border-left: 2px solid #EEE;
+	}
+	// .reply {
+	// 	float: right;
+	// }
 }
 
 .entry-content {
@@ -788,6 +857,10 @@ ol {
 			}
 		}
 	}
+
+	.cat-description {
+		margin-bottom: 20px;
+	}
 }
 
 .post {
@@ -805,7 +878,7 @@ ol {
 	}
 
 	.entry-summary, .entry-meta {
-		font-size: 12px;
+		font-size: 14px;
 		margin-bottom: 10px;
 		a {
 			color: $link;
@@ -813,7 +886,6 @@ ol {
 	}
 	.entry-utility {
 		border-top: 3px solid #EEE;
-		padding: 10px 0;
 		font-size: 14px;
 		a {
 			color: $link;

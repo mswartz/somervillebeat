@@ -1516,10 +1516,10 @@ body {
   }
 }
 
-h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1, h3, .h3, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .tag-content h1, h3, .h3, .single-content .single-related ul li a, .page-content .single-related ul li a, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
 }
-h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, .hdr-box a, .single-content .single-related .related-hdr a, .page-content .single-related .related-hdr a, #comments-title a, .respond-header a, .home-tz .entry-title a a, .home-zones-cat .home-zones-hdr a, .post .entry-title a, .tag-content h1 a, h3 a, .h3 a, .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, #home-cover-txt .cover-entry-title a, .home-tz .entry-title a a, .post .entry-title a, .tag-content h1 a, h3 a, .h3 a, .single-content .single-related ul li a a, .page-content .single-related ul li a a, .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
   color: #2e2e2e;
 }
 
@@ -1528,12 +1528,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   color: #2e2e2e;
 }
 
-.h2, .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header, .home-tz .entry-title a, .home-zones-cat .home-zones-hdr, .post .entry-title, .tag-content h1 {
+.h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .tag-content h1 {
   font-size: 24px;
   color: #2e2e2e;
 }
 
-.h3, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h3 {
+.h3, .single-content .single-related ul li a, .page-content .single-related ul li a, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h3 {
   font-size: 18px;
   color: #2e2e2e;
   font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
@@ -1550,8 +1550,10 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 
 /**************************************/
 .hdr-box, .single-content .single-related .related-hdr, .page-content .single-related .related-hdr, #comments-title, .respond-header {
-  padding: 10px;
+  font: bold 18px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
   border-bottom: 8px solid #87d7e3;
+  padding: 10px 0;
+  margin: 0 0 10px 0;
 }
 
 /***************************************/
@@ -1704,7 +1706,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     max-width: 1200px;
     height: 50px;
     margin: 0 0 20px 0;
-    background-color: #87d7e3;
+    background-color: #5ec9d9;
     border-bottom: 5px solid #34bbd0;
   }
   #access .menu-header {
@@ -1733,11 +1735,11 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     text-overflow: ellipsis;
   }
   #access .menu-header ul li a:hover {
-    color: #34bbd0;
+    color: #2899a9;
     border-bottom: 5px solid #000;
   }
   #access .menu-header ul li.current-menu-item a, #access .menu-header ul li.current-post-parent a, #access .menu-header ul li.current-category-ancestor a {
-    color: #34bbd0;
+    color: #2899a9;
     border-bottom: 5px solid #000;
   }
   #access #searchform {
@@ -1851,7 +1853,8 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 
 /***************************************/
 #home-cover {
-  margin: 0 0 0px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 5px solid #87d7e3;
 }
 
 #home-cover-img {
@@ -1859,7 +1862,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   overflow: hidden;
 }
 #home-cover-img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 @media (max-width: 480px) {
@@ -1884,14 +1887,13 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 #home-cover-txt p a {
   color: #1d78af;
 }
-#home-cover-txt .cover-entry-title {
-  font-size: 20px;
-  line-height: 34px;
-  color: #2e2e2e;
+#home-cover-txt .cover-cat {
+  font: normal 14px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 600px) {
   #home-cover-txt .cover-entry-title {
     font-size: 32px;
+    line-height: 38px;
     color: #2e2e2e;
     margin-bottom: 10px;
   }
@@ -1958,8 +1960,18 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   margin: 0 0 20px 0;
 }
 .home-zones-cat .home-zones-hdr {
-  border-bottom: 8px solid #87d7e3;
+  font: bold 18px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   margin: 0 0 20px 0;
+}
+.home-zones-cat .home-zones-hdr a {
+  display: block;
+  padding: 8px;
+  color: #FFF;
+  background-color: #5ec9d9;
+}
+.home-zones-cat .home-zones-hdr a:hover {
+  background-color: #87d7e3;
 }
 @media (min-width:500px) {
   .home-zones-cat .home-zones-tiles {
@@ -1980,32 +1992,32 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     clear: left;
   }
 }
-.home-zones-cat .home-zones-title {
-  font-weight: normal;
-  font-size: 20px;
+.home-zones-cat .tile:hover .home-zones-title {
+  border: 0;
+  margin-top: -10px;
+}
+.home-zones-cat .tile .home-zones-title {
+  font-size: 18px;
 }
 @media (min-width:500px) {
-  .home-zones-cat .home-zones-title {
-    border-top: 10px solid rgba(255, 255, 255, 0.25);
-    margin-top: -10px;
-    background-color: rgba(255, 255, 255, 0.75);
-    -webkit-box-shadow: 0 0 30px white inset;
-    -moz-box-shadow: 0 0 30px white inset;
-    box-shadow: 0 0 30px white inset;
+  .home-zones-cat .tile .home-zones-title {
+    font-size: 18px;
+    border-top: 10px solid rgba(255, 255, 255, 0.5);
+    margin-top: -20px;
     position: relative;
   }
 }
-.home-zones-cat .home-zones-img {
+.home-zones-cat .tile .home-zones-img {
   display: none;
 }
 @media (min-width:500px) {
-  .home-zones-cat .home-zones-img {
+  .home-zones-cat .tile .home-zones-img {
     display: block;
     margin-bottom: 10px;
     max-height: 150px;
     overflow: hidden;
   }
-  .home-zones-cat .home-zones-img img {
+  .home-zones-cat .tile .home-zones-img img {
     width: 100%;
     height: auto;
   }
@@ -2042,12 +2054,17 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   margin: 20px 0 30px 0;
 }
 .single-content .single-related ul li, .page-content .single-related ul li {
-  padding: 5px 0;
+  padding: 10px 0;
+  margin: 0;
   border-bottom: 1px solid #EEE;
+  list-style-type: none;
 }
 .single-content .single-related ul li a, .page-content .single-related ul li a {
   color: #2e2e2e;
-  font-size: 20px;
+  font-size: 18px;
+}
+.single-content .single-related ul li a:hover, .page-content .single-related ul li a:hover {
+  color: #1d78af;
 }
 .single-content .entry-utility, .page-content .entry-utility {
   border-top: 3px solid #EEE;
@@ -2091,7 +2108,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content .alignleft, .page-content .alignleft {
   float: left;
 }
-.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content .hdr-box a, .single-content .single-related .related-hdr a, .single-content .page-content .single-related .related-hdr a, .page-content .single-related .single-content .related-hdr a, .single-content #comments-title a, .single-content .respond-header a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .single-content .home-zones-hdr a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h3 a, .single-content .category-content .child-cats .cat-item a, .category-content .child-cats .single-content .cat-item a, .single-content .search-content .child-cats .cat-item a, .search-content .child-cats .single-content .cat-item a, .single-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .single-content .cat-item a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content .hdr-box a, .page-content .single-content .single-related .related-hdr a, .single-content .single-related .page-content .related-hdr a, .page-content .single-related .related-hdr a, .page-content #comments-title a, .page-content .respond-header a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .home-zones-cat .home-zones-hdr a, .home-zones-cat .page-content .home-zones-hdr a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h3 a, .page-content .category-content .child-cats .cat-item a, .category-content .child-cats .page-content .cat-item a, .page-content .search-content .child-cats .cat-item a, .search-content .child-cats .page-content .cat-item a, .page-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .page-content .cat-item a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
+.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content #home-cover-txt .cover-entry-title a, #home-cover-txt .single-content .cover-entry-title a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h3 a, .single-content .single-related ul li a a, .single-content .page-content .single-related ul li a a, .page-content .single-related ul li .single-content a a, .single-content .category-content .child-cats .cat-item a, .category-content .child-cats .single-content .cat-item a, .single-content .search-content .child-cats .cat-item a, .search-content .child-cats .single-content .cat-item a, .single-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .single-content .cat-item a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content #home-cover-txt .cover-entry-title a, #home-cover-txt .page-content .cover-entry-title a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h3 a, .page-content .single-content .single-related ul li a a, .single-content .single-related ul li .page-content a a, .page-content .single-related ul li a a, .page-content .category-content .child-cats .cat-item a, .category-content .child-cats .page-content .cat-item a, .page-content .search-content .child-cats .cat-item a, .search-content .child-cats .page-content .cat-item a, .page-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .page-content .cat-item a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
   color: #2e2e2e;
 }
 .single-content a, .page-content a {
@@ -2102,9 +2119,26 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   font: normal 16px/29px "Georgia", Times, Times New Roman, serif;
   color: #2e2e2e;
 }
+.single-content ul li, .page-content ul li {
+  list-style-type: disc;
+  margin: 0 0 20px 0;
+}
+.single-content ol li, .page-content ol li {
+  list-style-type: decimal;
+  margin: 0 0 20px 0;
+}
 
-ol {
+/***************************************/
+/*       COMMENTS
+
+/***************************************/
+.comments ol li {
   list-style-type: none;
+  margin: 0;
+}
+.comments ul li {
+  list-style-type: none;
+  margin: 0;
 }
 
 .pingback p {
@@ -2123,14 +2157,21 @@ ol {
   display: table;
   clear: both;
 }
-.comment .comment-author {
-  border: 1px solid #EEE;
+.comment p {
+  margin: 0 0 10px 0;
 }
-.comment .comment-meta {
+.comment .comment-author {
+  border-top: 1px solid #EEE;
+  margin: 0 0 20px 0;
+}
+.comment .comment-meta, .comment .reply {
   position: relative;
   float: right;
   top: -30px;
   right: 10px;
+}
+.comment .children {
+  border-left: 2px solid #EEE;
 }
 
 .entry-content {
@@ -2300,6 +2341,9 @@ ol {
 .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, .search-content .child-cats .cat-item a {
   color: #1d78af;
 }
+.category-content .cat-description, .search-content .cat-description, .tag-content .cat-description, .search-content .cat-description {
+  margin-bottom: 20px;
+}
 
 .post {
   *zoom: 1;
@@ -2319,7 +2363,7 @@ ol {
   margin-bottom: 10px;
 }
 .post .entry-summary, .post .entry-meta {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 .post .entry-summary a, .post .entry-meta a {
@@ -2327,7 +2371,6 @@ ol {
 }
 .post .entry-utility {
   border-top: 3px solid #EEE;
-  padding: 10px 0;
   font-size: 14px;
 }
 .post .entry-utility a {

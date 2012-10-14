@@ -30,21 +30,16 @@ get_header(); ?>
 							</a>
 						</footer><!-- #entry-author-info -->
 	<?php endif; ?>
-						<aside class="single-related">
-							<h4 class="related-hdr">Related:</h4>
-							<?php sim_by_mix(); ?>
-						</aside>
 						<footer class="entry-utility">
 							<?php boilerplate_posted_in(); ?>
 							<?php edit_post_link( __( 'Edit', 'boilerplate' ), '<span class="edit-link">', '</span>' ); ?>
 						</footer><!-- .entry-utility -->
-
-						
+						<aside class="single-related">
+							<h4 class="related-hdr">Related:</h4>
+							<?php sim_by_mix(); ?>
+						</aside>
 					</article><!-- #post-## -->
-					<nav id="nav-below" class="navigation">
-						<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'boilerplate' ) . '</span> %title' ); ?></div>
-						<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'boilerplate' ) . '</span>' ); ?></div>
-					</nav><!-- #nav-below -->
+
 
 					<div class="comments">
 						<?php comments_template( '', true ); ?>

@@ -20,10 +20,14 @@ get_header(); ?>
 
 		<ul class="child-cats"><?php wp_list_categories('title_li&hide_empty=1&child_of='.$cat); ?></ul>
 
-		<?php
-			$category_description = category_description();
+		<div class="cat-description">
+		<?php 			$category_description = category_description();
 			if ( ! empty( $category_description ) )
 				echo '' . $category_description . '';
+			?>
+		</div><!-- cat description -->
+		
+		<?php
 
 		/* Run the loop for the category page to output the posts.
 		 * If you want to overload this in a child theme then include a file

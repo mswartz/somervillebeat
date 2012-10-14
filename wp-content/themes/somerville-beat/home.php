@@ -17,7 +17,7 @@ get_header(); ?>
 				<article id="home-cover" <?php post_class(); ?>>
 					<div id="home-cover-img"><?php the_post_thumbnail('original');	?></div>
 					<div id="home-cover-txt">
-						<small><?php the_category(' &raquo; '); ?></small>
+						<small class="cover-cat"><?php the_category(' &raquo; '); ?></small>
 						<h1 class="cover-entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 						<?php the_excerpt(); ?>
 					</div><!-- cover-text -->
@@ -52,7 +52,7 @@ get_header(); ?>
 				echo '<div class="home-zones-tiles">';
 				foreach($f2 as $link){
 					//first image in list has thumbnail
-					echo '<div class="media-block"><div class="home-zones-img">';
+					echo '<div class="tile media-block"><div class="home-zones-img">';
 					$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $link->ID ), "thumbnail" );
 					echo '<a href="'.get_permalink($link->ID).'"><img src="'.$thumbnail_src[0].'"/></a></div>';
 					echo '<h4 class="home-zones-title"><a href="'.get_permalink($link->ID).'">'.$link->post_title.'</a></h4></div>';

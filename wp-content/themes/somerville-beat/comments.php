@@ -28,7 +28,7 @@
 	// You can start editing here -- including this comment!
 ?>
 
-<h3 class="respond-header">Leave a Comment</h3>
+
 <?php comment_form(); ?>
 
 <?php if ( have_comments() ) : ?>
