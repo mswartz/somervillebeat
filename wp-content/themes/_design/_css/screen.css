@@ -1575,18 +1575,11 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   max-width: 210px;
   height: 75px;
   display: block;
-  margin: 0 0 10px 0;
   background-image: url("/wp-content/themes/_design/_img/beat-logo-stacked.png");
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
-}
-@media (min-width:321px) {
-  .menu-header .menu-logo a {
-    width: 70%;
-    max-width: 300px;
-  }
 }
 @media (min-width:599px) {
   .menu-header .menu-logo a {
@@ -1863,12 +1856,6 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 #home-cover-img img {
   width: 100%;
   height: auto;
-}
-@media (max-width: 480px) {
-  #home-cover-img {
-    margin-top: -75px;
-    z-index: -10000;
-  }
 }
 
 #home-cover-txt {
