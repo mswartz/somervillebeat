@@ -1,7 +1,7 @@
 3.1.16 (Brainy Betty)
-9e9711acbe38f1447e9ff259356ac2f8e5ee61f9
+1ad3613bb515492a6851034ccdb2736cf91aa2c4
 o:Sass::Tree::RootNode
-:@template"Ü8/* ## Bring in all Compass Helpers */ 
+:@template"õ8/* ## Bring in all Compass Helpers */ 
 @import "partials/base";
 
 /* ## Base CSS */
@@ -955,6 +955,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		@extend .media-block;
 		margin-bottom: 20px;
 	}
+
+	a {
+		color: $link;
+	}
 }
 
 
@@ -1269,12 +1273,13 @@ right;i†;"i o;;T;["img;@;o;;" ;iˆ;[o;;[o;;@U;iˆ;
 
 /***************************************/;iž;0o;;T;[".footer-container;@;o;;" ;i¢;[o;;[o;;@§;i¢;[o;';["footer-container;@§;i¢;	[	o;;;;@;["background-color;	[ ;o;#	;$"b_blue;@;"b-blue;i£;i£;"i o;;;;@;["height;	[ ;o;; ;!;@;"	50px;i¤;"i o;;;;@;["background;	[ ;o;(	;);F;@;[o;(	;);*;@;[	o;4
 ;5{ ;@;"url;i¥;6[o;	; ;7;@;"3/wp-content/themes/_design/_img/beat-heart.png;i¥o;	; ;!;@;"no-repeat;i¥o;	; ;!;@;"center;i¥o;	; ;!;@;"center;i¥;i¥o;(	;);*;@;[	o;4
-;5{ ;@;"url;i¥;6[o;	; ;7;@;"4/wp-content/themes/_design/_img/beat-footer.png;i¥o;	; ;!;@;"repeat-x;i¥o;	; ;!;@;"center;i¥o;	; ;!;@;"center;i¥;i¥;i¥;i¥;"i o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	10px;i¦;"i ;i¢;"i o;;T;[".footer;@;o;;" ;i©;[o;;[o;;@ê;i©;[o;';["footer;@ê;i©;	[o;;;;@;["
+;5{ ;@;"url;i¥;6[o;	; ;7;@;"4/wp-content/themes/_design/_img/beat-footer.png;i¥o;	; ;!;@;"repeat-x;i¥o;	; ;!;@;"center;i¥o;	; ;!;@;"center;i¥;i¥;i¥;i¥;"i o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	10px;i¦;"i ;i¢;"i o;;T;[".footer;@;o;;" ;i©;[o;;[o;;@ê;i©;[o;';["footer;@ê;i©;	[o;;;;@;["
 width;	[ ;o;; ;!;@;"	100%;iª;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 0 20px 0;i«;"i o;;;;@;["padding;	[ ;o;; ;!;@;"10 0 20px 0;i¬;"i o;8;5{ ;@;"pie-clearfix;	[ ;i­;6[ o;%;T;&[".(min-width: 480px) and (max-width: 767px);@;	[o;8;5{ ;@;"media-grid;	[ ;i°;6[o;-;.[ ;@;/"2;0@;i;i°o;-;.["px;@;/"	20px;0[ ;i;i°;" ;i¯;"i o;%;T;&["(min-width: 768px);@;	[o;8;5{ ;@;"media-grid;	[ ;i´;6[o;-;.[ ;@;/"4;0@;i	;i´o;-;.["px;@;/"	20px;0[ ;i;i´;" ;i³;"i o;;T;["
-.xoxo;@;o;;" ;i·;[o;;[o;;@3;i·;[o;';["	xoxo;@3;i·;	[o;D	;@;E["."media-block;	[ ;i¸o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	20px;i¹;"i ;i·;"i ;i©;"i o;
-;@;0;	[ ;["8/* ============================================= */;i¾;0o;
+.xoxo;@;o;;" ;i·;[o;;[o;;@3;i·;[o;';["	xoxo;@3;i·;	[o;D	;@;E["."media-block;	[ ;i¸o;;;;@;["margin-bottom;	[ ;o;; ;!;@;"	20px;i¹;"i ;i·;"i o;;T;["a;@;o;;" ;i¼;[o;;[o;;@L;i¼;[o;	;["a;@L;i¼;0;	[o;;;;@;["
+color;	[ ;o;#	;$"	link;@;"	link;i½;i½;"i ;i¼;"i ;i©;"i o;
+;@;0;	[ ;["8/* ============================================= */;iÂ;0o;
 ;@;0;	[ ;["Q/*	Print Styles							     
-	Inline to avoid required HTTP connection     */;i¿;0o;
-;@;0;	[ ;["8/* ============================================= */;iÁ;0o;
-;@;0;	[ ;["/* Import Print Styles */;iÃ;i o;
-;0;@;"project/print;	[ ;iÄ;i
+	Inline to avoid required HTTP connection     */;iÃ;0o;
+;@;0;	[ ;["8/* ============================================= */;iÅ;0o;
+;@;0;	[ ;["/* Import Print Styles */;iÇ;i o;
+;0;@;"project/print;	[ ;iÈ;i
