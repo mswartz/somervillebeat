@@ -25,9 +25,9 @@ get_header(); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php if ( is_front_page() ) { ?>
-							<h2 class="entry-title"><?php the_title(); ?></h2>
+							<h1><?php the_title(); ?></h1>
 						<?php } else { ?>	
-							<h1 class="entry-title"><?php the_title(); ?></h1>
+							<h1><?php the_title(); ?></h1>
 						<?php } ?>
 
 						<div class="dropdown">								 

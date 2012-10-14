@@ -312,7 +312,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	}
 
 	.sidebar-housead {
-		border: 5px solid #EEE;
+		border: 5px solid $b-blue;
+		background-color: lighten($b-blue, 10%);
 		@include border-radius(5px);
 		padding: 10px;
 	}
@@ -414,7 +415,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	}
 
 	p {
-		font: normal 14px/20px $ff-meta;
+		font: normal 15px/20px $ff-meta;
 		a {
 			color: $link;
 		}
@@ -847,6 +848,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		border-bottom: 3px solid #EEE;
 		margin: 0 0 20px 0;
 	}
+
 	#nav-below, #nav-above {
 		@include pie-clearfix;
 
@@ -936,10 +938,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 
-.tag-content {
+.tag-content, .page-content {
 	h1 {
-		@extend .h2;
+		@extend .h1;
+		font-family: $ff-meta;
+		border-bottom: 3px solid #EEE;
+		margin: 0 0 20px 0;
 	}
+
+
 }
 
 

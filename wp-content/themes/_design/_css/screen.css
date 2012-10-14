@@ -1516,10 +1516,10 @@ body {
   }
 }
 
-h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .page .entry-title, .tag-content h1, h3, .h3, .single-content .single-related ul li a, .page-content .single-related ul li a, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, .single-content h1, .page-content h1, .category-content h1, .search-content h1, .tag-content h1, h2, .h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .page .entry-title, h3, .h3, .single-content .single-related ul li a, .page-content .single-related ul li a, .category-content .child-cats .cat-item, .search-content .child-cats .cat-item, .tag-content .child-cats .cat-item, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
 }
-h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, #home-cover-txt .cover-entry-title a, .home-tz .entry-title a a, .post .entry-title a, .page .entry-title a, .tag-content h1 a, h3 a, .h3 a, .single-content .single-related ul li a a, .page-content .single-related ul li a a, .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .search-content h1 a, .tag-content h1 a, h2 a, .h2 a, #home-cover-txt .cover-entry-title a, .home-tz .entry-title a a, .post .entry-title a, .page .entry-title a, h3 a, .h3 a, .single-content .single-related ul li a a, .page-content .single-related ul li a a, .category-content .child-cats .cat-item a, .search-content .child-cats .cat-item a, .tag-content .child-cats .cat-item a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
   color: #2e2e2e;
 }
 
@@ -1528,7 +1528,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   color: #2e2e2e;
 }
 
-.h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .page .entry-title, .tag-content h1 {
+.h2, #home-cover-txt .cover-entry-title, .home-tz .entry-title a, .post .entry-title, .page .entry-title {
   font-size: 24px;
   color: #2e2e2e;
 }
@@ -1823,7 +1823,8 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   margin: 0 0 30px 0;
 }
 #sidebar .xoxo .sidebar-housead {
-  border: 5px solid #EEE;
+  border: 5px solid #87d7e3;
+  background-color: #b0e5ed;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1922,7 +1923,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   margin-bottom: 10px;
 }
 .home-tz p {
-  font: normal 14px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+  font: normal 15px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
 }
 .home-tz p a {
   color: #1d78af;
@@ -2132,7 +2133,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content .alignleft, .page-content .alignleft {
   float: left;
 }
-.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content #home-cover-txt .cover-entry-title a, #home-cover-txt .single-content .cover-entry-title a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .page .entry-title a, .page .single-content .entry-title a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h3 a, .single-content .single-related ul li a a, .single-content .page-content .single-related ul li a a, .page-content .single-related ul li .single-content a a, .single-content .category-content .child-cats .cat-item a, .category-content .child-cats .single-content .cat-item a, .single-content .search-content .child-cats .cat-item a, .search-content .child-cats .single-content .cat-item a, .single-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .single-content .cat-item a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content #home-cover-txt .cover-entry-title a, #home-cover-txt .page-content .cover-entry-title a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .page .entry-title a, .page .page-content .entry-title a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h3 a, .page-content .single-content .single-related ul li a a, .single-content .single-related ul li .page-content a a, .page-content .single-related ul li a a, .page-content .category-content .child-cats .cat-item a, .category-content .child-cats .page-content .cat-item a, .page-content .search-content .child-cats .cat-item a, .search-content .child-cats .page-content .cat-item a, .page-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .page-content .cat-item a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
+.single-content .h1 a, .single-content h1 a, .single-content .page-content h1 a, .page-content .single-content h1 a, .single-content .category-content h1 a, .category-content .single-content h1 a, .single-content .search-content h1 a, .search-content .single-content h1 a, .single-content .tag-content h1 a, .tag-content .single-content h1 a, .single-content .h2 a, .single-content #home-cover-txt .cover-entry-title a, #home-cover-txt .single-content .cover-entry-title a, .single-content .home-tz .entry-title a a, .home-tz .entry-title .single-content a a, .single-content .post .entry-title a, .post .single-content .entry-title a, .single-content .page .entry-title a, .page .single-content .entry-title a, .single-content .h3 a, .single-content .single-related ul li a a, .single-content .page-content .single-related ul li a a, .page-content .single-related ul li .single-content a a, .single-content .category-content .child-cats .cat-item a, .category-content .child-cats .single-content .cat-item a, .single-content .search-content .child-cats .cat-item a, .search-content .child-cats .single-content .cat-item a, .single-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .single-content .cat-item a, .single-content .h4 a, .single-content .h5 a, .single-content .h6 a, .page-content .h1 a, .page-content .single-content h1 a, .single-content .page-content h1 a, .page-content h1 a, .page-content .category-content h1 a, .category-content .page-content h1 a, .page-content .search-content h1 a, .search-content .page-content h1 a, .page-content .tag-content h1 a, .tag-content .page-content h1 a, .page-content .h2 a, .page-content #home-cover-txt .cover-entry-title a, #home-cover-txt .page-content .cover-entry-title a, .page-content .home-tz .entry-title a a, .home-tz .entry-title .page-content a a, .page-content .post .entry-title a, .post .page-content .entry-title a, .page-content .page .entry-title a, .page .page-content .entry-title a, .page-content .h3 a, .page-content .single-content .single-related ul li a a, .single-content .single-related ul li .page-content a a, .page-content .single-related ul li a a, .page-content .category-content .child-cats .cat-item a, .category-content .child-cats .page-content .cat-item a, .page-content .search-content .child-cats .cat-item a, .search-content .child-cats .page-content .cat-item a, .page-content .tag-content .child-cats .cat-item a, .tag-content .child-cats .page-content .cat-item a, .page-content .h4 a, .page-content .h5 a, .page-content .h6 a {
   color: #2e2e2e;
 }
 .single-content a, .page-content a {
@@ -2259,7 +2260,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .page-grid .entry-content {
   width: 100%;
 }
-.page-grid .entry-content .h2, .page-grid .entry-content #home-cover-txt .cover-entry-title, #home-cover-txt .page-grid .entry-content .cover-entry-title, .page-grid .entry-content .home-tz .entry-title a, .home-tz .entry-title .page-grid .entry-content a, .page-grid .entry-content .post .entry-title, .post .page-grid .entry-content .entry-title, .page-grid .entry-content .page .entry-title, .page .page-grid .entry-content .entry-title, .page-grid .entry-content .tag-content h1, .tag-content .page-grid .entry-content h1 {
+.page-grid .entry-content .h2, .page-grid .entry-content #home-cover-txt .cover-entry-title, #home-cover-txt .page-grid .entry-content .cover-entry-title, .page-grid .entry-content .home-tz .entry-title a, .home-tz .entry-title .page-grid .entry-content a, .page-grid .entry-content .post .entry-title, .post .page-grid .entry-content .entry-title, .page-grid .entry-content .page .entry-title, .page .page-grid .entry-content .entry-title {
   margin: 0 0 20px 0;
 }
 .page-grid .entry-content .grid {
@@ -2420,6 +2421,12 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     max-width: 80px;
     height: auto;
   }
+}
+
+.tag-content h1, .page-content h1 {
+  font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+  border-bottom: 3px solid #EEE;
+  margin: 0 0 20px 0;
 }
 
 /***************************************/

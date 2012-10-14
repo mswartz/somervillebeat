@@ -21,7 +21,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png">
 		<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
-
+		<meta name="apple-mobile-web-app-title" content="Somerville Beat">
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
 		<title><?php
