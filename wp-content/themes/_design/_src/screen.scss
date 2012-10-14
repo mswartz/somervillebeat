@@ -801,9 +801,12 @@ ol {
 
 	.entry-title {
 		@extend .h2;
+		margin-bottom: 10px;
 	}
 
 	.entry-summary, .entry-meta {
+		font-size: 12px;
+		margin-bottom: 10px;
 		a {
 			color: $link;
 		}

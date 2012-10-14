@@ -2315,6 +2315,13 @@ ol {
   font: normal 16px/24px "Georgia", Times, Times New Roman, serif;
   color: #2e2e2e;
 }
+.post .entry-title {
+  margin-bottom: 10px;
+}
+.post .entry-summary, .post .entry-meta {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
 .post .entry-summary a, .post .entry-meta a {
   color: #1d78af;
 }
