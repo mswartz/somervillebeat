@@ -428,7 +428,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	}
 }
 
-.home-zones {
+.home .home-zones {
 	@media (min-width:900px) {
 		width: 70%;
 	}
@@ -680,7 +680,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .comment {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	padding: 0 10%;
 	@include pie-clearfix;
 
@@ -950,6 +950,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 	.xoxo {
 		@extend .media-block;
+		margin: 0 0 20px 0;
 	}
 }
 

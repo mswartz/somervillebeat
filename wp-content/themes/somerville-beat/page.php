@@ -29,7 +29,7 @@ get_header(); ?>
 								<?php edit_post_link( __( 'Edit', 'boilerplate' ), '', '' ); ?>
 							</div><!-- .entry-content -->
 						</article><!-- #post-## -->
-						<?php comments_template( '', true ); ?>
+						<div class="comments"><?php comments_template( '', true ); ?></div>
 		<?php endwhile; ?>
 	</section>
 	<section id="sidebar" class="ui-block-2">
