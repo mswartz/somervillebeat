@@ -258,8 +258,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			#s {
 		    background: url("/wp-content/themes/_design/_img/search-dark.png") no-repeat 10px 6px #FFF;
 		    border: 0 none;
-		    font: bold 14px Arial,Helvetica,Sans-serif;
-		    color: #777;
+		    font: normal 14px $ff-meta;
+		    color: #666;
 		    width: 130px;
 		    padding: 6px 15px 6px 35px;
 
