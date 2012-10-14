@@ -10,6 +10,9 @@
  * @since Boilerplate 1.0
  */
 ?>
+	<div class="footer-container">
+		
+	</div><!-- footer container -->
 		<footer role="contentinfo" class="footer">
 <?php
 	/* A sidebar in the footer? Yep. You can can customize

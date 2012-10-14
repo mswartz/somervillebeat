@@ -172,17 +172,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		display: block;
 		padding: 10px;
 		text-transform: uppercase;
-		font-family: $ff-meta;
+		font: bold 18px/20px $ff-meta;
+		// color: darken($b-blue, 20%);
 	}
 
 	@media (max-width: 699px){
 		background-color: white;
-		@include box-shadow(0px 0px 10px rgba(0,0,0,.5));
+		@include box-shadow(0px 0px 20px rgba(0,0,0,.5));
 		position: absolute;
 		z-index: 9999;
 		left: 6%;
 		right: 6%;
 		top: -500px;
+		border: 1px solid #EEE;
 		@include trans;
 
 		&.menu-active {
@@ -207,7 +209,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		max-width: 1200px;
 		height: 50px;
 		margin: 0 0 20px 0;
-		background-color: darken($b-blue, 10%);
+		background-color: $b-blue;
 		border-bottom: 5px solid darken($b-blue, 20%);
 
 		.menu-header {
@@ -439,10 +441,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			display: block;
 			padding: 8px;
 			color: #FFF;
-			background-color: darken($b-blue, 10%);
+			background-color: $b-blue;	
 
-			&:hover {
-				background-color: $b-blue;
+			&:hover {		
+				background-color: darken($b-blue, 10%);
 			}
 		}
 	}
@@ -464,11 +466,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			// @extend .h3;
 			// font-weight: normal;
 			font-size: 18px;
+			margin: 0 0 15px 0;
 
 			@media (min-width:500px) {
 				font-size: 18px;
 				border-top: 10px solid rgba(255,255,255,.5);
-				margin-top: -20px;
+				margin: -20px 0 0 0;
 				position: relative;
 			}
 		}
@@ -514,6 +517,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		@extend .h1;
 		border-bottom: 3px solid #EEE;
 		margin: 0 0 20px 0;
+
+		//this was too big at iPhone sizes
+		@media (max-width:500px){
+			font-size: 26px;
+		}
 	}
 
 	.entry-meta {
@@ -883,6 +891,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	.entry-image {
 		float: left;
 		margin: 0 20px 20px 0;
+
+		@media (max-width: 500px){
+			float: right;
+
+			img {
+				max-width: 80px;
+				height: auto;
+			}
+		}
 	}
 
 	.entry-text {
@@ -904,11 +921,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /***************************************/
 
+.footer-container {
+	background-color: $b-blue;
+	height: 50px;
+	background: url("/wp-content/themes/_design/_img/beat-heart.png") no-repeat center center, url("/wp-content/themes/_design/_img/beat-footer.png") repeat-x center center;
+	margin-bottom: 10px;
+}
+
 .footer {
 	width: 100%;
-	border-top: 10px solid $b-blue;
-	padding: 20px 0;
-	margin: 20px 0;
+	margin: 0 0 20px 0;
+	padding: 10 0 20px 0;
 	@include pie-clearfix;
 
 	@media (min-width: 480px) and (max-width: 767px){

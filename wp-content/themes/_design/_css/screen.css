@@ -1661,19 +1661,20 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   display: block;
   padding: 10px;
   text-transform: uppercase;
-  font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
+  font: bold 18px/20px "ff-meta-web-pro", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 699px) {
   #access {
     background-color: white;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 9999;
     left: 6%;
     right: 6%;
     top: -500px;
+    border: 1px solid #EEE;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
@@ -1699,7 +1700,7 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     max-width: 1200px;
     height: 50px;
     margin: 0 0 20px 0;
-    background-color: #5ec9d9;
+    background-color: #87d7e3;
     border-bottom: 5px solid #34bbd0;
   }
   #access .menu-header {
@@ -1954,10 +1955,10 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   display: block;
   padding: 8px;
   color: #FFF;
-  background-color: #5ec9d9;
+  background-color: #87d7e3;
 }
 .home-zones-cat .home-zones-hdr a:hover {
-  background-color: #87d7e3;
+  background-color: #5ec9d9;
 }
 @media (min-width:500px) {
   .home-zones-cat .home-zones-tiles {
@@ -1984,12 +1985,13 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 }
 .home-zones-cat .tile .home-zones-title {
   font-size: 18px;
+  margin: 0 0 15px 0;
 }
 @media (min-width:500px) {
   .home-zones-cat .tile .home-zones-title {
     font-size: 18px;
     border-top: 10px solid rgba(255, 255, 255, 0.5);
-    margin-top: -20px;
+    margin: -20px 0 0 0;
     position: relative;
   }
 }
@@ -2028,6 +2030,11 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .single-content h1, .page-content h1 {
   border-bottom: 3px solid #EEE;
   margin: 0 0 20px 0;
+}
+@media (max-width:500px) {
+  .single-content h1, .page-content h1 {
+    font-size: 26px;
+  }
 }
 .single-content .entry-meta, .page-content .entry-meta {
   margin: 20px 0 20px 0;
@@ -2366,16 +2373,31 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   float: left;
   margin: 0 20px 20px 0;
 }
+@media (max-width: 500px) {
+  .post .entry-image {
+    float: right;
+  }
+  .post .entry-image img {
+    max-width: 80px;
+    height: auto;
+  }
+}
 
 /***************************************/
 /*       Footer.php
 
 /***************************************/
+.footer-container {
+  background-color: #87d7e3;
+  height: 50px;
+  background: url("/wp-content/themes/_design/_img/beat-heart.png") no-repeat center center, url("/wp-content/themes/_design/_img/beat-footer.png") repeat-x center center;
+  margin-bottom: 10px;
+}
+
 .footer {
   width: 100%;
-  border-top: 10px solid #87d7e3;
-  padding: 20px 0;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
+  padding: 10 0 20px 0;
   *zoom: 1;
 }
 .footer:after {
