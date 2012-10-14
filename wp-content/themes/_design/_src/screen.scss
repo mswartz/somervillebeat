@@ -830,23 +830,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	}
 	#nav-below, #nav-above {
 		@include pie-clearfix;
-		border-top: 3px solid #EEE;
-		border-bottom: 3px solid #EEE;
+
 		margin: 0 0 20px 0;
+	}
+
+	.nav-previous a, .nav-next a {
+		background-color: $b-blue;
+		@include border-radius(10px);
+		padding: 10px;
+
+		&:hover {
+			background-color: darken($b-blue, 10%);
+		}
 	}
 
 	.nav-previous {
 		float: left;
-		width: 50%;
-		border-right: 1px solid #EEE;
-		padding: 10px;
 	}
 
 	.nav-next {
 		float: right;
-		text-align: right;
-		width: 50%;
-		padding: 10px;
 	}
 
 	.child-cats {

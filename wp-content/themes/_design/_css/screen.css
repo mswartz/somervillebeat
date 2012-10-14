@@ -2311,8 +2311,6 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 }
 .category-content #nav-below, .category-content #nav-above, .search-content #nav-below, .search-content #nav-above, .tag-content #nav-below, .tag-content #nav-above, .search-content #nav-below, .search-content #nav-above {
   *zoom: 1;
-  border-top: 3px solid #EEE;
-  border-bottom: 3px solid #EEE;
   margin: 0 0 20px 0;
 }
 .category-content #nav-below:after, .category-content #nav-above:after, .search-content #nav-below:after, .search-content #nav-above:after, .tag-content #nav-below:after, .tag-content #nav-above:after, .search-content #nav-below:after, .search-content #nav-above:after {
@@ -2320,17 +2318,23 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   display: table;
   clear: both;
 }
+.category-content .nav-previous a, .category-content .nav-next a, .search-content .nav-previous a, .search-content .nav-next a, .tag-content .nav-previous a, .tag-content .nav-next a, .search-content .nav-previous a, .search-content .nav-next a {
+  background-color: #87d7e3;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.category-content .nav-previous a:hover, .category-content .nav-next a:hover, .search-content .nav-previous a:hover, .search-content .nav-next a:hover, .tag-content .nav-previous a:hover, .tag-content .nav-next a:hover, .search-content .nav-previous a:hover, .search-content .nav-next a:hover {
+  background-color: #5ec9d9;
+}
 .category-content .nav-previous, .search-content .nav-previous, .tag-content .nav-previous, .search-content .nav-previous {
   float: left;
-  width: 50%;
-  border-right: 1px solid #EEE;
-  padding: 10px;
 }
 .category-content .nav-next, .search-content .nav-next, .tag-content .nav-next, .search-content .nav-next {
   float: right;
-  text-align: right;
-  width: 50%;
-  padding: 10px;
 }
 .category-content .child-cats, .search-content .child-cats, .tag-content .child-cats, .search-content .child-cats {
   margin: -10px 0 20px 0;
