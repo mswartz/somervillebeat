@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php if($c == 1) :?>
 				<!-- cover post -->
 				<article id="home-cover" <?php post_class(); ?>>
-					<div id="home-cover-img"><?php the_post_thumbnail('original');	?></div>
+					<div id="home-cover-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('original');	?></a></div>
 					<div id="home-cover-txt">
 						<small class="cover-cat"><?php the_category(' &raquo; '); ?></small>
 						<h1 class="cover-entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="home-tz">
 			<?php else : ?>
 					<article id="post-<?php the_ID(); ?>" class="home-tz-mod" ?>
-						<div class="home-tz-img ui-block-1"><?php the_post_thumbnail('thumbnail');	?></div>
+						<div class="home-tz-img ui-block-1"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail');	?></a></div>
 						<div class="ui-block-2"><small><?php the_category(' &raquo; '); ?></small>
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p><?php the_excerpt(); ?></p>
