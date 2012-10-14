@@ -1742,17 +1742,32 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
     text-align: center;
     padding: 8px;
   }
+  #access #searchform #s {
+    background: url("/wp-content/themes/_design/_img/search-dark.png") no-repeat 10px 6px white;
+    border: 0 none;
+    font: bold 14px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 130px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 0 #eeeeee inset;
+    -moz-box-shadow: 0 1px 0 #eeeeee inset;
+    box-shadow: 0 1px 0 #eeeeee inset;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
   #access #searchform .screen-reader-text {
     display: none;
   }
-  #access #searchform #s {
-    width: 50%;
-  }
   #access #searchform #searchsubmit {
-    background-color: #5ec9d9;
-    width: 25px;
-    height: 25px;
-    border: 0;
+    display: none;
   }
 }
 @media (min-width: 700px) and (min-width: 768px) {
