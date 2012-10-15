@@ -42,13 +42,12 @@ get_header(); ?>
 </section><!-- #main -->
 
 <section class="home-zones">
-	<?php 
-	$z1 = z_get_zones(); 
-	foreach($z1 as $zone){ ?>
-		<section class="home-zones-cat">
+		
+		<section id="home-zones-food" class="home-zones-cat">
 			<?php
-				$f2 = z_get_posts_in_zone($zone->slug);
-				echo '<h3 class="home-zones-hdr"><a href="'.get_category_link($zone->term_id).'">'.$zone->name.'</h3>';
+
+				$f2 = z_get_posts_in_zone('food');
+				echo '<h3 class="home-zones-hdr"><a href="/category/food">Food</h3>';
 				echo '<div class="home-zones-tiles">';
 				foreach($f2 as $link){
 					//first image in list has thumbnail
@@ -58,10 +57,62 @@ get_header(); ?>
 					echo '<h4 class="home-zones-title"><a href="'.get_permalink($link->ID).'">'.$link->post_title.'</a></h4></div>';
 				}
 				echo '</div>';
-
 			?>
 		</section>
-	<?php }	?><!-- end foreach that looped thru $zones -->
+
+		<section id="home-zones-features" class="home-zones-cat">
+			<?php
+
+				$f2 = z_get_posts_in_zone('features');
+				echo '<h3 class="home-zones-hdr"><a href="/category/features">Features</h3>';
+				echo '<div class="home-zones-tiles">';
+				foreach($f2 as $link){
+					//first image in list has thumbnail
+					echo '<div class="tile media-block"><div class="home-zones-img">';
+					$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $link->ID ), "thumbnail" );
+					echo '<a href="'.get_permalink($link->ID).'"><img src="'.$thumbnail_src[0].'"/></a></div>';
+					echo '<h4 class="home-zones-title"><a href="'.get_permalink($link->ID).'">'.$link->post_title.'</a></h4></div>';
+				}
+				echo '</div>';
+			?>
+		</section>
+
+		<section id="home-zones-things" class="home-zones-cat">
+			<?php
+
+				$f2 = z_get_posts_in_zone('things-to-do-3');
+				echo '<h3 class="home-zones-hdr"><a href="/category/things-to-do">Things To Do</h3>';
+				echo '<div class="home-zones-tiles">';
+				foreach($f2 as $link){
+					//first image in list has thumbnail
+					echo '<div class="tile media-block"><div class="home-zones-img">';
+					$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $link->ID ), "thumbnail" );
+					echo '<a href="'.get_permalink($link->ID).'"><img src="'.$thumbnail_src[0].'"/></a></div>';
+					echo '<h4 class="home-zones-title"><a href="'.get_permalink($link->ID).'">'.$link->post_title.'</a></h4></div>';
+				}
+				echo '</div>';
+			?>
+		</section>
+
+
+		<section id="home-zones-beyond" class="home-zones-cat">
+			<?php
+
+				$f2 = z_get_posts_in_zone('beyond-somerville');
+				echo '<h3 class="home-zones-hdr"><a href="/category/beyond">Beyond Somerville</h3>';
+				echo '<div class="home-zones-tiles">';
+				foreach($f2 as $link){
+					//first image in list has thumbnail
+					echo '<div class="tile media-block"><div class="home-zones-img">';
+					$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $link->ID ), "thumbnail" );
+					echo '<a href="'.get_permalink($link->ID).'"><img src="'.$thumbnail_src[0].'"/></a></div>';
+					echo '<h4 class="home-zones-title"><a href="'.get_permalink($link->ID).'">'.$link->post_title.'</a></h4></div>';
+				}
+				echo '</div>';
+			?>
+		</section>
+
+
 </section>
 
 <?php get_footer(); ?>
