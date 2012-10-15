@@ -6,26 +6,26 @@
 	Note that if you are using Modernizr, it already does this for you. :-)
 */
 
-$(document).ready(function(){
-	$('html').removeClass('no-js');
-	$('html').addClass('js');
+jQuery(document).ready(function(){
+	jQuery('html').removeClass('no-js');
+	jQuery('html').addClass('js');
 
-	$('#menu-toggle').on('click', '#menu-trigger', function(){
-		$('#access').toggleClass('menu-active');
-		$(this).find('.menu-triangle').toggleClass('trigger-active');
+	jQuery('#menu-toggle').on('click', '#menu-trigger', function(){
+		jQuery('#access').toggleClass('menu-active');
+		jQuery(this).find('.menu-triangle').toggleClass('trigger-active');
 		console.log('toggle');
 	});
 
 	function initDropDowns(){
 		// Set dropdowns on click
-		$(document.body).delegate(".dropdown-trigger", "click", function() {
-			var t = $(this).closest(".dropdown");
+		jQuery(document.body).delegate(".dropdown-trigger", "click", function() {
+			var t = jQuery(this).closest(".dropdown");
 			t.toggleClass("dropdown-active");
 		});
 		
 		// Set dropdowns on hover
-		$(document.body).delegate(".dropdown-trigger-hover", "mouseenter mouseleave", function() {
-			var t = $(this).closest(".dropdown");
+		jQuery(document.body).delegate(".dropdown-trigger-hover", "mouseenter mouseleave", function() {
+			var t = jQuery(this).closest(".dropdown");
 			t.toggleClass("dropdown-active");
 		});
 	}
