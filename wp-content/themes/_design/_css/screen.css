@@ -2317,10 +2317,13 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   .page-grid .entry-content .grid .media-block, .page-grid .entry-content .grid #sidebar .xoxo .widget-container, #sidebar .xoxo .page-grid .entry-content .grid .widget-container, .page-grid .entry-content .grid li, .page-grid .entry-content .grid .footer .xoxo, .footer .page-grid .entry-content .grid .xoxo {
     float: left;
     padding-left: 20px;
-    width: 25%;
+    width: 33.3333%;
   }
-  .page-grid .entry-content .grid .media-block:nth-child(4n+5), .page-grid .entry-content .grid #sidebar .xoxo .widget-container:nth-child(4n+5), #sidebar .xoxo .page-grid .entry-content .grid .widget-container:nth-child(4n+5), .page-grid .entry-content .grid li:nth-child(4n+5), .page-grid .entry-content .grid .footer .xoxo:nth-child(4n+5), .footer .page-grid .entry-content .grid .xoxo:nth-child(4n+5) {
+  .page-grid .entry-content .grid .media-block:nth-child(3n+4), .page-grid .entry-content .grid #sidebar .xoxo .widget-container:nth-child(3n+4), #sidebar .xoxo .page-grid .entry-content .grid .widget-container:nth-child(3n+4), .page-grid .entry-content .grid li:nth-child(3n+4), .page-grid .entry-content .grid .footer .xoxo:nth-child(3n+4), .footer .page-grid .entry-content .grid .xoxo:nth-child(3n+4) {
     clear: left;
+  }
+  .ie7 .page-grid .entry-content .grid .media-block, .ie7 .page-grid .entry-content .grid #sidebar .xoxo .widget-container, #sidebar .xoxo .ie7 .page-grid .entry-content .grid .widget-container, .ie7 .page-grid .entry-content .grid li, .ie7 .page-grid .entry-content .grid .footer .xoxo, .footer .ie7 .page-grid .entry-content .grid .xoxo {
+    width: 33%;
   }
 }
 .page-grid .entry-content .grid li {
