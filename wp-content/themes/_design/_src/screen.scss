@@ -770,6 +770,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			left: 0;
 			@include box-shadow(0px 0px 10px #CCC);
 
+			li {
+				list-style-type: none;
+				margin: 0;
+			}
 			li a {
 				padding: 10px;
 				border-bottom: 1px solid #EEE;
@@ -945,8 +949,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		border-bottom: 3px solid #EEE;
 		margin: 0 0 20px 0;
 	}
-
-
 }
 
 
