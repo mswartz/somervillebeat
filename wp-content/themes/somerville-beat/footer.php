@@ -24,12 +24,6 @@
 		</div><!-- site container -->
 
 	<?php
-	//get our site specific JS in there.
-	echo '<script type="text/javascript" src="'.get_stylesheet_directory_uri().'/js/script.js"></script>';
-	?>
-
-
-	<?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
 	 * generally use this hook to reference JavaScript files.
