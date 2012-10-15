@@ -80,7 +80,7 @@ get_header(); ?>
 		<section id="home-zones-things" class="home-zones-cat">
 			<?php
 
-				$f2 = z_get_posts_in_zone('things-to-do-3');
+				$f2 = z_get_posts_in_zone('things-to-do-2');
 				echo '<h3 class="home-zones-hdr"><a href="/category/things-to-do">Things To Do</h3>';
 				echo '<div class="home-zones-tiles">';
 				foreach($f2 as $link){
