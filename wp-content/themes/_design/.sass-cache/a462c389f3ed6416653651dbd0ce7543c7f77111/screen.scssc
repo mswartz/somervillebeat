@@ -1,5 +1,5 @@
 3.1.16 (Brainy Betty)
-bab98274d1916b494d2c3f7415fbce08fc8ed3c4
+ad4eea6ab433301212b63b1cb205a7b22d016170
 o:Sass::Tree::RootNode
 :@template"­;/* ## Bring in all Compass Helpers */ 
 @import "partials/base";
@@ -541,7 +541,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	width: 95%;
 	margin: 0 auto;
 
-	@media (max-width: 500px){
+	@media (max-width: 800px){
 		img.alignleft, img.alignright, img.alignnone {
 			width: 100%;
 			height: auto;
@@ -1204,7 +1204,7 @@ color;	[ ;o;; ;!;@;"	#000;i;"i o;;;;@;["font-size;	[ ;o;; 
 
 /***************************************/;i;0o;
 ;@;0;	[ ;["!/* Rules for page content */;i;0o;;T;[".entry-content;@;o;;" ;i;[o;;[o;;@h;i;[o;';["entry-content;@h;i;	[	o;;;;@;["
-width;	[ ;o;; ;!;@;"95%;i;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 auto;i;"i o;%;T;&["(max-width: 500px);@;	[o;;T;["1img.alignleft, img.alignright, img.alignnone;@;o;;" ;i;[o;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignleft;@†;io;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignright;@†;io;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignnone;@†;i;	[o;;;;@;["
+width;	[ ;o;; ;!;@;"95%;i;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 auto;i;"i o;%;T;&["(max-width: 800px);@;	[o;;T;["1img.alignleft, img.alignright, img.alignnone;@;o;;" ;i;[o;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignleft;@†;io;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignright;@†;io;;[o;;@†;i;[o;	;["img;@†;i;0o;';["alignnone;@†;i;	[o;;;;@;["
 width;	[ ;o;; ;!;@;"	100%;i;"i o;;;;@;["height;	[ ;o;; ;!;@;"	auto;i ;"i ;i;"i ;" ;i;"i o;%;T;&["(min-width: 500px);@;	[o;;;;@;["
 width;	[ ;o;; ;!;@;"80%;i%;"i ;" ;i$;"i ;i;"i o;;T;["#.single-content, .page-content;@;o;;" ;i);[o;;[o;;@Ã;i);[o;';["single-content;@Ã;i)o;;[o;;@Ã;i);[o;';["page-content;@Ã;i);	[o;;T;["h1;@;o;;" ;i*;[o;;[o;;@Ø;i*;[o;	;["h1;@Ø;i*;0;	[
 o;D	;@;E["."h1;	[ ;i+o;;;;@;["border-bottom;	[ ;o;; ;!;@;"3px solid #EEE;i,;"i o;;;;@;["margin;	[ ;o;; ;!;@;"0 0 20px 0;i-;"i o;
