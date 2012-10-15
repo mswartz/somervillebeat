@@ -24,11 +24,6 @@
 	endif;
 ?>
 
-<?php
-	// You can start editing here -- including this comment!
-?>
-
-
 <?php comment_form(); ?>
 
 <?php if ( have_comments() ) : ?>
