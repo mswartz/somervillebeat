@@ -538,15 +538,32 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	width: 95%;
 	margin: 0 auto;
 
-	@media (max-width: 800px){
-		img.alignleft, img.alignright, img.alignnone {
+	@media (min-width: 500px){
+		width: 80%;
+	}
+
+	//Content image rules
+	img.alignleft {
+		margin: 10px 10px 10px 0;
+	} 
+
+	img.alignright {
+		margin: 10px 0 10px 10px;
+	}
+
+	@media (max-width: 500px){
+		img.alignleft, img.alignright{
 			width: 100%;
 			height: auto;
+			margin: 0;
 		}
 	}
 
-	@media (min-width: 500px){
-		width: 80%;
+	@media (max-width: 800px){
+		img.alignnone {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 
