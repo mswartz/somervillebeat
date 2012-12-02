@@ -75,7 +75,7 @@ if ( ! function_exists( 'boilerplate_setup' ) ):
 		add_editor_style();
 
 		// Uncomment if you choose to use post thumbnails; add the_post_thumbnail() wherever thumbnail should appear
-		//add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails' );
 
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
