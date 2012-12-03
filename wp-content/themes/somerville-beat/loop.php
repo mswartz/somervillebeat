@@ -73,13 +73,14 @@
 						$image = array_shift( $images );
 						$image_img_tag = wp_get_attachment_image( $image->ID, 'thumbnail' );
 				?>
-						<div class="gallery-thumb">
-							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
-						</div><!-- .gallery-thumb -->
-						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'twentyten' ),
-								'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
-								number_format_i18n( $total_images )
-							); ?></em></p>
+				<figure class="gallery-thumb">
+					<a href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
+				</figure><!-- .gallery-thumb -->
+
+				<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'twentyeleven' ),
+						'href="' . esc_url( get_permalink() ) . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
+						number_format_i18n( $total_images )
+					); ?></em></p>
 				<?php endif; ?>
 						<?php the_excerpt(); ?>
 <?php endif; ?>
@@ -97,6 +98,8 @@
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
 		</div><!-- #post-## -->
+
+
 
 <?php /* How to display posts in the asides category */ ?>
 

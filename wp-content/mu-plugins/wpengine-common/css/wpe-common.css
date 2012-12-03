@@ -1,0 +1,105 @@
+.log-display
+{
+    font-family: "Courier New", "Courier", fixed;
+    font-size: 9pt;
+}
+
+.wpe-notices.updated
+{
+    text-align: left;
+    vertical-align: middle;
+    width: 98%;
+    color: #333;
+    font-size:1.2em;
+    border: 2px solid #E6DB55 ;
+    margin: 0 0 0 3em;
+    background-image:url('http://cdn.wpengine.com/wp-content/themes/wp-engine-theme/images/bg.png');
+    text-shadow:0 1px 0 #fff;    
+}
+
+.wpe-notices.updated p {
+	    padding-left:25px;
+	    background:url(../images/favicon.png) no-repeat 0px 2px;
+}
+
+
+.wpe-notices { margin-bottom:0 ;}
+.wpe-notices p,div.updated p, div.error p {  width: 90% !important;}
+.wpe-notices-critical.updated { 
+  background: #D1453D; 
+  color: #fff; 
+  border-width:1px; 
+  border-style:solid;
+    border-color:#333; 
+  padding:0 .6em; 
+  -moz-border-radius:3px; 
+  -khtml-border-radius:3px; 
+  -webkit-border-radius:3px; 
+  border-radius:3px; 
+  border-top-left-radius: 3px 3px; 
+  border-top-right-radius:3px 3px; 
+  border-bottom-right-radius:3px 3px; 
+  border-bottom-left-radius: 3px 3px;
+ 	text-shadow:0 1px 0 #000;
+}
+
+.wpe-notices-critical a { color: #ff6;}
+.wpe-notices-high.updated { 
+  color:#fff;
+  border-width:1px; 
+  border-style:solid; 
+  border-color:#333;
+  padding:0 .6em; 
+  -moz-border-radius:3px; 
+  -khtml-border-radius:3px; 
+  -webkit-border-radius:3px; 
+  border-radius:3px; 
+  border-top-left-radius: 3px 3px; 
+  border-top-right-radius:3px 3px; 
+  border-bottom-right-radius:3px 3px; 
+  border-bottom-left-radius: 3px 3px;
+  background-color:#D18431;
+  text-shadow:0 1px 0 #000;
+}
+.wpe-notices-high a { color: #ff6;}
+.wpe-notices-normal.updated {}
+.wpe-notices-low.updated {}
+
+.wpe-notices .dismissable {
+	min-height:16px;
+	min-width: 16px;
+	margin:10px;
+	background:transparent;
+	float:right;
+	display: block;
+}
+
+.wpe-notices .dismissable img:hover {
+	cursor: pointer;
+}
+
+
+div.message {
+	padding: 5px 10px; 
+	margin: 5px 0;
+	border:1px solid #737B35;
+	background:#F2EFE6;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+/*** Apprise Notifications **/
+.appriseOverlay{position:fixed;top:0;left:0;background:rgba(0,0,0,0.3);display:none;z-index:1000;}
+.appriseOuter{
+	border:3px solid #737B35;
+	box-shadow:0 3px 7px #333;
+	-moz-box-shadow:0 3px 7px #333;
+	-webkit-box-shadow:0 3px 7px #333;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;border-radius:4px;-khtml-border-radius:4px;z-index:99999999;min-width:200px;min-height:50px;max-width:75%;position:fixed;display:none;}
+.appriseInner{background: #F2EFE6 url('http://cdn.wpengine.com/wp-content/themes/wp-engine-theme/images/bg.png');font-size:1.2em;color:#333;font-weight:bold;text-shadow:0 1px 0 #fff;padding:20px; }
+.appriseInner button{border:1px solid #bbb;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-khtml-border-radius:3px;background:#737B35;color:#dedede;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 1px 2px #ccc;-moz-box-shadow:0 1px 2px #ccc;-webkit-box-shadow:0 1px 2px #ccc;margin:0 3px;padding:4px 10px;}
+.appriseInner button:hover{color:#fff;}
+.aButtons,.aInput{text-align:center;margin:20px 10px 0;}
+.aTextbox{border:1px solid #aaa;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;-khtml-border-radius:4px;box-shadow:0 1px 0 #fff;-moz-box-shadow:0 1px 0 #fff;-webkit-box-shadow:0 1px 0 #fff;width:180px;font-size:12px;font-weight:700;padding:5px 10px;} 

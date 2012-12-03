@@ -43,6 +43,9 @@ Atg
 
 === Change Log ===
 
+= 4.1 2012-11-14 =
+* Fixed an issue where the `html5shiv.js` was getting applied to a page 2-3 times in IE < 9...  erps!
+
 = 4.0.1 2012-10-05 =
 Let's try that again...
 

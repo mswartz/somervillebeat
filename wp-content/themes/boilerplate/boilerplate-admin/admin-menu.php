@@ -3,15 +3,23 @@
 /*
  	@package Boilerplate
 	Theme Name: Boilerplate
-	Theme  URI: http://aarontgrogg.com/boilerplate/
-	Description: Based on the <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a> created by
-		<a href="http://paulirish.com" target="_blank">Paul Irish</a> and <a href="http://nimbupani.com" target="_blank">Divya Manian</a>,
-		this theme allows for easy inclusion and removal of all HTML5 Boilerplate options pertinent to WP.
+	Theme URI: http://aarontgrogg.com/boilerplate/
+	Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>)
+		of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>)
+		and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>),
+		Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.
+		Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in
+		(thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme
+		to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add,
+		but you could just as easily use this as a starting point and alter the PHP as your design needs.
 		More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
-	Version: 4.0
-	Author: Aaron T. Grogg, based on the work of Paul Irish & Divya Manian
+	Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
 	Author URI: http://aarontgrogg.com/
-	License: GPLv2 or later
+	Version: 4.1
+	Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
+
+	License: GNU General Public License v2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /*	Define Boilerplate URI */
@@ -270,8 +278,8 @@
 				echo '<code>&lt;script src="' .H5BP_URL. '/js/modernizr.js"&gt;&lt;/script&gt;</code>';
 				echo '<p><strong>Note: If you do <em>not</em> include Modernizr, the IEShiv JS <em>will</em> be added to weaker browsers to accommodate the HTML5 elements used in Boilerplate:</strong></p>';
 				echo '<code>&lt;!--[if lt IE 9]&gt;</code>';
-				echo '<code>	&lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js" onload="window.ieshiv=true;"&gt;&lt;/script&gt;</code>';
-				echo '<code>	&lt;script&gt;!window.ieshiv && document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/ieshiv.js"%3E%3C/script%3E\'))&lt;/script&gt;</code>';
+				echo '<code>	&lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;</code>';
+				echo '<code>	&lt;script&gt;!window.html5 && document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/ieshiv.js"%3E%3C/script%3E\'))&lt;/script&gt;</code>';
 				echo '<code>&lt;![endif]--&gt;</code>';
 			}
 		endif; // H5BP_modernizr_js_setting
@@ -453,8 +461,8 @@
 			function H5BP_add_ieshiv_script() {
 				$cache = H5BP_cache_buster();
 				echo '<!--[if lt IE 9]>'.PHP_EOL;
-				echo '	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js" onload="window.ieshiv=true;"></script>'.PHP_EOL; // try getting from CDN
-				echo '	<script>!window.ieshiv && document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/ieshiv.js'.$cache.'"%3E%3C/script%3E\'))</script>'.PHP_EOL; // fallback to local if CDN fails
+				echo '	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>'.PHP_EOL; // try getting from CDN
+				echo '	<script>!window.html5 && document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/ieshiv.js'.$cache.'"%3E%3C/script%3E\'))</script>'.PHP_EOL; // fallback to local if CDN fails
 				echo '<![endif]-->'.PHP_EOL;
 			}
 		endif; // H5BP_add_ieshiv_script
@@ -475,7 +483,7 @@
 				$version = ($options['H5BP_jquery_version']) ? $options['H5BP_jquery_version'] : '1.8.2';
 				wp_deregister_script( 'jquery' ); // get rid of WP's jQuery
 				echo '<script src="//ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js"></script>'.PHP_EOL; // try getting from CDN
-				echo '<script>window.jQuery || document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/jquery.js'.$cache.'"%3E%3C/script%3E\'))</script>'.PHP_EOL; // fallback to local if CDN fails
+				echo '<script>!window.jQuery || document.write(unescape(\'%3Cscript src="' .H5BP_URL. '/js/jquery.js'.$cache.'"%3E%3C/script%3E\'))</script>'.PHP_EOL; // fallback to local if CDN fails
 			}
 		endif; // H5BP_add_jquery_script
 

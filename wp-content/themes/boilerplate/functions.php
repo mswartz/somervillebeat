@@ -80,6 +80,9 @@ if ( ! function_exists( 'boilerplate_setup' ) ):
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
 
+			add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+
+
 		// Make theme available for translation
 		// Translations can be filed in the /languages/ directory
 		load_theme_textdomain( 'boilerplate', get_template_directory() . '/languages' );
@@ -558,6 +561,9 @@ endif;
 	if ( function_exists( 'add_theme_support' ) ) :
 		add_theme_support( 'post-thumbnails' );
 	endif;
+
+	// Add support for a variety of post formats
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
 /*	End Boilerplate */
 

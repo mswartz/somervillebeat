@@ -39,6 +39,7 @@
  */
 
 
+
 /* Function To link to large images from galleries instead of Full Size. */
 //http://oikos.org.uk/2011/09/tech-notes-using-resized-images-in-wordpress-galleries-and-lightboxes/
 

@@ -1,0 +1,115 @@
+/* !== Transitions ==================================== */
+
+$context: 960 !default;
+
+@mixin respw($target, $context){
+	width: percentage($target / $context); 
+	}
+
+@function resp($target, $context){
+	@return percentage($target / $context); 
+	}
+
+@function em($px, $doc:13){
+	@return #{($px/$doc)}em;	
+	}
+
+@mixin trans($trans-time: .2s, $trans-property: all, $trans-function: ease-in) {
+	@include single-transition(#{$trans-property}, #{$trans-time}, #{$trans-function}, false);
+	}
+
+@mixin user-select($user-select: none) {
+	-webkit-user-select: #{$user-select};
+	-khtml-user-select: #{$user-select};
+	-moz-user-select: #{$user-select};
+	-ms-user-select: #{$user-select};
+	-o-user-select: #{$user-select};
+	user-select: #{$user-select};
+	}
+
+@mixin reset-clearfix {
+	&:after {
+		display: initial;
+		clear: none;
+		}
+	}
+
+@mixin triangle($tri-orientation: down, $tri-width: 3px, $tri-color: #666) {
+	@include rotate(.1deg);
+	
+	@if $tri-orientation == "up" or $tri-orientation == "top" {
+		border-left: $tri-width solid transparent;
+		border-right: $tri-width solid transparent;
+		border-bottom: $tri-width solid $tri-color;
+		}
+
+	@if $tri-orientation == "down" or $tri-orientation == "bottom" {
+		border-left: $tri-width solid transparent;
+		border-right: $tri-width solid transparent;
+		border-top: $tri-width solid $tri-color;
+		}
+
+	@if $tri-orientation == "left" {
+		border-top: $tri-width solid transparent;
+		border-bottom: $tri-width solid transparent;
+		border-right: $tri-width solid $tri-color;
+		}
+
+	@if $tri-orientation == "right" {
+		border-top: $tri-width solid transparent;
+		border-bottom: $tri-width solid transparent;
+		border-left: $tri-width solid $tri-color;
+		}
+	}
+
+
+/* !== Sprites ==================================== */
+
+// Let Compass make Sprites for us
+// http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites/base";
+
+// To create new sprites, make a new folder in _img and 
+// copy/paste the pattern below, replacing the first instance
+// of the word "sprite" with the new folder name
+$sprite-sprite-dimensions: true;
+@import "sprite/*.png";
+@include all-sprite-sprites;
+
+// Provide a map and var name to use in conjunction with other sprite mixins
+$sprite: sprite-map("sprite/*.png"); 
+
+
+/* !== Paul Irish HTML5 Helpers =================== */
+
+// Image replacement
+@mixin ir { 
+	display: block; 
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+	}
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+@mixin hidden { 
+	display: none; 
+	visibility: hidden; } 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+@mixin visuallyhidden { 
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px); }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+@mixin invisible { 
+	visibility: hidden; 
+	}
