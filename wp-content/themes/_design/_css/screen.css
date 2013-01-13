@@ -1857,6 +1857,10 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   }
 }
 
+.execphpwidget a {
+  color: #1d78af;
+}
+
 .tweets li {
   margin-bottom: 15px;
   font-family: "ff-meta-web-pro", Helvetica, Arial, sans-serif;
