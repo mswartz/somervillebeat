@@ -2349,6 +2349,44 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 }
 
 /***************************************/
+.page-directory {
+  margin-left: -40px;
+  *zoom: 1;
+}
+.page-directory:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.page-directory .media-block, .page-directory #sidebar .xoxo .widget-container, #sidebar .xoxo .page-directory .widget-container, .page-directory .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-directory li, .page-directory .footer .xoxo, .footer .page-directory .xoxo {
+  float: left;
+  padding-left: 40px;
+  width: 50%;
+}
+.page-directory .media-block:nth-child(2n+3), .page-directory #sidebar .xoxo .widget-container:nth-child(2n+3), #sidebar .xoxo .page-directory .widget-container:nth-child(2n+3), .page-directory .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid .page-directory li:nth-child(2n+3), .page-directory .footer .xoxo:nth-child(2n+3), .footer .page-directory .xoxo:nth-child(2n+3) {
+  clear: left;
+}
+.page-directory .media-block, .page-directory #sidebar .xoxo .widget-container, #sidebar .xoxo .page-directory .widget-container, .page-directory .page-grid .entry-content .grid li, .page-grid .entry-content .grid .page-directory li, .page-directory .footer .xoxo, .footer .page-directory .xoxo {
+  margin-bottom: 40px;
+}
+.page-directory .business {
+  border: 1px solid #EEE;
+  padding: 20px;
+}
+.page-directory .business .h2, .page-directory .business #home-cover-txt .cover-entry-title, #home-cover-txt .page-directory .business .cover-entry-title, .page-directory .business .home-tz .entry-title a, .home-tz .entry-title .page-directory .business a, .page-directory .business .post .entry-title, .post .page-directory .business .entry-title, .page-directory .business .page .entry-title, .page .page-directory .business .entry-title, .page-directory .business .h4 {
+  margin-bottom: 8px;
+}
+.page-directory .business .h4 {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.page-directory .business a img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/***************************************/
 .gallery .gallery-item {
   float: left;
   margin: 0 20px 20px 0;

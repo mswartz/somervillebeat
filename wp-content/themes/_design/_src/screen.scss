@@ -855,6 +855,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 
+/***************************************/
+
+/*   Directory page
+// displayed using the page-directory.php template
+
+/***************************************/
+
+.page-directory {
+	@include media-grid(2, 40px);
+
+	.media-block {
+		margin-bottom: 40px;
+	}
+
+	.business {
+		border: 1px solid #EEE;
+		padding: 20px;
+		// height: 620px;
+
+		.h2, .h4 {
+			margin-bottom: 8px;
+		}
+
+		.h4 {
+			color: #666;
+			text-transform: uppercase;
+			font-size: 11px;
+		}
+
+		a img {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	}
+
+}
+
 
 /***************************************/
 
