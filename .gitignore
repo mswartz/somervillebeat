@@ -6,6 +6,7 @@ wp-content/uploads/
 
 #stop the cache from sassing us
 wp-content/themes/_design/.sass-cache*
+wp-content/themes/_design/.sass-cache/*
 
 #ignore plugins
 wp-content/plugins/*

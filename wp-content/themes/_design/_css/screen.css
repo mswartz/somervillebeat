@@ -1962,6 +1962,9 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
 .page-directory .business .h2, .page-directory .business #home-cover-txt .cover-entry-title, #home-cover-txt .page-directory .business .cover-entry-title, .page-directory .business .home-tz .entry-title a, .home-tz .entry-title .page-directory .business a, .page-directory .business .post .entry-title, .post .page-directory .business .entry-title, .page-directory .business .page .entry-title, .page .page-directory .business .entry-title, .page-directory .business .h4 {
   margin-bottom: 8px;
 }
+.page-directory .business .h2, .page-directory .business #home-cover-txt .cover-entry-title, #home-cover-txt .page-directory .business .cover-entry-title, .page-directory .business .home-tz .entry-title a, .home-tz .entry-title .page-directory .business a, .page-directory .business .post .entry-title, .post .page-directory .business .entry-title, .page-directory .business .page .entry-title, .page .page-directory .business .entry-title, .page-directory .business .h4, .page-directory .business a {
+  word-wrap: break-word;
+}
 .page-directory .business .h4 {
   color: #666;
   text-transform: uppercase;

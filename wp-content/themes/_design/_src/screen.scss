@@ -889,6 +889,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			margin-bottom: 8px;
 		}
 
+		.h2, .h4, a {
+			word-wrap: break-word;
+		}
+
 		.h4 {
 			color: #666;
 			text-transform: uppercase;
