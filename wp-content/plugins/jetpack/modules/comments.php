@@ -2,9 +2,12 @@
 
 /**
  * Module Name: Jetpack Comments
- * Module Description: A new comment system that has integrated social media login options.
+ * Module Description: Let readers comment with WordPress.com, Twitter, Facebook, or Google+ accounts.
  * First Introduced: 1.4
- * Sort Order: 2
+ * Sort Order: 20
+ * Requires Connection: Yes
+ * Auto Activate: No
+ * Module Tags: Social
  */
 
 require dirname( __FILE__ ) . '/comments/comments.php';

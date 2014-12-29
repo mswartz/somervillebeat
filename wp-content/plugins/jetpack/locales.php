@@ -14,22 +14,22 @@ class GP_Locale {
 	var $facebook_locale = null;
 	// TODO: days, months, decimals, quotes
 
-	function GP_Locale( $args = array() ) {
+	public function GP_Locale( $args = array() ) {
 		foreach( $args as $key => $value ) {
 			$this->$key = $value;
 		}
 	}
 
-	static function __set_state( $state ) {
+	public static function __set_state( $state ) {
 		return new GP_Locale( $state );
 	}
 
-	function combined_name() {
+	public function combined_name() {
 		/* translators: combined name for locales: 1: name in English, 2: native name */
 		return sprintf( _x( '%1$s/%2$s', 'locales', 'jetpack' ), $this->english_name, $this->native_name );
 	}
 
-	function numbers_for_index( $index, $how_many = 3, $test_up_to = 1000 ) {
+	public function numbers_for_index( $index, $how_many = 3, $test_up_to = 1000 ) {
 		$numbers = array();
 		for( $number = 0; $number < $test_up_to; ++$number ) {
 			if ( $this->index_for_number( $number ) == $index ) {
@@ -40,7 +40,7 @@ class GP_Locale {
 		return $numbers;
 	}
 
-	function index_for_number( $number ) {
+	public function index_for_number( $number ) {
 		if ( !isset( $this->_index_for_number ) ) {
 			$expression = Gettext_Translations::parenthesize_plural_exression( $this->plural_expression );
 			$this->_index_for_number = Gettext_Translations::make_plural_form_function( $this->nplurals, $expression );
@@ -54,7 +54,7 @@ class GP_Locales {
 
 	var $locales = array();
 
-	function GP_Locales() {
+	public function GP_Locales() {
 		$aa = new GP_Locale();
 		$aa->english_name = 'Afar';
 		$aa->native_name = 'Afaraf';
@@ -615,6 +615,16 @@ class GP_Locales {
 		$fa_af->plural_expression = '0';
 		$fa_af->rtl = true;
 
+		$ff_sn = new GP_Locale();
+		$ff_sn->english_name = 'Fulah';
+		$ff_sn->native_name = 'Pulaar';
+		$ff_sn->lang_code_iso_639_1 = 'ff';
+		$ff_sn->lang_code_iso_639_2 = 'fuc';
+		$ff_sn->country_code = 'sn';
+		$ff_sn->wp_locale = 'fuc';
+		$ff_sn->slug = 'fuc';
+		$ff_sn->plural_expression = 'n!=1';
+
 		$fi = new GP_Locale();
 		$fi->english_name = 'Finnish';
 		$fi->native_name = 'Suomi';
@@ -672,6 +682,7 @@ class GP_Locales {
 	 	$fr_ca->lang_code_iso_639_2 = 'fra';
 	 	$fr_ca->country_code = 'ca';
 	 	$fr_ca->facebook_locale = 'fr_CA';
+	 	$fr_ca->wp_locale = 'fr_CA';
 	 	$fr_ca->slug = 'fr-ca';
 
 		$fr_ch = new GP_Locale();
@@ -699,6 +710,7 @@ class GP_Locales {
 		$ga->lang_code_iso_639_2 = 'gle';
 		$ga->country_code = 'ie';
 		$ga->slug = 'ga';
+		$ga->wp_locale = 'ga';
 		$ga->google_code = 'ga';
 		$ga->facebook_locale = 'ga_IE';
 		$ga->nplurals = 5;
@@ -1551,7 +1563,7 @@ class GP_Locales {
 		$tg->google_code = 'tg';
 		$tg->nplurals = 2;
 		$tg->plural_expression = 'n != 1;';
-		
+
 		$th = new GP_Locale();
 		$th->english_name = 'Thai';
 		$th->native_name = 'ไทย';
@@ -1564,6 +1576,17 @@ class GP_Locales {
 		$th->facebook_locale = 'th_TH';
 		$th->nplurals = 1;
 		$th->plural_expression = '0';
+
+		$tir = new GP_Locale();
+		$tir->english_name = 'Tigrinya';
+		$tir->native_name = 'ትግርኛ';
+		$tir->lang_code_iso_639_1 = 'ti';
+		$tir->lang_code_iso_639_2 = 'tir';
+		$tir->country_code = 'er';
+		$tir->wp_locale = 'tir';
+		$tir->slug = 'tir';
+		$tir->nplurals = 1;
+		$tir->plural_expression = '0';
 
 		$tlh = new GP_Locale();
 		$tlh->english_name = 'Klingon';
@@ -1581,6 +1604,7 @@ class GP_Locales {
 		$tl->lang_code_iso_639_1 = 'tl';
 		$tl->lang_code_iso_639_2 = 'tgl';
 		$tl->country_code = 'ph';
+		$tl->wp_locale = 'ph';
 		$tl->slug = 'tl';
 		$tl->google_code = 'tl';
 		$tl->facebook_locale = 'tl_PH';
@@ -1701,7 +1725,7 @@ class GP_Locales {
 		$yi->slug = 'yi';
 		$yi->google_code = 'yi';
 		$yi->rtl = true;
-		
+
 		$yo = new GP_Locale();
 		$yo->english_name = 'Yorùbá';
 		$yo->native_name = 'èdè Yorùbá';
@@ -1773,28 +1797,28 @@ class GP_Locales {
 		}
 	}
 
-	function &instance() {
+	public static function instance() {
 		if ( !isset( $GLOBALS['gp_locales'] ) )
 			$GLOBALS['gp_locales'] = new GP_Locales;
 		return $GLOBALS['gp_locales'];
 	}
 
-	function locales() {
+	public static function locales() {
 		$instance = GP_Locales::instance();
 		return $instance->locales;
 	}
 
-	function exists( $slug ) {
+	public static function exists( $slug ) {
 		$instance = GP_Locales::instance();
 		return isset( $instance->locales[$slug] );
 	}
 
-	function by_slug( $slug ) {
+	public static function by_slug( $slug ) {
 		$instance = GP_Locales::instance();
 		return isset( $instance->locales[$slug] )? $instance->locales[$slug] : null;
 	}
 
-	function by_field( $field_name, $field_value ) {
+	public static function by_field( $field_name, $field_value ) {
 		$instance = GP_Locales::instance();
 		$result = false;
 		foreach( $instance->locales() as $locale ) {
@@ -1803,6 +1827,7 @@ class GP_Locales {
 				break;
 			}
 		}
+
 		return $result;
 	}
 }

@@ -1,9 +1,9 @@
 === Zone Manager (Zoninator) ===
-Contributors: batmoo, automattic
+Contributors: batmoo, automattic, pkevan, matthumphreys, wpcomvip, 
 Tags: zones, post order, post list, posts, order, zonination, content curation, curation, content management
-Requires at least: 3.4
-Tested up to: 3.4.1
-Stable tag: 0.4
+Requires at least: 3.5
+Tested up to: 3.6
+Stable tag: 0.5
 License: GPLv2
 
 Curation made easy! Create "zones" then add and order your content!
@@ -54,6 +54,14 @@ Filter the following and change according to your needs:
 1. Create and manage your zones and content through a fairly intuitive and familiar interface
 
 == Changelog ==
+
+= 0.5 =
+
+* WordPress version requirements bumped to 3.5
+* Support for touch events for mobile via jQuery UI Touch Punch (http://touchpunch.furf.com/)
+* Filter recent posts or search-as-you-type by date (today, yesterday, all) or category for more refined results, props Paul Kevan and the Metro UK team
+* New actions fired when adding/removing posts from zones
+* Bits of clean-up
 
 = 0.4 =
 
@@ -107,8 +115,8 @@ You can work with with a zone's posts either as an array or a WP_Query object.
 `
 $zone_query = z_get_zone_query( 'homepage' );
 if ( $zone_query->have_posts() ) :
-	while ( $zone_query->have_posts() ) $zone_query->the_post();
-		echo '<li>' . get_the_title() . </li>;
+	while ( $zone_query->have_posts() ) : $zone_query->the_post();
+		echo '<li>' . get_the_title() . '</li>';
 	endwhile;
 endif;
 wp_reset_query();
@@ -119,7 +127,7 @@ wp_reset_query();
 `
 $zone_posts = z_get_posts_in_zone( 'homepage' );
 foreach ( $zone_posts as $zone_post ) :
-	echo '<li>' . get_the_title( $zone_post->ID ) . </li>;
+	echo '<li>' . get_the_title( $zone_post->ID ) . '</li>';
 endforeach;
 `
 

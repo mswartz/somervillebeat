@@ -2,13 +2,13 @@
 Contributors: jamescollins, glenn-om4
 Donate link: http://om4.com.au/wordpress-plugins/#donate
 Tags: typekit, fonts, font, design, wp, multisite, wpmu
-Requires at least: 3.1
-Tested up to: 3.4.1
-Stable tag: 1.4
+Requires at least: 3.6
+Tested up to: 3.9.1
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use a range of hundreds of high quality fonts on your WordPress website by integrating the Typekit font service into your WordPress blog.
+Use a range of hundreds of high quality fonts on your WordPress website by integrating the Typekit font service into your WordPress website or blog.
 
 == Description ==
 
@@ -26,7 +26,13 @@ This plugin is designed to function securely with both WordPress and WordPress M
 
 If the website is using HTTPS/SSL, the SSL version of the Typekit embed code is automatically used instead.
 
-See the [Typekit Fonts for WordPress Plugin](http://om4.com.au/wordpress-plugins/typekit-fonts-for-wordpress-plugin/) home page for further information.
+**Available Languages**
+
+* Japanese – 日本語 ( ja )
+
+**Other Languages**
+
+If you would like to help translate this plugin into another language, [please visit the Transifex project page](https://www.transifex.com/projects/p/typekit-fonts-for-wordpress/). Thank you.
 
 == Installation ==
 
@@ -56,6 +62,16 @@ Please see [this page](http://help.typekit.com/customer/portal/articles/6786-bro
 2. Detailed inline help
 
 == Changelog ==
+
+= 1.7 =
+* Japanese language - thanks to ThemeBoy.
+* Improved translation support.
+
+= 1.6 =
+* WordPress 3.8 compatibility.
+
+= 1.5 =
+* WordPress 3.5 compatibility.
 
 = 1.4 =
 * Use the new scheme-less typekit.net embed code format ( ﻿//use.typekit.net/xyz.js ).
@@ -94,6 +110,12 @@ Please see [this page](http://help.typekit.com/customer/portal/articles/6786-bro
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.7 =
+* Japanese language support.
+
+= 1.5 =
+* WordPress 3.5 compatibility.
 
 = 1.4 =
 * Adds support for Typekit's new embed code format.

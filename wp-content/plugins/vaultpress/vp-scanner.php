@@ -4,12 +4,14 @@ class VP_FileScan {
 	var $path;
 	var $last_dir = null;
 	var $offset = 0;
+	var $ignore_symlinks = false;
 
-	function VP_FileScan( $path ) {
+	function __construct( $path, $ignore_symlinks = false ) {
 		if ( is_dir( $path ) )
 			$this->last_dir = $this->path = @realpath( $path );
 		else
 			$this->last_dir = $this->path = dirname( @realpath( $path ) );
+		$this->ignore_symlinks = $ignore_symlinks;
 	}
 
 	function get_files( $limit = 100 ) {
@@ -26,7 +28,7 @@ class VP_FileScan {
 
 	function _scan_files( $path, &$files, $offset, $limit, &$last_dir ) {
 		$_offset = 0;
-		if ( $handle = opendir( $path ) ) {
+		if ( is_readable( $path ) && $handle = opendir( $path ) ) {
 			while( false !== ( $entry = readdir( $handle ) ) ) {
 				if ( '.' == $entry || '..' == $entry )
 					continue;
@@ -40,6 +42,8 @@ class VP_FileScan {
 				if ( !empty( $next[0] ) && $next[0] != $entry )
 					continue;
 				if ( rtrim( $last_dir, DIRECTORY_SEPARATOR ) == rtrim( $path, DIRECTORY_SEPARATOR ) && $_offset < $offset )
+					continue;
+				if ( $this->ignore_symlinks && is_link( $full_entry ) )
 					continue;
 
 				if ( rtrim( $last_dir, DIRECTORY_SEPARATOR ) == rtrim( $path, DIRECTORY_SEPARATOR ) ) {
@@ -96,7 +100,7 @@ function vp_is_interesting_file($file) {
 function vp_scan_file($file, $tmp_file = null) {
 	$real_file = vp_get_real_file_path( $file, $tmp_file );
 	$file_size = file_exists( $real_file ) ? @filesize( $real_file ) : 0;
-	if ( !$file_size || $file_size > apply_filters( 'scan_max_file_size', 3 * 1024 * 1024 ) ) // don't scan empty or files larger than 3MB.
+	if ( !is_readable( $real_file ) || !$file_size || $file_size > apply_filters( 'scan_max_file_size', 3 * 1024 * 1024 ) ) // don't scan empty or files larger than 3MB.
 		return false;
 
 	$file_content = null;
@@ -107,28 +111,38 @@ function vp_scan_file($file, $tmp_file = null) {
 	if ( !vp_is_interesting_file( $file ) ) // only scan relevant files.
 		return false;
 
+	if ( !isset( $GLOBALS['vp_signatures'] ) )
+		$GLOBALS['vp_signatures'] = array();
+
 	$found = array ();
 	foreach ( $GLOBALS['vp_signatures'] as $signature ) {
+		if ( !is_object( $signature ) || !isset( $signature->patterns ) )
+			continue;
 		// if there is no filename_regex, we assume it's the same of vp_is_interesting_file().
 		if ( empty( $signature->filename_regex ) || preg_match( '#' . addcslashes( $signature->filename_regex, '#' ) . '#i', $file ) ) {
-			if ( null === $file_content )
-				$file_content = file_get_contents( $real_file );
+			if ( null === $file_content || !is_array( $file_content ) )
+				$file_content = file( $real_file );
 
 			$is_vulnerable = true;
-			reset( $signature->patterns );
 			$matches = array ();
-			while ( $is_vulnerable && list( , $pattern ) = each( $signature->patterns ) ) {
-				if ( !preg_match( '#' . addcslashes( $pattern, '#' ) . '#im', $file_content, $match ) ) {
-					$is_vulnerable = false;
-					break;
+			if ( is_array( $file_content ) && ( $signature->patterns ) && is_array( $signature->patterns ) ) {
+				reset( $signature->patterns );
+				while ( $is_vulnerable && list( , $pattern ) = each( $signature->patterns ) ) {
+					if ( ! $match = preg_grep( '#' . addcslashes( $pattern, '#' ) . '#im', $file_content ) ) {
+						$is_vulnerable = false;
+						break;
+					}
+					$matches += $match;
 				}
-				$matches[] = $match;
+			} else {
+				$is_vulnerable = false;
 			}
+			$debug_data = array( 'matches' => $matches );
 			// Additional checking needed?
 			if ( method_exists( $signature, 'get_detailed_scanner' ) && $scanner = $signature->get_detailed_scanner() )
-				$is_vulnerable = $scanner->scan( $is_vulnerable, $file, $real_file, $file_content, $matches );
+				$is_vulnerable = $scanner->scan( $is_vulnerable, $file, $real_file, $file_content, $debug_data );
 			if ( $is_vulnerable ) {
-				$found[$signature->id] = $matches;
+				$found[$signature->id] = $debug_data;
 				if ( isset( $signature->severity ) && $signature->severity > 8 ) // don't continue scanning
 					break;
 			}

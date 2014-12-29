@@ -3,7 +3,7 @@
 Plugin Name: Typekit Fonts for WordPress
 Plugin URI: http://om4.com.au/wordpress-plugins/typekit-fonts-for-wordpress-plugin/
 Description: Use a range of hundreds of high quality fonts on your WordPress website by integrating the <a href="http://typekit.com">Typekit</a> font service into your WordPress blog.
-Version: 1.4
+Version: 1.7
 Author: OM4
 Author URI: http://om4.com.au/
 Text Domain: om4-typekit
@@ -11,7 +11,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/*  Copyright 2009-2012 OM4 (email : info@om4.com.au)
+/*  Copyright 2009-2014 OM4 (email : info@om4.com.au)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -88,11 +88,11 @@ class OM4_Typekit {
 		// Store the name of the directory that this plugin is installed in
 		$this->dirname = str_replace('/typekit.php', '', plugin_basename(__FILE__));
 
-		register_activation_hook(__FILE__, array(&$this, 'Activate'));
+		register_activation_hook(__FILE__, array($this, 'Activate'));
 
-		add_action('init', array(&$this, 'Initialise'));
+		add_action('init', array($this, 'Initialise'));
 		
-		add_action('wp_head', array(&$this, 'HeaderCode'), 99);
+		add_action('wp_head', array($this, 'HeaderCode'), 99);
 
 		$data = get_option($this->optionName);
 		if (is_array($data)) {

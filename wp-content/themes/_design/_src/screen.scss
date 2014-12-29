@@ -1,4 +1,4 @@
-/* ## Bring in all Compass Helpers */ 
+/* ## Bring in all Compass Helpers */
 @import "partials/base";
 
 /* ## Base CSS */
@@ -20,7 +20,7 @@
 
 
 /* ============================================= */
-/*	Universal						   			 */ 
+/*	Universal						   			 */
 /* ============================================= */
 
 a 		{ 	text-decoration: none; color: inherit; }
@@ -255,7 +255,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		}
 
 		#searchform {
-			@extend .form;
+			// @extend .form;
 			width: 19%;
 			float: right;
 			text-align: center;
@@ -326,7 +326,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		@include media-grid(2,20px);
 
 		.widget-container {
-			@extend .media-block;
+			// @extend .media-block;
 		}
 	}
 
@@ -392,7 +392,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	position: relative;
 	font-size: 16px;
 	font: normal 16px/24px "Georgia", Times, Times New Roman, serif;
-	
+
 	p a {
 		color: $link;
 	}
@@ -416,7 +416,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .home-tz {
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 	.entry-title {
 		margin-bottom: 10px;
 		a {
@@ -470,9 +470,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			display: block;
 			padding: 8px;
 			color: #FFF;
-			background-color: $b-blue;	
+			background-color: $b-blue;
 
-			&:hover {		
+			&:hover {
 				background-color: darken($b-blue, 10%);
 			}
 		}
@@ -555,7 +555,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	//Content image rules
 	img.alignleft {
 		margin: 10px 10px 10px 0;
-	} 
+	}
 
 	img.alignright {
 		margin: 10px 0 10px 10px;
@@ -663,10 +663,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 	.alignright {
 		float: right;
+
+		&.size-full {
+			width: auto;
+		}
 	}
 
 	.alignleft {
 		float: left;
+
+		&.size-full {
+			width: auto;
+		}
 	}
 
 
@@ -709,7 +717,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .comments {
 	ol {
-		li { 
+		li {
 			list-style-type: none;
 			margin: 0;
 		}
@@ -795,7 +803,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		}
 		span {
 			display: block;
-			margin: 5px 5px 0 0;	
+			margin: 5px 5px 0 0;
 			float: right;
 			width: 16px;
 			@include triangle(down, 8px, $b-blue);
@@ -834,7 +842,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			margin: 0 0 20px 0;
 		}
 
-		
+
 		.grid {
 			margin: 0 0 20px 0;
 			li p {
@@ -1081,7 +1089,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 /* ============================================= */
-/*	Print Styles							     
+/*	Print Styles
 	Inline to avoid required HTTP connection     */
 /* ============================================= */
 
