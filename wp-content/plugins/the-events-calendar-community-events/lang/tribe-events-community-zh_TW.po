@@ -1,0 +1,1144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Community Events 3.5\n"
+"POT-Creation-Date: 2014-03-27 10:12-0800\n"
+"PO-Revision-Date: 2014-06-20 12:03-0800\n"
+"Last-Translator: \n"
+"Language-Team: Modern Tribe, Inc. <pro@tri.be>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin-views/community-options-template.php:37
+msgid "Placed in the Trash"
+msgstr "丟棄到回收桶中"
+
+#: ../admin-views/community-options-template.php:38
+msgid "Permanently Deleted"
+msgstr "永久刪除"
+
+#: ../admin-views/community-options-template.php:45
+msgid "No Default"
+msgstr "沒有預設"
+
+#: ../admin-views/community-options-template.php:53
+msgid "Use New Venue/No Default"
+msgstr "使用新地點／沒有預設"
+
+#: ../admin-views/community-options-template.php:68
+msgid "Community Events Settings"
+msgstr "Community Events 設定"
+
+#: ../admin-views/community-options-template.php:73
+#, php-format
+msgid ""
+"<p>Community Events enables users to submit events through a form on your "
+"site. Whether soliciting contributions from anonymous users or registered "
+"members, you have complete editorial control over what makes it onto the "
+"calendar.</p><p>Before jumping in, make sure you've checked out our <a href="
+"\"%s\">Community Events new user primer</a>: it features both videos and "
+"written steps covering how the plugin works and what the different options "
+"can do to enhance your site."
+msgstr ""
+"<p>Community Events 能讓使用者透過你網站上的表格提交活動， 無論是從匿名使用者"
+"或註冊會員所提交的活動，你能完全決定是否讓其加入到行事曆。</p><p>進入此之前，"
+"請確定你已查閱我們的 <a href=\"%s\">Community Events 使用者操作說明</a>：其包"
+"含有教學影片和外掛的使用步驟，還有哪些選項可以強化你的網站。"
+
+#: ../admin-views/community-options-template.php:83
+msgid "General"
+msgstr "一般"
+
+#: ../admin-views/community-options-template.php:89
+msgid "Allow anonymous submissions"
+msgstr "允許匿名者提交"
+
+#: ../admin-views/community-options-template.php:90
+msgid ""
+"Check this box to allow users to submit events without having a WordPress "
+"account"
+msgstr "勾選此方格允許沒有 WordPress 帳號的使用者可以提交活動。"
+
+#: ../admin-views/community-options-template.php:98
+msgid "Use visual editor for event descriptions"
+msgstr "使用可視化編輯器編輯活動說明。"
+
+#: ../admin-views/community-options-template.php:106
+msgid "Default status for submitted events"
+msgstr "提交活動預設狀態"
+
+#: ../admin-views/community-options-template.php:116
+msgid "Community rewrite slug"
+msgstr "社群修改代稱"
+
+#: ../admin-views/community-options-template.php:120
+msgid ""
+"The slug used for building the community events URL - it is appended to the "
+"main events slug. Your current community events URLs are"
+msgstr ""
+"建立使用於社群活動網址的代稱 - 其附加於主活動代稱上，你目前的社群活動網址為"
+
+#: ../admin-views/community-options-template.php:133
+msgid "Alerts"
+msgstr "提示"
+
+#: ../admin-views/community-options-template.php:138
+msgid "Send an email alert when a new event is submitted"
+msgstr "當有活動提交時傳送電子郵件提示"
+
+#: ../admin-views/community-options-template.php:146
+msgid "Email addresses to be notified"
+msgstr "收取通知的電子郵件地址"
+
+#: ../admin-views/community-options-template.php:149
+msgid "One address per line"
+msgstr "每行一個電子郵件地址"
+
+#: ../admin-views/community-options-template.php:155
+msgid "Members"
+msgstr "會員"
+
+#: ../admin-views/community-options-template.php:160
+msgid "Control the permissions for your logged in users. Allow them to:"
+msgstr "控制許可給已登入的使用者，允許他們："
+
+#: ../admin-views/community-options-template.php:165
+msgid "Edit their submissions"
+msgstr "編輯他們的提交"
+
+#: ../admin-views/community-options-template.php:173
+msgid "Remove their submissions"
+msgstr "移除他們的提交"
+
+#: ../admin-views/community-options-template.php:181
+msgid "Deleted events should be:"
+msgstr "刪除活動應："
+
+#: ../admin-views/community-options-template.php:190
+#: ../lib/tribe-community-events.class.php:535
+#: ../lib/tribe-community-events.class.php:1003
+#: ../views/community/modules/delete.php:24
+#: ../views/community/modules/header-links.php:18
+msgid "My Events"
+msgstr "我的活動"
+
+#: ../admin-views/community-options-template.php:195
+msgid "Events per page"
+msgstr "每頁活動"
+
+#: ../admin-views/community-options-template.php:196
+msgid "This is the number of events displayed per page"
+msgstr "這是每頁顯示活動的筆數"
+
+#: ../admin-views/community-options-template.php:204
+msgid "Date/time format"
+msgstr "日期／時間格式"
+
+#: ../admin-views/community-options-template.php:205
+msgid "Help with date &amp; time formatting"
+msgstr "幫助日期 &amp; 時間格式化"
+
+#: ../admin-views/community-options-template.php:213
+msgid "Access Control"
+msgstr "進入控制"
+
+#: ../admin-views/community-options-template.php:218
+msgid "Block access to WordPress dashboard"
+msgstr "阻擋進入 WordPress 控制台"
+
+#: ../admin-views/community-options-template.php:219
+msgid "Also disables the admin bar"
+msgstr "並關閉管理員工具列"
+
+#: ../admin-views/community-options-template.php:227
+msgid "Roles to block"
+msgstr "阻擋角色"
+
+#: ../admin-views/community-options-template.php:237
+msgid "Redirect URL"
+msgstr "重新導向網址"
+
+#: ../admin-views/community-options-template.php:238
+msgid ""
+"Where users will be sent if they attempt to access the admin<br>Should be a "
+"full url e.g. <code>http://domain.com/path/</code> <br> Leave blank for "
+"homepage"
+msgstr ""
+"如果使用者試圖要進入管理後台時將被導向至<br>應該是完整的網址，例如 "
+"<code>http://domain.com/path/</code> <br> 留白時將導向至首頁。"
+
+#: ../admin-views/community-options-template.php:248
+msgid "PRO Options"
+msgstr "PRO 選項"
+
+#: ../admin-views/community-options-template.php:254
+msgid "Default venue for submitted events"
+msgstr "提交活動預設地點"
+
+#: ../admin-views/community-options-template.php:265
+msgid "Default organizer for submitted events"
+msgstr "提交活動預設主辦人"
+
+#: ../lib/tribe-community-events.class.php:264
+msgid "edit"
+msgstr "編輯"
+
+#: ../lib/tribe-community-events.class.php:265
+msgid "add"
+msgstr "新增"
+
+#: ../lib/tribe-community-events.class.php:266
+msgid "delete"
+msgstr "刪除"
+
+#: ../lib/tribe-community-events.class.php:267
+msgid "list"
+msgstr "列表"
+
+#: ../lib/tribe-community-events.class.php:269
+msgid "venue"
+msgstr "地點"
+
+#: ../lib/tribe-community-events.class.php:270
+msgid "organizer"
+msgstr "主辦人"
+
+#: ../lib/tribe-community-events.class.php:271
+#: ../views/community/modules/recurrence.php:86
+msgid "event"
+msgstr "活動"
+
+#: ../lib/tribe-community-events.class.php:419
+#: ../lib/tribe-community-events.class.php:924
+msgid "Edit a Venue"
+msgstr "編輯活動"
+
+#: ../lib/tribe-community-events.class.php:438
+#: ../lib/tribe-community-events.class.php:927
+msgid "Edit an Organizer"
+msgstr "編輯主辨人"
+
+#: ../lib/tribe-community-events.class.php:456
+#: ../lib/tribe-community-events.class.php:921
+msgid "Edit an Event"
+msgstr "編輯活動"
+
+#: ../lib/tribe-community-events.class.php:475
+msgid "Redirect"
+msgstr "重新導向"
+
+#: ../lib/tribe-community-events.class.php:493
+#: ../lib/tribe-community-events.class.php:1025
+msgid "Submit an Event"
+msgstr "提交活動"
+
+#: ../lib/tribe-community-events.class.php:519
+#: ../lib/tribe-community-events.class.php:906
+msgid "Remove an Event"
+msgstr "移除活動"
+
+#: ../lib/tribe-community-events.class.php:609
+msgid "Not found."
+msgstr "未發現。"
+
+#: ../lib/tribe-community-events.class.php:754
+msgid ""
+"Community Events requires non-default (pretty) permalinks to be enabled or "
+"the [tribe_community_events] shortcode to exist on a page."
+msgstr ""
+"Community Events 需要非預設 (漂亮) 連結以激活其附加元件本身或讓此 "
+"[tribe_community_events] 存在於頁面。"
+
+#: ../lib/tribe-community-events.class.php:831
+msgid ""
+"Are you sure you want to permanently delete this instance of a recurring "
+"event?"
+msgstr "你確定要永久刪除此循環活動的 instance 嗎？"
+
+#: ../lib/tribe-community-events.class.php:831
+#: ../lib/tribe-community-events.class.php:836
+msgid "Delete"
+msgstr "刪除"
+
+#: ../lib/tribe-community-events.class.php:836
+msgid "Are you sure?"
+msgstr "你確定嗎？"
+
+#: ../lib/tribe-community-events.class.php:909
+msgid "Remove a Venue"
+msgstr "移除地點"
+
+#: ../lib/tribe-community-events.class.php:912
+msgid "Remove an Organizer"
+msgstr "移除主辦人"
+
+#: ../lib/tribe-community-events.class.php:915
+#: ../lib/tribe-community-events.class.php:930
+msgid "Unknown Post Type"
+msgstr "未知的文章類型"
+
+#: ../lib/tribe-community-events.class.php:1063
+msgid "This shortcode can only be used in pages."
+msgstr "此 shortcode 僅能使用於頁面。"
+
+#: ../lib/tribe-community-events.class.php:1290
+msgid "Community Events Submission"
+msgstr "Community Events 提交"
+
+#: ../lib/tribe-community-events.class.php:1296
+msgid "Event Organizer"
+msgstr "活動主辦人"
+
+#: ../lib/tribe-community-events.class.php:1297
+msgid "Event Venue"
+msgstr "活動地點"
+
+#: ../lib/tribe-community-events.class.php:1298
+msgid "Description"
+msgstr "說明"
+
+#: ../lib/tribe-community-events.class.php:1299
+msgid "Review Event"
+msgstr "重新檢視活動"
+
+#: ../lib/tribe-community-events.class.php:1400
+msgid "Trashed Event #"
+msgstr "丟棄活動 #"
+
+#: ../lib/tribe-community-events.class.php:1403
+msgid "Deleted Event #"
+msgstr "刪除活動 #"
+
+#: ../lib/tribe-community-events.class.php:1412
+#, php-format
+msgid "Removed occurence %s from Event #"
+msgstr ""
+
+#: ../lib/tribe-community-events.class.php:1415
+#, php-format
+msgid "This event (#%s) does not appear to exist."
+msgstr "此活動 (#%s) 不存在。"
+
+#: ../lib/tribe-community-events.class.php:1418
+msgid "You do not have permission to delete this event."
+msgstr "你不被允許刪除此活動。"
+
+#: ../lib/tribe-community-events.class.php:1467
+#, php-format
+msgid ""
+"%sWarning:%s You are editing a recurring event. All changes will be applied "
+"to the entire series."
+msgstr "%s注意：%s 你正編輯一個循環活動，所有改變將應用於全系列活動。"
+
+#: ../lib/tribe-community-events.class.php:1487
+msgid "Event not found."
+msgstr "未發現活動。"
+
+#: ../lib/tribe-community-events.class.php:1495
+msgid "Please log in first."
+msgstr "請先登入。"
+
+#: ../lib/tribe-community-events.class.php:1501
+msgid "You do not have permission to edit this event."
+msgstr "你不被允許編輯此活動。"
+
+#: ../lib/tribe-community-events.class.php:1530
+msgid "Event updated."
+msgstr "活動已更新。"
+
+#: ../lib/tribe-community-events.class.php:1532
+#: ../lib/tribe-community-events.class.php:1547
+msgid "Submit another event"
+msgstr "提交另一活動"
+
+#: ../lib/tribe-community-events.class.php:1545
+msgid "Event submitted."
+msgstr "活動已提交。"
+
+#: ../lib/tribe-community-events.class.php:1628
+#: ../views/community/event-list.php:102
+msgid "View"
+msgstr "檢視"
+
+#: ../lib/tribe-community-events.class.php:1669
+msgid "There was a problem saving your event, please try again."
+msgstr "儲存你的活動時出現問題，請稍後再試。"
+
+#: ../lib/tribe-community-events.class.php:1671
+msgid "There was a problem submitting your event, please try again."
+msgstr "提交你的活動時出現問題，請稍後再試。"
+
+#: ../lib/tribe-community-events.class.php:1676
+msgid "Event title and description are required."
+msgstr "活動標題及說明為必填資料。"
+
+#: ../lib/tribe-community-events.class.php:1678
+msgid "Event description is required."
+msgstr "活動說明為必填資料。"
+
+#: ../lib/tribe-community-events.class.php:1680
+msgid "Event title is required."
+msgstr "活動標題為必填資料。"
+
+#: ../lib/tribe-community-events.class.php:1723
+msgid "Venue not found."
+msgstr "未發現地點。"
+
+#: ../lib/tribe-community-events.class.php:1729
+#: ../lib/tribe-community-events.class.php:1816
+msgid "This feature is not currently enabled."
+msgstr "此功能目前未啟用。"
+
+#: ../lib/tribe-community-events.class.php:1732
+msgid "Please log in to edit this venue"
+msgstr "請登入以編輯此地點"
+
+#: ../lib/tribe-community-events.class.php:1736
+msgid "You do not have permission to edit this venue."
+msgstr "你不被允許編輯此地點。"
+
+#: ../lib/tribe-community-events.class.php:1761
+msgid "Venue updated."
+msgstr "地點已更新。"
+
+#: ../lib/tribe-community-events.class.php:1771
+msgid "Venue name cannot be blank."
+msgstr "地點名稱不能是空白。"
+
+#: ../lib/tribe-community-events.class.php:1775
+msgid "There was a problem updating your venue, please try again."
+msgstr "更新你的地點時發生問題，請稍後再試。"
+
+#: ../lib/tribe-community-events.class.php:1812
+msgid "Organizer not found."
+msgstr "未發現主辦人。"
+
+#: ../lib/tribe-community-events.class.php:1819
+msgid "Please log in to edit this organizer"
+msgstr "請登入以編輯此主辦人"
+
+#: ../lib/tribe-community-events.class.php:1823
+msgid "You do not have permission to edit this organizer."
+msgstr "你不被允許編輯此主辦人。"
+
+#: ../lib/tribe-community-events.class.php:1848
+msgid "Organizer updated."
+msgstr "主辦人已更新。"
+
+#: ../lib/tribe-community-events.class.php:1859
+msgid "Organizer name cannot be blank."
+msgstr "主辦人名稱不能是空白。"
+
+#: ../lib/tribe-community-events.class.php:1863
+msgid "There was a problem updating this organizer, please try again."
+msgstr "更新你的主辦人時發生問題，請稍後再試。"
+
+#: ../lib/tribe-community-events.class.php:1933
+msgid "Please log in to view your events"
+msgstr "請登入以檢視你的活動"
+
+#: ../lib/tribe-community-events.class.php:2038
+msgid "Fake Title"
+msgstr "標題是假的"
+
+#: ../lib/tribe-community-events.class.php:2209
+#, php-format
+msgid "Show all categories ( %d )"
+msgstr "顯示所有類別 ( %d )"
+
+#: ../lib/tribe-community-events.class.php:2268
+msgid "The requested page number was not found."
+msgstr "未發現需求頁數。"
+
+#: ../lib/tribe-community-events.class.php:2523
+msgid "Community"
+msgstr "Community"
+
+#: ../lib/tribe-community-events.class.php:2538
+msgid "This template is also used for Community Events."
+msgstr "此模板亦使用於 Community Events。"
+
+#: ../lib/tribe-community-events.class.php:2779
+msgid "Community: Submit Event"
+msgstr "Community: 提交活動"
+
+#: ../lib/tribe-community-events.class.php:2787
+msgid "Community: My Events"
+msgstr "Community: 我的活動"
+
+#: ../lib/tribe-community-events.class.php:2796
+msgid "Community Events"
+msgstr "Community Events"
+
+#: ../lib/tribe-community-events.class.php:2813
+msgid "Settings"
+msgstr "設定"
+
+#: ../tribe-community-events.php:64
+msgid "The Events Calendar"
+msgstr "The Events Calendar"
+
+#: ../tribe-community-events.php:65
+#, php-format
+msgid ""
+"To begin using The Events Calendar: Community Events, please install the "
+"latest version of <a href=\"%s\" class=\"thickbox\" title=\"%s\">The Events "
+"Calendar</a>."
+msgstr ""
+"開始使用 The Events Calendar: Community Events，請安裝最新版本的 <a href=\"%s"
+"\" class=\"thickbox\" title=\"%s\">The Events Calendar</a>."
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:9
+#: ../vendor/pue-client/admin-views/license-key.view.php:13
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:291
+msgid "License Key"
+msgstr ""
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:10
+msgid "A valid license key is required for support and updates."
+msgstr ""
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:16
+msgid "Replace empty fields"
+msgstr ""
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:25
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:292
+msgid "A valid license key is required for support and updates"
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:360
+#, fuzzy
+msgid "License key(s) updated."
+msgstr "地點已更新。"
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:400
+msgid "Sorry, key validation server is not available."
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:402
+msgid "Sorry, this key is expired."
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:404
+msgid "Sorry, this key is out of installs."
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:406
+msgid "Sorry, this key is not valid."
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:409
+#, php-format
+msgid "Valid Key! Expires on %s"
+msgstr ""
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:413
+#, php-format
+msgid ""
+"Hmmm... something's wrong with this validator. Please contact <a href=\"%s"
+"\">support.</a>"
+msgstr ""
+
+#: ../vendor/tribe-support/tribe-support.class.php:52
+msgid ""
+"Sometimes it's hard to tell what's going wrong without knowing more about "
+"your system steup. For your convenience, we've put together a little report "
+"on what's cooking under the hood."
+msgstr ""
+
+#: ../vendor/tribe-support/tribe-support.class.php:53
+msgid ""
+"If you suspect that the problem you're having is related to another plugin, "
+"or we're just plain having trouble reproducing your bug report, please copy "
+"and send all of this to our support team."
+msgstr ""
+
+#: ../vendor/tribe-support/tribe-support.class.php:57
+msgid "System Information"
+msgstr ""
+
+#: ../vendor/tribe-support/tribe-support.class.php:71
+msgid "Send a support request for this site."
+msgstr ""
+
+#: ../vendor/wp-router/WP_Route.class.php:36
+#, php-format
+msgid "Missing %s"
+msgstr "遺失 %s"
+
+#: ../vendor/wp-router/WP_Route.class.php:63
+#, php-format
+msgid "Property not found: %s."
+msgstr "找不到屬性：%s."
+
+#: ../vendor/wp-router/WP_Route.class.php:77
+#, php-format
+msgid "Invalid value for %s. Value may not be empty."
+msgstr "無效數值 %s，數值不能空白。"
+
+#: ../vendor/wp-router/WP_Route.class.php:80
+#, php-format
+msgid "Invalid value for %1$s: %2$s. Value must be an array."
+msgstr "無效數值 %1$s: %2$s。數值必須是陣列。"
+
+#: ../vendor/wp-router/WP_Route.class.php:250
+msgid "You are not authorized to access this page"
+msgstr "你未被授權進入此頁面。"
+
+#: ../vendor/wp-router/WP_Route.class.php:251
+msgid "Access Denied"
+msgstr "拒絕進入"
+
+#: ../vendor/wp-router/WP_Router_Page.class.php:74
+msgid "WP Router Placeholder Page"
+msgstr "WP Router Placeholder Page"
+
+#: ../vendor/wp-router/WP_Router_Utility.class.php:49
+#, php-format
+msgid "%1$s requires WordPress %2$s or higher and PHP %3$s or higher."
+msgstr "%1$s 需求 WordPress %2$s 或更高與 PHP %3$s 或更高。"
+
+#: ../views/community/edit-event.php:31
+msgid "Event Title:"
+msgstr "活動標題："
+
+#: ../views/community/edit-event.php:31 ../views/community/edit-event.php:44
+#: ../views/community/edit-organizer.php:28
+#: ../views/community/edit-venue.php:28
+msgid "(required)"
+msgstr "(必填)"
+
+#: ../views/community/edit-event.php:44
+msgid "Event Description:"
+msgstr "活動說明："
+
+#: ../views/community/edit-event.php:76
+msgid "Update Event"
+msgstr "更新活動"
+
+#: ../views/community/edit-event.php:78
+msgid "Submit Event"
+msgstr "提交活動"
+
+#: ../views/community/edit-organizer.php:27
+msgid "Organizer Name:"
+msgstr "主辦人名稱："
+
+#: ../views/community/edit-organizer.php:38
+msgid "Organizer Description:"
+msgstr "主辦人說明："
+
+#: ../views/community/edit-organizer.php:64
+msgid "Update Organizer"
+msgstr "更新主辦人"
+
+#: ../views/community/edit-organizer.php:64
+msgid "Submit Organizer"
+msgstr "提交主辦人"
+
+#: ../views/community/edit-venue.php:27
+msgid "Venue Name:"
+msgstr "地點名稱："
+
+#: ../views/community/edit-venue.php:38
+msgid "Venue Description:"
+msgstr "地點說明："
+
+#: ../views/community/edit-venue.php:64
+msgid "Update Venue"
+msgstr "更新地點"
+
+#: ../views/community/edit-venue.php:64
+msgid "Submit Venue"
+msgstr "提交地點"
+
+#: ../views/community/event-list.php:20
+#: ../views/community/modules/delete.php:20
+msgid "Add New"
+msgstr "新增"
+
+#: ../views/community/event-list.php:25
+msgid "Display"
+msgstr "顯示"
+
+#: ../views/community/event-list.php:40
+#: ../views/community/modules/delete.php:28
+#: ../views/community/modules/header-links.php:19
+msgid "Not"
+msgstr "沒有"
+
+#: ../views/community/event-list.php:43
+#: ../views/community/modules/delete.php:29
+#: ../views/community/modules/header-links.php:19
+msgid "Log Out"
+msgstr "登出"
+
+#: ../views/community/event-list.php:51
+msgid "There are no upcoming events in your queue."
+msgstr "未有符合你查詢條件的即將來臨活動。"
+
+#: ../views/community/event-list.php:66
+msgid "Status"
+msgstr "狀態"
+
+#: ../views/community/event-list.php:67
+msgid "Title"
+msgstr "標題"
+
+#: ../views/community/event-list.php:68
+msgid "Organizer"
+msgstr "主辦人"
+
+#: ../views/community/event-list.php:69
+msgid "Venue"
+msgstr "地點"
+
+#: ../views/community/event-list.php:70
+msgid "Category"
+msgstr "類別"
+
+#: ../views/community/event-list.php:72
+msgid "Recurring?"
+msgstr "循環？"
+
+#: ../views/community/event-list.php:73
+msgid "Start Date"
+msgstr "開始日期"
+
+#: ../views/community/event-list.php:74
+msgid "End Date"
+msgstr "結束日期"
+
+#: ../views/community/event-list.php:140
+msgid "Yes"
+msgstr "是"
+
+#: ../views/community/event-list.php:142
+msgid "No"
+msgstr "否"
+
+#: ../views/community/modules/cost.php:28
+msgid "Event Cost"
+msgstr "活動費用"
+
+#: ../views/community/modules/cost.php:34
+msgid "Currency Symbol:"
+msgstr "貨幣符號："
+
+#: ../views/community/modules/cost.php:44
+msgid "Cost:"
+msgstr "費用："
+
+#: ../views/community/modules/cost.php:51
+msgid "Leave blank to hide the field. Enter a 0 for events that are free."
+msgstr "留白以隱藏此欄位，輸入 0 表示活動免費。"
+
+#: ../views/community/modules/custom.php:32
+msgid "Additional Fields"
+msgstr "額外欄位"
+
+#: ../views/community/modules/datepickers.php:37
+msgid "Event Time &amp; Date"
+msgstr "活動時間 &amp; 日期"
+
+#: ../views/community/modules/datepickers.php:43
+msgid ""
+"You have changed the recurrence rules of this event. Saving the event will "
+"update all future events.  If you did not mean to change all events, then "
+"please refresh the page."
+msgstr ""
+"你已改變此活動的循環規則，儲存後未來活動的週期都將隨之更新，如你沒有要改變後"
+"續所有活動的週期請刷新此頁面。"
+
+#: ../views/community/modules/datepickers.php:48
+msgid "All day event?"
+msgstr "全天活動？"
+
+#: ../views/community/modules/datepickers.php:56
+msgid "Start Date / Time:"
+msgstr "開始日期／時間："
+
+#: ../views/community/modules/datepickers.php:60
+#: ../views/community/modules/datepickers.php:71
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+#: ../views/community/modules/datepickers.php:68
+msgid "End Date / Time:"
+msgstr "結束日期／時間："
+
+#: ../views/community/modules/image.php:26
+msgid "Event Image"
+msgstr "活動圖片"
+
+#: ../views/community/modules/image.php:32
+msgid "Upload"
+msgstr "上傳"
+
+#: ../views/community/modules/image.php:44
+msgid "Images that are not png, jpg, or gif will not be uploaded."
+msgstr "圖片格是必須為 png、jpg 或 gif。 "
+
+#: ../views/community/modules/organizer.php:34
+msgid "Event Organizer Details"
+msgstr "活動主辦人詳述"
+
+#: ../views/community/modules/organizer.php:44
+msgid "Organizer Name"
+msgstr "主辦人名稱"
+
+#: ../views/community/modules/organizer.php:56
+#: ../views/community/modules/venue.php:144
+msgid "Phone"
+msgstr "聯絡電話"
+
+#: ../views/community/modules/organizer.php:66
+msgid "Website"
+msgstr "網址"
+
+#: ../views/community/modules/organizer.php:75
+msgid "Email"
+msgstr "電子郵件信箱"
+
+#: ../views/community/modules/recurrence.php:75
+msgid "Recurrence:"
+msgstr "循環："
+
+#: ../views/community/modules/recurrence.php:81
+msgid "None"
+msgstr "沒有"
+
+#: ../views/community/modules/recurrence.php:82
+msgid "day"
+msgstr "天"
+
+#: ../views/community/modules/recurrence.php:82
+msgid "days"
+msgstr "天"
+
+#: ../views/community/modules/recurrence.php:82
+msgid "Every Day"
+msgstr "每天"
+
+#: ../views/community/modules/recurrence.php:83
+msgid "week"
+msgstr "週"
+
+#: ../views/community/modules/recurrence.php:83
+msgid "weeks"
+msgstr "週"
+
+#: ../views/community/modules/recurrence.php:83
+msgid "Every Week"
+msgstr "每週"
+
+#: ../views/community/modules/recurrence.php:84
+msgid "month"
+msgstr "月"
+
+#: ../views/community/modules/recurrence.php:84
+msgid "months"
+msgstr "月"
+
+#: ../views/community/modules/recurrence.php:84
+msgid "Every Month"
+msgstr "每月"
+
+#: ../views/community/modules/recurrence.php:85
+msgid "year"
+msgstr "年"
+
+#: ../views/community/modules/recurrence.php:85
+msgid "years"
+msgstr "年"
+
+#: ../views/community/modules/recurrence.php:85
+msgid "Every Year"
+msgstr "每年"
+
+#: ../views/community/modules/recurrence.php:86
+msgid "events"
+msgstr "活動"
+
+#: ../views/community/modules/recurrence.php:86
+msgid "Custom"
+msgstr "自訂"
+
+#: ../views/community/modules/recurrence.php:90
+msgid "End"
+msgstr "結束"
+
+#: ../views/community/modules/recurrence.php:93
+msgid "On"
+msgstr "於"
+
+#: ../views/community/modules/recurrence.php:94
+msgid "After"
+msgstr "之後"
+
+#: ../views/community/modules/recurrence.php:95
+msgid "Never"
+msgstr "從未"
+
+#: ../views/community/modules/recurrence.php:108
+msgid "You must select a recurrence end date"
+msgstr "你必須選擇循環活動結束的日期。"
+
+#: ../views/community/modules/recurrence.php:118
+msgid "Frequency"
+msgstr "次數"
+
+#: ../views/community/modules/recurrence.php:120
+msgid "Day(s)"
+msgstr "天"
+
+#: ../views/community/modules/recurrence.php:120
+msgid "Daily"
+msgstr "每天"
+
+#: ../views/community/modules/recurrence.php:121
+msgid "Week(s) on:"
+msgstr "週循環於："
+
+#: ../views/community/modules/recurrence.php:121
+msgid "Weekly"
+msgstr "每週"
+
+#: ../views/community/modules/recurrence.php:122
+msgid "Month(s) on the:"
+msgstr "月循環於："
+
+#: ../views/community/modules/recurrence.php:122
+msgid "Monthly"
+msgstr "每月"
+
+#: ../views/community/modules/recurrence.php:123
+msgid "Year(s) on:"
+msgstr "年循環於："
+
+#: ../views/community/modules/recurrence.php:123
+msgid "Yearly"
+msgstr "每年"
+
+#: ../views/community/modules/recurrence.php:126
+msgid "Every"
+msgstr "每一"
+
+#: ../views/community/modules/recurrence.php:138
+msgid "M"
+msgstr "一"
+
+#: ../views/community/modules/recurrence.php:139
+msgid "Tu"
+msgstr "二"
+
+#: ../views/community/modules/recurrence.php:140
+msgid "W"
+msgstr "三"
+
+#: ../views/community/modules/recurrence.php:141
+msgid "Th"
+msgstr "四"
+
+#: ../views/community/modules/recurrence.php:142
+msgid "F"
+msgstr "五"
+
+#: ../views/community/modules/recurrence.php:143
+msgid "Sa"
+msgstr "六"
+
+#: ../views/community/modules/recurrence.php:144
+msgid "Su"
+msgstr "日"
+
+#: ../views/community/modules/recurrence.php:153
+#: ../views/community/modules/recurrence.php:203
+msgid "First"
+msgstr "第一"
+
+#: ../views/community/modules/recurrence.php:154
+#: ../views/community/modules/recurrence.php:204
+msgid "Second"
+msgstr "第二"
+
+#: ../views/community/modules/recurrence.php:155
+#: ../views/community/modules/recurrence.php:205
+msgid "Third"
+msgstr "第三"
+
+#: ../views/community/modules/recurrence.php:156
+#: ../views/community/modules/recurrence.php:206
+msgid "Fourth"
+msgstr "第四"
+
+#: ../views/community/modules/recurrence.php:157
+#: ../views/community/modules/recurrence.php:207
+msgid "Last"
+msgstr "最後"
+
+#: ../views/community/modules/recurrence.php:164
+#: ../views/community/modules/recurrence.php:210
+msgid "Monday"
+msgstr "星期一"
+
+#: ../views/community/modules/recurrence.php:165
+#: ../views/community/modules/recurrence.php:211
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../views/community/modules/recurrence.php:166
+#: ../views/community/modules/recurrence.php:212
+msgid "Wednesday"
+msgstr "星期三"
+
+#: ../views/community/modules/recurrence.php:167
+#: ../views/community/modules/recurrence.php:213
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../views/community/modules/recurrence.php:168
+#: ../views/community/modules/recurrence.php:214
+msgid "Friday"
+msgstr "星期五"
+
+#: ../views/community/modules/recurrence.php:169
+#: ../views/community/modules/recurrence.php:215
+msgid "Saturday"
+msgstr "星期六"
+
+#: ../views/community/modules/recurrence.php:170
+#: ../views/community/modules/recurrence.php:216
+msgid "Sunday"
+msgstr "星期日"
+
+#: ../views/community/modules/recurrence.php:172
+#: ../views/community/modules/recurrence.php:218
+msgid "Day"
+msgstr "天"
+
+#: ../views/community/modules/recurrence.php:182
+msgid "Jan"
+msgstr "一月"
+
+#: ../views/community/modules/recurrence.php:183
+msgid "Feb"
+msgstr "二月"
+
+#: ../views/community/modules/recurrence.php:184
+msgid "Mar"
+msgstr "三月"
+
+#: ../views/community/modules/recurrence.php:185
+msgid "Apr"
+msgstr "四月"
+
+#: ../views/community/modules/recurrence.php:186
+msgid "May"
+msgstr "五月"
+
+#: ../views/community/modules/recurrence.php:187
+msgid "Jun"
+msgstr "六月"
+
+#: ../views/community/modules/recurrence.php:191
+msgid "Jul"
+msgstr "七月"
+
+#: ../views/community/modules/recurrence.php:192
+msgid "Aug"
+msgstr "八月"
+
+#: ../views/community/modules/recurrence.php:193
+msgid "Sep"
+msgstr "九月"
+
+#: ../views/community/modules/recurrence.php:194
+msgid "Oct"
+msgstr "十月"
+
+#: ../views/community/modules/recurrence.php:195
+msgid "Nov"
+msgstr "十一月"
+
+#: ../views/community/modules/recurrence.php:196
+msgid "Dec"
+msgstr "十二月"
+
+#: ../views/community/modules/recurrence.php:201
+msgid "On the:"
+msgstr "於："
+
+#: ../views/community/modules/taxonomy.php:37
+msgid "Event Categories:"
+msgstr "活動類別："
+
+#: ../views/community/modules/venue.php:49
+msgid "Event Location Details"
+msgstr "活動位置詳述"
+
+#: ../views/community/modules/venue.php:59
+msgid "Venue Name"
+msgstr "地點名稱"
+
+#: ../views/community/modules/venue.php:71
+msgid "Address"
+msgstr "地址"
+
+#: ../views/community/modules/venue.php:82
+msgid "City"
+msgstr "城市"
+
+#: ../views/community/modules/venue.php:91
+msgid "Country"
+msgstr "國家"
+
+#: ../views/community/modules/venue.php:114
+msgid "State or Province"
+msgstr "州或省"
+
+#: ../views/community/modules/venue.php:120
+msgid "Select a State"
+msgstr "請選擇州"
+
+#: ../views/community/modules/venue.php:133
+msgid "Postal Code"
+msgstr "郵遞區號"
+
+#: ../views/community/modules/venue.php:156
+msgid "Show Google Maps Link"
+msgstr "顯示 Google 地圖連結"
+
+#: ../views/community/modules/venue.php:169
+msgid "Show Google Map"
+msgstr "顯示 Google 地圖"
+
+#: ../views/community/modules/website.php:30
+msgid "Event Website"
+msgstr "活動網址"
+
+#: ../views/community/modules/website.php:36
+msgid "URL"
+msgstr "網址"
+
+#~ msgid "Delete All"
+#~ msgstr "全部刪除"
+
+#~ msgid ""
+#~ "Are you sure you want to permanently delete all instances of this "
+#~ "recurring event?"
+#~ msgstr "你確定要永久刪除此循環活動的所有 instances 嗎？"
+
+#~ msgctxt "As in \"go back to previous page\""
+#~ msgid "Back"
+#~ msgstr "回上一頁"

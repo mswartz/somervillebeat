@@ -1,0 +1,1089 @@
+/* ## Bring in all Compass Helpers */ 
+@import "partials/base";
+
+/* ## Base CSS */
+// @import "project/type";
+@import "project/forms";
+// @import "project/tables";
+// @import "project/lists";
+
+/* ## Components */
+// @import "project/buttons";
+@import "project/dropdowns";
+// @import "project/tabs";
+// @import "project/modals";
+// @import "project/tooltips";
+
+/* ## Project */
+// @import "project/header";
+
+
+
+/* ============================================= */
+/*	Universal						   			 */ 
+/* ============================================= */
+
+a 		{ 	text-decoration: none; color: inherit; }
+strong	{	font-weight: bold;	}
+em   	{	font-style: italic;	}
+
+body {
+	padding: 0 10px;
+	font-family: $ff-meta;
+	font-size: 15px;
+
+	@media (min-width:1200px){
+		padding: 0;
+	}
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: $ff-tisa;
+
+	a {
+		color: $txt-black;
+	}
+}
+
+.h1 {
+	font-size: 32px;
+	color: $txt-black;
+}
+
+.h2 {
+	font-size: 24px;
+	color: $txt-black;
+}
+
+.h3, h3 {
+	font-size: 18px;
+	color: $txt-black;
+	font-family: $ff-tisa;
+	font-weight: bold;
+}
+
+.text {
+	font-family: $ff-meta;
+	font-size: 15px;
+}
+
+
+/**************************************/
+
+/*			Objects
+
+/**************************************/
+
+.hdr-box {
+	font: bold 18px/20px $ff-meta;
+	border-bottom: 8px solid $b-blue;
+	padding: 10px 0;
+	margin: 0 0 10px 0;
+}
+
+/***************************************/
+
+/*              Header
+
+/***************************************/
+
+
+.menu-header {
+	min-height: 60px;
+
+	.menu-logo {
+		text-align: center;
+		font-size: 40px;
+		padding: 10px 0 0 0;
+		a {
+			background-repeat: no-repeat;
+			background-position: top left;
+			text-indent: -9000px;
+			max-width: 210px;
+			height: 75px;
+			display: block;
+			// margin: 0 0 75px 0 ;
+			background-image: url("/wp-content/themes/_design/_img/beat-logo-stacked.png");
+			@include background-size(100%);
+
+
+			@media (min-width:599px){
+				width: 85%;
+				max-width: 600px;
+				margin: 0;
+				height: 60px;
+				background-image: url("/wp-content/themes/_design/_img/beat-logo.png");
+			}
+
+			@media (min-width:768px){
+				max-width: 600px;
+				margin: 0 auto;
+				height: 40px;
+				background-image: url("/wp-content/themes/_design/_img/beat-logo.png");
+			}
+		}
+	}
+
+	.menu-descrip {
+		display: none;
+	}
+
+	@media (min-width: 768px){
+		.menu-descrip {
+			display: block;
+			text-align: center;
+			font-family: $ff-meta;
+			font-size: 15px;
+			margin: 10px 0;
+		}
+	}
+}
+
+#menu-trigger {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 60px;
+	width: 60px;
+	background-color: $b-blue;
+	z-index: 10000;
+	@include trans;
+	@include border-radius(5px);
+
+	.menu-triangle {
+		display: block;
+		margin: 25px auto 0 auto;
+		width: 20px;
+		@include triangle(down, 10px, #FFF);
+
+		&.trigger-active {
+			@include rotate(180deg);
+		}
+	}
+
+	@media (min-width: 700px){
+		display: none;
+	}
+}
+
+#access {
+	li a {
+		display: block;
+		padding: 10px;
+		text-transform: uppercase;
+		font: bold 18px/20px $ff-meta;
+		// color: darken($b-blue, 20%);
+	}
+
+	@media (max-width: 699px){
+		background-color: white;
+		@include box-shadow(0px 0px 20px rgba(0,0,0,.5));
+		position: absolute;
+		z-index: 9999;
+		left: 6%;
+		right: 6%;
+		top: -500px;
+		border: 1px solid #EEE;
+		@include trans;
+
+		&.menu-active {
+			top: 20px;
+		}
+
+		#searchform {
+			width: 100%;
+			padding: 10px;
+			position: absolute;
+			background-color: #FFF;
+			// bottom: 0;
+
+			.screen-reader-text {
+				display: none;
+			}
+		}
+	}
+
+	@media (min-width: 700px){
+		width: 100%;
+		max-width: 1200px;
+		height: 50px;
+		margin: 0 0 20px 0;
+		background-color: $b-blue;
+		border-bottom: 5px solid darken($b-blue, 20%);
+
+		.menu-header {
+			height: 50px;
+			width: 80%;
+			float: left;
+
+			ul li {
+				@include inline-block;
+
+				a {
+					font-family: $ff-meta;
+					font-weight: bold;
+					font-size: 15px;
+					color: #FFF;
+					padding: 15px 5px;
+					height: 50px;
+					display: block;
+					text-overflow:ellipsis;
+
+					&:hover {
+						color: darken($b-blue, 30%);
+						border-bottom: 5px solid #000;
+					}
+
+					@media (min-width: 768px){
+						padding: 15px 5px;
+					}
+				}
+
+				&.current-menu-item a, &.current-post-parent a, &.current-category-ancestor a{
+					color: darken($b-blue, 30%);
+					border-bottom: 5px solid #000;
+				}
+
+			}
+		}
+
+		@media (min-width: 930px){
+			.menu-header ul li a {
+				font-size: 18px;
+			}
+		}
+
+		#searchform {
+			@extend .form;
+			width: 19%;
+			float: right;
+			text-align: center;
+			padding: 8px;
+
+			#s {
+		    background: url("/wp-content/themes/_design/_img/search-dark.png") no-repeat 10px 6px #FFF;
+		    border: 0 none;
+		    font: normal 14px $ff-meta;
+		    color: #666;
+		    width: 100%;
+		    padding: 3px 15px 3px 35px;
+
+		    @include border-radius(20px);
+		    @include box-shadow(0 1px 0 #EEE inset);
+		    @include trans;
+		    }
+
+			.screen-reader-text {
+				display: none;
+			}
+
+			#searchsubmit {
+				display: none;
+			}
+		}
+	}
+}// #access
+
+.site-container {
+	max-width: 1100px;
+	margin: 0 auto;
+
+	@media (min-width: 900px){
+		margin-top: 20px;
+	}
+}
+
+#content {
+	@media (min-width:900px) {
+		@include ui-grid-lr(70%, 30%, 2);
+	}
+}
+
+/***************************************/
+
+/*              Sidebar.php
+
+/***************************************/
+
+#sidebar .xoxo {
+	margin-bottom: 30px;
+	border-top: 5px solid #EEE;
+	padding: 20px 0 0 0;
+
+	.widget-container {
+		margin: 0 0 30px 0;
+	}
+
+	.sidebar-housead {
+		border: 5px solid $b-blue;
+		background-color: lighten($b-blue, 10%);
+		@include border-radius(5px);
+		padding: 10px;
+	}
+
+	@media (min-width: 600px) and (max-width: 900px){
+		@include media-grid(2,20px);
+
+		.widget-container {
+			@extend .media-block;
+		}
+	}
+
+	@media (min-width: 900px){
+		border: 0;
+	}
+}
+
+.execphpwidget {
+	a {
+		color: $link;
+	}
+}
+
+.tweets {
+	li {
+		margin-bottom: 15px;
+		font-family: $ff-meta;
+		font-size: 15px;
+
+		a {
+			color: $link;
+
+			&.timesince {
+				color: #CCC;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}// tweets
+
+
+
+/***************************************/
+
+/*              Home.php
+
+/***************************************/
+
+#home-cover {
+	margin: 0 0 20px 0;
+	border-bottom: 5px solid $b-blue;
+}
+
+#home-cover-img {
+	max-height: 350px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+}
+
+#home-cover-txt {
+	border-top: 10px solid rgba(255,255,255,.25);
+	margin-top: -10px;
+	padding: 10px;
+	background-color: rgba(255,255,255,.75);
+	@include box-shadow(0 0 30px #FFF inset);
+	position: relative;
+	font-size: 16px;
+	font: normal 16px/24px "Georgia", Times, Times New Roman, serif;
+	
+	p a {
+		color: $link;
+	}
+
+	.cover-cat {
+		font: normal 14px/20px $ff-meta;
+	}
+
+	.cover-entry-title {
+		@extend .h2;
+	}
+
+	@media (min-width: 600px) {
+		.cover-entry-title {
+			font-size: 32px;
+			line-height: 38px;
+			color: $txt-black;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.home-tz {
+	margin-bottom: 20px; 
+	.entry-title {
+		margin-bottom: 10px;
+		a {
+			@extend .h2;
+		}
+	}
+
+	p {
+		font: normal 15px/20px $ff-meta;
+		a {
+			color: $link;
+		}
+	}
+}
+
+.home-tz-img {
+	display: none;
+
+	@media (min-width: 480px){
+		display: block;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.home-tz-mod {
+	margin: 0 0 20px 0;
+	@media (min-width: 480px){
+		@include ui-grid-lr(25%, 75%, 2%);
+	}
+}
+
+.home .home-zones {
+	@media (min-width:900px) {
+		width: 70%;
+	}
+}
+
+.home-zones-cat {
+	margin: 0 0 20px 0;
+
+	.home-zones-hdr {
+		font: bold 18px/20px $ff-meta;
+		text-transform: uppercase;
+		// border-bottom: 8px solid $b-blue;
+		margin: 0 0 20px 0;
+
+		a {
+			display: block;
+			padding: 8px;
+			color: #FFF;
+			background-color: $b-blue;	
+
+			&:hover {		
+				background-color: darken($b-blue, 10%);
+			}
+		}
+	}
+
+	.home-zones-tiles {
+		@media (min-width:500px) {
+			@include media-grid(4, 20px);
+		}
+	}
+
+	.tile {
+
+		@media (min-width: 500px){
+			&:hover .home-zones-title {
+				border: 0;
+				margin-top: -10px;
+			}
+		}
+
+		.home-zones-title {
+			// @extend .h3;
+			// font-weight: normal;
+			font-size: 18px;
+			margin: 0 0 15px 0;
+
+			@media (min-width:500px) {
+				font-size: 18px;
+				border-top: 10px solid rgba(255,255,255,.5);
+				margin: -20px 0 0 0;
+				position: relative;
+			}
+		}
+
+		.home-zones-img {
+			display: none;
+
+			@media (min-width:500px) {
+				display: block;
+				margin-bottom: 10px;
+				max-height: 150px;
+				overflow: hidden;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	.home-zones-list {
+		padding: 10px 0 0 0;
+		li {
+			margin: 0 0 10px 0;
+		}
+		a {
+			font-family: $ff-tisa;
+			color: #000;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+}
+
+/***************************************/
+
+/*       Single.php,  Page.php
+
+/***************************************/
+
+/* Rules for page content */
+.entry-content {
+	width: 95%;
+	margin: 0 auto;
+
+	@media (min-width: 500px){
+		width: 80%;
+	}
+
+	//Content image rules
+	img.alignleft {
+		margin: 10px 10px 10px 0;
+	} 
+
+	img.alignright {
+		margin: 10px 0 10px 10px;
+	}
+
+	@media (max-width: 500px){
+		img.alignleft, img.alignright{
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+	}
+
+	@media (max-width: 800px){
+		img.alignnone {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.single-content, .page-content {
+	h1 {
+		@extend .h1;
+		border-bottom: 3px solid #EEE;
+		margin: 0 0 20px 0;
+
+		//this was too big at iPhone sizes
+		@media (max-width:500px){
+			font-size: 26px;
+		}
+	}
+
+	.entry-meta {
+		margin: 20px 0 20px 0;
+
+		.fb-like {
+			float: right;
+			display: block;
+		}
+	}
+
+	.single-related {
+		margin: 20px 0 30px 0;
+
+		.related-hdr {
+			@extend .hdr-box;
+		}
+
+		ul {
+			li {
+				padding: 10px 0;
+				margin: 0;
+				border-bottom: 1px solid #EEE;
+				list-style-type: none;
+
+				a {
+					color: $txt-black;
+					font-size: 18px;
+					@extend .h3;
+
+					&:hover {
+						color: $link;
+					}
+				}
+			}
+		}
+	}
+
+	.entry-utility {
+		border-top: 3px solid #EEE;
+		padding: 10px 0;
+	}
+	#nav-below {
+		@include pie-clearfix;
+		border-top: 3px solid #EEE;
+		border-bottom: 3px solid #EEE;
+		margin: 0 0 20px 0;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+		border-right: 1px solid #EEE;
+		padding: 10px;
+	}
+
+	.nav-next {
+		float: right;
+		width: 50%;
+		padding: 10px;
+	}
+
+	.nav-previous, .nav-next {
+		display: block;
+		&:hover {
+			background-color: #F4F4F4;
+		}
+	}
+
+	.size-full {
+		width: 100%;
+		height: auto;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	.alignleft {
+		float: left;
+	}
+
+
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		a {
+			color: $text-black;
+		}
+	}
+
+	a {
+		color: $link;
+	}
+
+	p {
+		margin: 0 0 20px 0;
+		font: normal 16px/29px "Georgia", Times, Times New Roman, serif;
+		color: $text-black;
+	}
+
+	ul {
+		li {
+			list-style-type: disc;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	ol {
+		li {
+			list-style-type: decimal;
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+/***************************************/
+
+/*       COMMENTS
+
+/***************************************/
+
+.comments {
+	ol {
+		li { 
+			list-style-type: none;
+			margin: 0;
+		}
+	}
+
+	ul {
+		li {
+			list-style-type: none;
+			margin: 0;
+		}
+	}
+}
+
+#comments-title {
+	@extend .hdr-box;
+}
+
+.respond-header {
+	@extend .hdr-box;
+}
+
+
+.pingback p{
+	font-style: italic;
+	color: #CCC;
+	font-family: $ff-meta;
+}
+
+.comment {
+	margin-bottom: 40px;
+	padding: 0 10%;
+	@include pie-clearfix;
+
+	p {
+		margin: 0 0 10px 0;
+	}
+	.comment-author {
+		border-top: 1px solid #EEE;
+		margin: 0 0 20px 0;
+	}
+
+	.comment-meta, .reply {
+		position: relative;
+		float: right;
+		top: -30px;
+		right: 10px;
+	}
+
+	.children {
+		border-left: 2px solid #EEE;
+	}
+	// .reply {
+	// 	float: right;
+	// }
+}
+
+
+
+
+/***************************************/
+
+/*       Grid page
+// Using this page for the "Seven Nights" feature
+
+/***************************************/
+
+.page-grid {
+
+	.dropdown {
+		float: right;
+		width: 100%;
+
+		@media (min-width: 600px){
+			width: 200px;
+			margin-top: -50px;
+		}
+		.dropdown-trigger-link {
+			padding: 10px;
+			width: 100%;
+			display: block;
+			background-color: #FFF;
+			border: 1px solid #EEE;
+		}
+		span {
+			display: block;
+			margin: 5px 5px 0 0;	
+			float: right;
+			width: 16px;
+			@include triangle(down, 8px, $b-blue);
+		}
+
+		.dropdown-menu {
+			background-color: #FFF;
+			width: 100%;
+
+			@media (min-width: 600px){
+				width: 200px;
+			}
+			left: 0;
+			@include box-shadow(0px 0px 10px #CCC);
+
+			li {
+				list-style-type: none;
+				margin: 0;
+			}
+			li a {
+				padding: 10px;
+				border-bottom: 1px solid #EEE;
+				display: block;
+
+				&:hover {
+					background-color: lighten($b-blue, 20%);
+				}
+			}
+		}
+	}
+
+	.entry-content{
+		width: 100%;
+
+		.h2 {
+			margin: 0 0 20px 0;
+		}
+
+		
+		.grid {
+			margin: 0 0 20px 0;
+			li p {
+				font: normal 16px/20px $ff-meta;
+			}
+
+			@media (max-width: 599px){
+				@include media-grid(2, 20px);
+			}
+
+			@media (min-width: 600px){
+				@include media-grid(3, 20px);
+			}
+
+			li {
+				@extend .media-block;
+				margin-bottom: 20px;
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+
+/***************************************/
+
+/*   Directory page
+// displayed using the page-directory.php template
+
+/***************************************/
+
+.page-directory {
+
+	@media(min-width: 500px){
+		@include media-grid(2, 40px);
+
+		.media-block {
+			margin-bottom: 40px;
+		}
+	}
+
+	.media-block {
+		margin-bottom: 20px;
+	}
+
+	.business {
+		border: 1px solid #EEE;
+		padding: 20px;
+		// height: 620px;
+
+		.h2, .h4 {
+			margin-bottom: 8px;
+		}
+
+		.h2, .h4, a {
+			word-wrap: break-word;
+		}
+
+		.h4 {
+			color: #666;
+			text-transform: uppercase;
+			font-size: 11px;
+		}
+
+		a img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 5px;
+		}
+	}
+
+}
+
+
+/***************************************/
+
+/*       Gallery styles
+// The way wordpress does this sucks. DL lists. Keep looking for a better way.
+
+/***************************************/
+
+.gallery {
+	.gallery-item {
+		float: left;
+		margin: 0 20px 20px 0;
+
+		&:nth-child(3){
+			margin-right: 0;
+		}
+	}
+}
+
+
+/***************************************/
+
+/*       Category.php
+
+/***************************************/
+
+.category-content, .search-content, .tag-content, .search-content {
+
+	h1 {
+		@extend .h1;
+		font-family: $ff-meta;
+		border-bottom: 3px solid #EEE;
+		margin: 0 0 20px 0;
+	}
+
+	#nav-below, #nav-above {
+		@include pie-clearfix;
+
+		margin: 0 0 20px 0;
+	}
+
+	.nav-previous a, .nav-next a {
+		background-color: $b-blue;
+		@include border-radius(10px);
+		padding: 10px;
+
+		&:hover {
+			background-color: darken($b-blue, 10%);
+		}
+	}
+
+	.nav-previous {
+		float: left;
+	}
+
+	.nav-next {
+		float: right;
+	}
+
+	.child-cats {
+		margin: -10px 0 20px 0;
+		.cat-item {
+			@extend .h3;
+			@include inline-block;
+			margin: 0 20px 20px 0;
+			a {
+				color: $link;
+			}
+		}
+	}
+
+	.cat-description {
+		margin-bottom: 20px;
+	}
+}
+
+.post, .page {
+	@include pie-clearfix;
+	margin: 0 0 30px 0;
+	p {
+		margin: 0 0 20px 0;
+		font: normal 16px/24px "Georgia", Times, Times New Roman, serif;
+		color: $text-black;
+	}
+
+	.entry-title {
+		@extend .h2;
+		margin-bottom: 10px;
+	}
+
+	.entry-summary, .entry-meta {
+		font-size: 14px;
+		margin-bottom: 10px;
+		a {
+			color: $link;
+		}
+	}
+	.entry-utility {
+		border-top: 3px solid #EEE;
+		font-size: 14px;
+		a {
+			color: $link;
+		}
+	}
+	.entry-image {
+		float: left;
+		margin: 0 20px 20px 0;
+
+		@media (max-width: 500px){
+			float: right;
+
+			img {
+				max-width: 80px;
+				height: auto;
+			}
+		}
+	}
+
+	.entry-text {
+
+	}
+}
+
+
+.tag-content, .page-content {
+	h1 {
+		@extend .h1;
+		font-family: $ff-meta;
+		border-bottom: 3px solid #EEE;
+		margin: 0 0 20px 0;
+	}
+}
+
+
+/***************************************/
+
+/*       Footer.php
+
+/***************************************/
+
+.footer-container {
+	background-color: $b-blue;
+	height: 50px;
+	background: url("/wp-content/themes/_design/_img/beat-heart.png") no-repeat center center, url("/wp-content/themes/_design/_img/beat-footer.png") repeat-x center center;
+	margin-bottom: 10px;
+}
+
+.footer {
+	width: 100%;
+	margin: 0 0 20px 0;
+	padding: 10 0 20px 0;
+	@include pie-clearfix;
+
+	@media (min-width: 480px) and (max-width: 767px){
+		@include media-grid(2, 20px);
+	}
+
+	@media (min-width: 768px){
+		@include media-grid(4, 20px);
+	}
+
+	.xoxo {
+		@extend .media-block;
+		margin-bottom: 20px;
+	}
+
+	a {
+		color: $link;
+	}
+}
+
+
+/* ============================================= */
+/*	Print Styles							     
+	Inline to avoid required HTTP connection     */
+/* ============================================= */
+
+// Import Print Styles
+@import "project/print";

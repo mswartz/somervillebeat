@@ -1,0 +1,11 @@
+/*
+Theme Name:     Somerville Beat
+Theme URI:      http://www.somervillebeat.com/
+Description:    Child theme for the Boilerplate theme
+Author:         Mike Swartz
+Author URI:     http://somervillebeat.com/about/
+Template:       boilerplate
+Version:        0.1.0
+*/
+
+@import url("/wp-content/themes/_design/_css/screen.css");

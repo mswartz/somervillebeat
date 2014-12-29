@@ -1,0 +1,1172 @@
+# Tribe Community Events by Modern Tribe, Inc.
+# Copyright (C) Modern Tribe, Inc.
+# This file is distributed under the same license as the Tribe Community Events package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tribe Community Events\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-04 18:22-0800\n"
+"PO-Revision-Date: 2014-02-06 15:02+0200\n"
+"Last-Translator: Arian - www.administrare-cantine.ro <arianserv@gmail.com>\n"
+"Language-Team: Arian | www.administrare-cantine.ro <arianserv@gmail.com>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ./\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../tribe-community-events.php:64
+msgid "The Events Calendar"
+msgstr "Calendar Evenimente"
+
+#: ../tribe-community-events.php:65
+#, php-format
+msgid ""
+"To begin using The Events Calendar: Community Events, please install the "
+"latest version of <a href=\"%s\" class=\"thickbox\" title=\"%s\">The Events "
+"Calendar</a>."
+msgstr ""
+"Pentru a începe folosirea Calendarului de Evenimente: Evenimente Comunitate, "
+"vă rugăm să instalaţi ultima versiune a <a href=\"%s\" class=\"thickbox\" "
+"title=\"%s\">Calendarului de Evenimente</a>."
+
+#: ../admin-views/community-options-template.php:37
+msgid "Placed in the Trash"
+msgstr "În Coşul de gunoi"
+
+#: ../admin-views/community-options-template.php:38
+msgid "Permanently Deleted"
+msgstr "Şterse Definitiv"
+
+#: ../admin-views/community-options-template.php:46
+msgid "No Default"
+msgstr "Nimic Implicit"
+
+#: ../admin-views/community-options-template.php:54
+msgid "Use New Venue/No Default"
+msgstr "Folosiţi Loc nou de întâlnire/Nimic Implicit"
+
+#: ../admin-views/community-options-template.php:70
+msgid "Community Events Settings"
+msgstr "Configurări Evenimente Comunitate"
+
+#: ../admin-views/community-options-template.php:75
+#, php-format
+msgid ""
+"<p>Community Events enables users to submit events through a form on your "
+"site. Whether soliciting contributions from anonymous users or registered "
+"members, you have complete editorial control over what makes it onto the "
+"calendar.</p><p>Before jumping in, make sure you've checked out our <a href="
+"\"%s\">Community Events new user primer</a>: it features both videos and "
+"written steps covering how the plugin works and what the different options "
+"can do to enhance your site."
+msgstr ""
+"<p>Modulul Evenimente Comunitate permite utilizatorilor să înscrie "
+"evenimente pe site-ul dvs. prin intermediul unui formular. Indiferent dacă "
+"se solicită contribuţia de la utilizatori anonimi sau de la membrii "
+"înregistraţi, dvs. deţineţi controlul de editare asupra a ceea ce apare în "
+"calendar.</p><p>Înainte de a trece la utilizare, asiguraţi-vă ca aţi văzut "
+"şi <a href=\"%s\">Ghidul utilizatorului nou de Evenimente Comunitate</a>:"
+"ambele sale caracteristici, atât cele video cât şi cele scrise, explică cum "
+"funcţionează modulul şi cum diferite sale opţiuni vă pot îmbunătăţi situl."
+
+#: ../admin-views/community-options-template.php:85
+msgid "General"
+msgstr "General"
+
+#: ../admin-views/community-options-template.php:91
+msgid "Allow anonymous submissions"
+msgstr "Permiteţi postările anonime"
+
+#: ../admin-views/community-options-template.php:92
+msgid ""
+"Check this box to allow users to submit events without having a WordPress "
+"account"
+msgstr ""
+"Bifaţi această căsuţă pentru a permite utilizatorilor să posteze evenimente, "
+"fără a avea un cont WordPress"
+
+#: ../admin-views/community-options-template.php:100
+msgid "Use visual editor for event descriptions"
+msgstr "Folosiţi editorul vizual pentru descrierile evenimentelor"
+
+#: ../admin-views/community-options-template.php:108
+msgid "Default status for submitted events"
+msgstr "Statusul implicit pentru evenimentele postate"
+
+#: ../admin-views/community-options-template.php:118
+msgid "Community rewrite slug"
+msgstr "Slug rescriere comunitate"
+
+#: ../admin-views/community-options-template.php:122
+msgid ""
+"The slug used for building the community events URL - it is appended to the "
+"main events slug. Your current community events URLs are"
+msgstr ""
+"Slug folosit pentru construirea adreselor URL ale evenimentelor comunităţii"
+
+#: ../admin-views/community-options-template.php:135
+msgid "Alerts"
+msgstr "Alerte"
+
+#: ../admin-views/community-options-template.php:140
+msgid "Send an email alert when a new event is submitted"
+msgstr "Trimiteţi o alertă prin email atunci când este creat un eveniment nou"
+
+#: ../admin-views/community-options-template.php:148
+msgid "Email addresses to be notified"
+msgstr "Adresa de Email ce va fi notificată"
+
+#: ../admin-views/community-options-template.php:151
+msgid "One address per line"
+msgstr "O adresă pe linie"
+
+#: ../admin-views/community-options-template.php:157
+msgid "Members"
+msgstr "Membrii"
+
+#: ../admin-views/community-options-template.php:162
+msgid "Control the permissions for your logged in users. Allow them to:"
+msgstr ""
+"Controlaţi permisiunile pentru utilizatorii dvs. autentificaţi. Permiteţi-le "
+"să: "
+
+#: ../admin-views/community-options-template.php:167
+msgid "Edit their submissions"
+msgstr "Editeze proprile lor înregistrări"
+
+#: ../admin-views/community-options-template.php:175
+msgid "Remove their submissions"
+msgstr "Elimine proprile lor înregistrări"
+
+#: ../admin-views/community-options-template.php:183
+msgid "Deleted events should be:"
+msgstr "Evenimentele şterse vor fi:"
+
+#: ../admin-views/community-options-template.php:192
+#: ../lib/tribe-community-events.class.php:535
+#: ../lib/tribe-community-events.class.php:1001
+#: ../views/community/modules/delete.php:24
+#: ../views/community/modules/header-links.php:18
+msgid "My Events"
+msgstr "Evenimentele Mele"
+
+#: ../admin-views/community-options-template.php:197
+msgid "Events per page"
+msgstr "Evenimente per pagină"
+
+#: ../admin-views/community-options-template.php:198
+msgid "This is the number of events displayed per page"
+msgstr "Acesta este numărul evenimentelor afişate per pagină"
+
+#: ../admin-views/community-options-template.php:206
+msgid "Date/time format"
+msgstr "Format dată/oră"
+
+#: ../admin-views/community-options-template.php:207
+msgid "Help with date &amp; time formatting"
+msgstr "Ajutor cu formatul dataei  &amp; orei"
+
+#: ../admin-views/community-options-template.php:215
+msgid "Access Control"
+msgstr "Control Acces"
+
+#: ../admin-views/community-options-template.php:220
+msgid "Block access to WordPress dashboard"
+msgstr "Blocare acces catre panoul de control WordPress"
+
+#: ../admin-views/community-options-template.php:221
+msgid "Also disables the admin bar"
+msgstr "Dezactivează de asemenea şi bara administrativă"
+
+#: ../admin-views/community-options-template.php:229
+msgid "Roles to block"
+msgstr "Roluri pentru blocare"
+
+#: ../admin-views/community-options-template.php:239
+msgid "Redirect URL"
+msgstr "URL de redirecţionare"
+
+#: ../admin-views/community-options-template.php:240
+msgid ""
+"Where users will be sent if they attempt to access the admin<br>Should be a "
+"full url e.g. <code>http://domain.com/path/</code> <br> Leave blank for "
+"homepage"
+msgstr ""
+"Unde vor fi redirecţionaţi utilizatorii dacă vor încerca să acceseze pagina "
+"de admin <br>Trebuie să fie o adresă url completă ex. <code>http://domeniu."
+"com/cale/</code> <br> Lăsaţi necompletat pentru pagina \"Acasă\""
+
+#: ../admin-views/community-options-template.php:250
+msgid "PRO Options"
+msgstr "Opţiuni Pro"
+
+#: ../admin-views/community-options-template.php:256
+msgid "Default venue for submitted events"
+msgstr "Locaţia implicită pentru evenimentele create"
+
+#: ../admin-views/community-options-template.php:267
+msgid "Default organizer for submitted events"
+msgstr "Organizatorul implicit pentru evenimentele create"
+
+#: ../lib/tribe-community-events.class.php:264
+msgid "edit"
+msgstr "editare"
+
+#: ../lib/tribe-community-events.class.php:265
+msgid "add"
+msgstr "adăugare"
+
+#: ../lib/tribe-community-events.class.php:266
+msgid "delete"
+msgstr "ştergere"
+
+#: ../lib/tribe-community-events.class.php:267
+msgid "list"
+msgstr "listă"
+
+#: ../lib/tribe-community-events.class.php:269
+msgid "venue"
+msgstr "locaţie"
+
+#: ../lib/tribe-community-events.class.php:270
+msgid "organizer"
+msgstr "organizator"
+
+#: ../lib/tribe-community-events.class.php:271
+msgid "event"
+msgstr "eveniment"
+
+#: ../lib/tribe-community-events.class.php:419
+#: ../lib/tribe-community-events.class.php:922
+msgid "Edit a Venue"
+msgstr "Editare Locaţie"
+
+#: ../lib/tribe-community-events.class.php:438
+#: ../lib/tribe-community-events.class.php:925
+msgid "Edit an Organizer"
+msgstr "Editarea unui Organizator"
+
+#: ../lib/tribe-community-events.class.php:456
+#: ../lib/tribe-community-events.class.php:919
+msgid "Edit an Event"
+msgstr "Editarea unui Eveniment"
+
+#: ../lib/tribe-community-events.class.php:475
+msgid "Redirect"
+msgstr "Redirecţionare"
+
+#: ../lib/tribe-community-events.class.php:493
+#: ../lib/tribe-community-events.class.php:1023
+msgid "Submit an Event"
+msgstr "Creaţi un Eveniment"
+
+#: ../lib/tribe-community-events.class.php:519
+#: ../lib/tribe-community-events.class.php:904
+msgid "Remove an Event"
+msgstr "Eliminaţi un Eveniment"
+
+#: ../lib/tribe-community-events.class.php:608
+msgid "Not found."
+msgstr "Nu a fost găsit."
+
+#: ../lib/tribe-community-events.class.php:752
+msgid ""
+"Community Events requires non-default (pretty) permalinks to be enabled or "
+"the [tribe_community_events] shortcode to exist on a page."
+msgstr ""
+"Community Events necesită ca (pretty) permalink-urile ne-implicite să fie "
+"activate sau să existe în pagină codul-scurt/shortcode "
+"[tribe_community_events]"
+
+#: ../lib/tribe-community-events.class.php:829
+msgid ""
+"Are you sure you want to permanently delete this instance of a recurring "
+"event?"
+msgstr ""
+"Sunteți sigur că doriți să ștergeți pentru totdeauna această dată a "
+"evenimentului recurent? "
+
+#: ../lib/tribe-community-events.class.php:829
+#: ../lib/tribe-community-events.class.php:834
+msgid "Delete"
+msgstr "Ştergere"
+
+#: ../lib/tribe-community-events.class.php:834
+msgid "Are you sure?"
+msgstr "Confirmaţi?"
+
+#: ../lib/tribe-community-events.class.php:907
+msgid "Remove a Venue"
+msgstr "Eliminaţi o Locaţie"
+
+#: ../lib/tribe-community-events.class.php:910
+msgid "Remove an Organizer"
+msgstr "Eliminaţi un Organizator"
+
+#: ../lib/tribe-community-events.class.php:913
+#: ../lib/tribe-community-events.class.php:928
+msgid "Unknown Post Type"
+msgstr "Tip de Articol Necunoscut"
+
+#: ../lib/tribe-community-events.class.php:1061
+msgid "This shortcode can only be used in pages."
+msgstr "Acest cod-scurt/shortcode poate fi folosit numai în pagini."
+
+#: ../lib/tribe-community-events.class.php:1288
+msgid "Community Events Submission"
+msgstr "Publicare Evenimente Comunitate"
+
+#: ../lib/tribe-community-events.class.php:1294
+msgid "Event Organizer"
+msgstr "Organizator Eveniment"
+
+#: ../lib/tribe-community-events.class.php:1295
+msgid "Event Venue"
+msgstr "Locaţie Eveniment"
+
+#: ../lib/tribe-community-events.class.php:1296
+msgid "Description"
+msgstr "Descriere"
+
+#: ../lib/tribe-community-events.class.php:1297
+msgid "Review Event"
+msgstr "Examinare Eveniment"
+
+#: ../lib/tribe-community-events.class.php:1398
+msgid "Trashed Event #"
+msgstr "Eveniment la Gunoi #"
+
+#: ../lib/tribe-community-events.class.php:1401
+msgid "Deleted Event #"
+msgstr "Eveniment Şters #"
+
+#: ../lib/tribe-community-events.class.php:1410
+#, php-format
+msgid "Removed occurence %s from Event #"
+msgstr "Apariţie %s eliminată din Evenimnent #"
+
+#: ../lib/tribe-community-events.class.php:1413
+#, php-format
+msgid "This event (#%s) does not appear to exist."
+msgstr "Acest eveniment (#%s) nu pare să existe."
+
+#: ../lib/tribe-community-events.class.php:1416
+msgid "You do not have permission to delete this event."
+msgstr "Nu aveţi permisiunea să ştergeţi acest eveniment."
+
+#: ../lib/tribe-community-events.class.php:1466
+#, php-format
+msgid ""
+"%sWarning:%s You are editing a recurring event. All changes will be applied "
+"to the entire series."
+msgstr ""
+"%sAtenţie:%s  Editaţi un eveniment repetitiv. Toate modificările vor fi "
+"aplicate întregii serii."
+
+#: ../lib/tribe-community-events.class.php:1486
+msgid "Event not found."
+msgstr "Eveniment negăsit."
+
+#: ../lib/tribe-community-events.class.php:1494
+msgid "Please log in first."
+msgstr "Vă rugăm să vă autentifaţi înainte."
+
+#: ../lib/tribe-community-events.class.php:1500
+msgid "You do not have permission to edit this event."
+msgstr "Nu aveţi permisiunea pentru a edita acest eveniment."
+
+#: ../lib/tribe-community-events.class.php:1529
+msgid "Event updated."
+msgstr "Eveniment actualizat."
+
+#: ../lib/tribe-community-events.class.php:1531
+#: ../lib/tribe-community-events.class.php:1546
+msgid "Submit another event"
+msgstr "Introduceţi un alt eveniment"
+
+#: ../lib/tribe-community-events.class.php:1544
+msgid "Event submitted."
+msgstr "Eveniment introdus."
+
+#: ../lib/tribe-community-events.class.php:1629
+#: ../views/community/event-list.php:102
+msgid "View"
+msgstr "Vizualizare"
+
+#: ../lib/tribe-community-events.class.php:1670
+msgid "There was a problem saving your event, please try again."
+msgstr ""
+"A apărut o problemă la salvarea evenimentului, vă rugăm să reîncercaţi."
+
+#: ../lib/tribe-community-events.class.php:1672
+msgid "There was a problem submitting your event, please try again."
+msgstr "A apărut o problemă la crearea evenimentului, vă rugăm să reîncercaţi."
+
+#: ../lib/tribe-community-events.class.php:1677
+msgid "Event title and description are required."
+msgstr "Titlul şi descrierea evenimentului sunt obligatorii."
+
+#: ../lib/tribe-community-events.class.php:1679
+msgid "Event description is required."
+msgstr "Descrierea evenimentului este obligatorie."
+
+#: ../lib/tribe-community-events.class.php:1681
+msgid "Event title is required."
+msgstr "Titlul evenimentului este obligatoriu."
+
+#: ../lib/tribe-community-events.class.php:1724
+msgid "Venue not found."
+msgstr "Locaţie negăsită."
+
+#: ../lib/tribe-community-events.class.php:1730
+#: ../lib/tribe-community-events.class.php:1820
+msgid "This feature is not currently enabled."
+msgstr "Această opţiune nu este încă activată."
+
+#: ../lib/tribe-community-events.class.php:1733
+msgid "Please log in to edit this venue"
+msgstr "Vă rugăm să vă autentificaţi pentru a edita această locaţie"
+
+#: ../lib/tribe-community-events.class.php:1737
+msgid "You do not have permission to edit this venue."
+msgstr "Nu aveţi permisiunea pentru a edita această locaţie."
+
+#: ../lib/tribe-community-events.class.php:1761
+msgid "Venue updated."
+msgstr "Locaţie actualizată."
+
+#: ../lib/tribe-community-events.class.php:1771
+msgid "Venue name cannot be blank."
+msgstr "Numele locaţiei nu poate fi necompletat."
+
+#: ../lib/tribe-community-events.class.php:1775
+msgid "There was a problem updating your venue, please try again."
+msgstr "A apărut o problemă la actualizarea locaţiei, vă rugăm să reîncercaţi."
+
+#: ../lib/tribe-community-events.class.php:1816
+msgid "Organizer not found."
+msgstr "Organizator negăsit."
+
+#: ../lib/tribe-community-events.class.php:1823
+msgid "Please log in to edit this organizer"
+msgstr "Vă rugăm să vă autentificaţi pentru a edita acest organizator"
+
+#: ../lib/tribe-community-events.class.php:1827
+msgid "You do not have permission to edit this organizer."
+msgstr "Nu aveţi permisiunea pentru a edita acest organizator."
+
+#: ../lib/tribe-community-events.class.php:1851
+msgid "Organizer updated."
+msgstr "Organizator actualizat."
+
+#: ../lib/tribe-community-events.class.php:1862
+msgid "Organizer name cannot be blank."
+msgstr "Numele organizatorului nu poate rămâne necompletat."
+
+#: ../lib/tribe-community-events.class.php:1866
+msgid "There was a problem updating this organizer, please try again."
+msgstr ""
+"A apărut o problemă la actualizarea organizatorului, vă rugăm să reîncercaţi."
+
+#: ../lib/tribe-community-events.class.php:1939
+msgid "Please log in to view your events"
+msgstr "Vă rugăm să vă autentificaţi pentru a vizualiza evenimentele dvs."
+
+#: ../lib/tribe-community-events.class.php:2044
+msgid "Fake Title"
+msgstr "Titlu fals"
+
+#: ../lib/tribe-community-events.class.php:2215
+#, php-format
+msgid "Show all categories ( %d )"
+msgstr "Arată toate categoriile (%d)"
+
+#: ../lib/tribe-community-events.class.php:2274
+msgid "The requested page number was not found."
+msgstr "Numărul de pagină cerut nu a fost găsit."
+
+#: ../lib/tribe-community-events.class.php:2529
+msgid "Community"
+msgstr "Comunitate"
+
+#: ../lib/tribe-community-events.class.php:2544
+msgid "This template is also used for Community Events."
+msgstr "Acest șablon este de asemenea utilizat pentru Evenimente Comunitate."
+
+#: ../lib/tribe-community-events.class.php:2776
+msgid "Community: Submit Event"
+msgstr "Comunitate: Trimitere Eveniment"
+
+#: ../lib/tribe-community-events.class.php:2784
+msgid "Community: My Events"
+msgstr "Comunitate: Evenimentele Mele"
+
+#: ../lib/tribe-community-events.class.php:2793
+msgid "Community Events"
+msgstr "Evenimente Comunitate"
+
+#: ../lib/tribe-community-events.class.php:2810
+msgid "Settings"
+msgstr "Configurări"
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:9
+#: ../vendor/pue-client/admin-views/license-key.view.php:13
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:291
+msgid "License Key"
+msgstr "Cheie de Licenţă"
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:10
+msgid "A valid license key is required for support and updates."
+msgstr "Pentru suport şi actualizări este necesară o cheie velidă de licenţă."
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:16
+msgid "Replace empty fields"
+msgstr "Înlocuire spaţii goale"
+
+#: ../vendor/pue-client/admin-views/license-key.view.php:25
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:292
+msgid "A valid license key is required for support and updates"
+msgstr "Pentru suport şi actualizări este necesară o cheie velidă de licenţă."
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:360
+msgid "License key(s) updated."
+msgstr "Chei(a) de licenţă actualizate(ă). "
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:400
+msgid "Sorry, key validation server is not available."
+msgstr "Ne pare rău, serverul de validare al cheii nu este disponibil."
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:402
+msgid "Sorry, this key is expired."
+msgstr "Ne pare rău, acestă cheie a expirat."
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:404
+msgid "Sorry, this key is out of installs."
+msgstr "Ne pare rău, acestă cheie este în afara instalării."
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:406
+msgid "Sorry, this key is not valid."
+msgstr "Ne pare rău, acestă cheie este Invalidă."
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:409
+#, php-format
+msgid "Valid Key! Expires on %s"
+msgstr "Cheie Validă! Expiră la %s"
+
+#: ../vendor/pue-client/lib/pue_plugin_update_engine.class.php:413
+#, php-format
+msgid ""
+"Hmmm... something's wrong with this validator. Please contact <a href=\"%s"
+"\">support.</a>"
+msgstr ""
+"Hmmm... se întâmăplă ceva greşit cu acest validator. Vă rugăm să contactaţi "
+"<a href=\"%s\">echipa de suport.</a>"
+
+#: ../vendor/tribe-support/tribe-support.class.php:52
+msgid ""
+"Sometimes it's hard to tell what's going wrong without knowing more about "
+"your system steup. For your convenience, we've put together a little report "
+"on what's cooking under the hood."
+msgstr ""
+"Uneori e greu de realizat ce nu e în regulă fără a ști mai mult despre felul "
+"în care este configurat sistemul dumneavoastră. Pentru a vă fi mai ușor, am "
+"realizat un scurt raport despre ce se petrece în spate. "
+
+#: ../vendor/tribe-support/tribe-support.class.php:53
+msgid ""
+"If you suspect that the problem you're having is related to another plugin, "
+"or we're just plain having trouble reproducing your bug report, please copy "
+"and send all of this to our support team."
+msgstr ""
+"Dacă suspectați că problema cu care vă confruntați e în legătură cu alt "
+"plugin sau nu putem să replicăm bugul dumneavpastră, copiați și trimiteți "
+"acest conținut echipei noastre de suport. "
+
+#: ../vendor/tribe-support/tribe-support.class.php:57
+msgid "System Information"
+msgstr "Informații de sistem"
+
+#: ../vendor/tribe-support/tribe-support.class.php:71
+msgid "Send a support request for this site."
+msgstr "Trimiteţi o cerere de suport pentru acest site."
+
+#: ../vendor/wp-router/WP_Route.class.php:36
+#, php-format
+msgid "Missing %s"
+msgstr "Lipseşte %s"
+
+#: ../vendor/wp-router/WP_Route.class.php:63
+#, php-format
+msgid "Property not found: %s."
+msgstr "Proprietate negăsită:  %s."
+
+#: ../vendor/wp-router/WP_Route.class.php:77
+#, php-format
+msgid "Invalid value for %s. Value may not be empty."
+msgstr "Valoare invalidă pentru %s. Valoarea nu poate fi goală."
+
+#: ../vendor/wp-router/WP_Route.class.php:80
+#, php-format
+msgid "Invalid value for %1$s: %2$s. Value must be an array."
+msgstr ""
+"Valoare invalidă pentru %1$s: %2$s. Valoarea trebuie să fie o matricve/"
+"mulţime."
+
+#: ../vendor/wp-router/WP_Route.class.php:250
+msgid "You are not authorized to access this page"
+msgstr "Nu sunteţi autorizaţi să accesaţi această pagină"
+
+#: ../vendor/wp-router/WP_Route.class.php:251
+msgid "Access Denied"
+msgstr "Acces Interzis"
+
+#: ../vendor/wp-router/WP_Router_Page.class.php:74
+msgid "WP Router Placeholder Page"
+msgstr "Pagina Substitut Router WP"
+
+#: ../vendor/wp-router/WP_Router_Utility.class.php:49
+#, php-format
+msgid "%1$s requires WordPress %2$s or higher and PHP %3$s or higher."
+msgstr "%1$s necesită WordPress %2$s sau superior şi  PHP %3$s sau peste."
+
+#: ../views/community/edit-event.php:31
+msgid "Event Title:"
+msgstr "Titlu Eveniment:"
+
+#: ../views/community/edit-event.php:31 ../views/community/edit-event.php:44
+#: ../views/community/edit-organizer.php:28
+#: ../views/community/edit-venue.php:28
+msgid "(required)"
+msgstr "(obligatoriu)"
+
+#: ../views/community/edit-event.php:44
+msgid "Event Description:"
+msgstr "Descriere Eveniment:"
+
+#: ../views/community/edit-event.php:76
+msgid "Update Event"
+msgstr "Actualizare Eveniment"
+
+#: ../views/community/edit-event.php:78
+msgid "Submit Event"
+msgstr "Trimitere Eveniment"
+
+#: ../views/community/edit-organizer.php:27
+msgid "Organizer Name:"
+msgstr "Nume Organizator:"
+
+#: ../views/community/edit-organizer.php:38
+msgid "Organizer Description:"
+msgstr "Descrierea organizatorului:"
+
+#: ../views/community/edit-organizer.php:64
+msgid "Update Organizer"
+msgstr "Actualizare Organizator"
+
+#: ../views/community/edit-organizer.php:64
+msgid "Submit Organizer"
+msgstr "Trimitere Organizator"
+
+#: ../views/community/edit-venue.php:27
+msgid "Venue Name:"
+msgstr "Numele Locaţiei:"
+
+#: ../views/community/edit-venue.php:38
+msgid "Venue Description:"
+msgstr "Descrierea Locaţiei:"
+
+#: ../views/community/edit-venue.php:64
+msgid "Update Venue"
+msgstr "Actualizare Locaţiei"
+
+#: ../views/community/edit-venue.php:64
+msgid "Submit Venue"
+msgstr "Trimitere Locaţie"
+
+#: ../views/community/event-list.php:20
+#: ../views/community/modules/delete.php:20
+msgid "Add New"
+msgstr "Adăugare Nou"
+
+#: ../views/community/event-list.php:25
+msgid "Display"
+msgstr "Afişare"
+
+#: ../views/community/event-list.php:40
+#: ../views/community/modules/delete.php:28
+#: ../views/community/modules/header-links.php:19
+msgid "Not"
+msgstr "Nu"
+
+#: ../views/community/event-list.php:43
+#: ../views/community/modules/delete.php:29
+#: ../views/community/modules/header-links.php:19
+msgid "Log Out"
+msgstr "Deautentificare"
+
+#: ../views/community/event-list.php:51
+msgid "There are no upcoming events in your queue."
+msgstr "Nu sunt evenimente următoare în lista dumneavoastră"
+
+#: ../views/community/event-list.php:66
+msgid "Status"
+msgstr "Status"
+
+#: ../views/community/event-list.php:67
+msgid "Title"
+msgstr "Titlu"
+
+#: ../views/community/event-list.php:68
+msgid "Organizer"
+msgstr "Organizator"
+
+#: ../views/community/event-list.php:69
+msgid "Venue"
+msgstr "Locaţie"
+
+#: ../views/community/event-list.php:70
+msgid "Category"
+msgstr "Categorie"
+
+#: ../views/community/event-list.php:72
+msgid "Recurring?"
+msgstr "Repetitiv?"
+
+#: ../views/community/event-list.php:73
+msgid "Start Date"
+msgstr "Dată Începere"
+
+#: ../views/community/event-list.php:74
+msgid "End Date"
+msgstr "Dată Finalizare"
+
+#: ../views/community/event-list.php:140
+msgid "Yes"
+msgstr "Da"
+
+#: ../views/community/event-list.php:142
+msgid "No"
+msgstr "Nu"
+
+#: ../views/community/modules/cost.php:28
+msgid "Event Cost"
+msgstr "Preţ Eveniment"
+
+#: ../views/community/modules/cost.php:34
+msgid "Currency Symbol"
+msgstr "Simbol Monetar"
+
+#: ../views/community/modules/cost.php:44
+msgid "Cost"
+msgstr "Preţ"
+
+#: ../views/community/modules/cost.php:51
+msgid "Leave blank to hide the field. Enter a 0 for events that are free."
+msgstr ""
+"Lăsaţi necompletat pentru a ascunde câmpul. Introduceţi 0 pentru evenimente "
+"gratuite."
+
+#: ../views/community/modules/custom.php:32
+msgid "Additional Fields"
+msgstr "Câmpuri adiționale"
+
+#: ../views/community/modules/datepickers.php:37
+msgid "Event Time &amp; Date"
+msgstr "Oră &amp; Dată Eveniment"
+
+#: ../views/community/modules/datepickers.php:43
+msgid ""
+"You have changed the recurrence rules of this event. Saving the event will "
+"update all future events.  If you did not mean to change all events, then "
+"please refresh the page."
+msgstr ""
+"Aţi modificat regulile de repetare pentru acest eveniment. Salvarea "
+"evenimentului va actualiza toate evenimentele viitoare. Dacă nu aţi dorit să "
+"modificaţi toate evenimentele, atunci vă rugăm să reîncărcaţi pagina (F5)."
+
+#: ../views/community/modules/datepickers.php:48
+msgid "All day event?"
+msgstr "Eveniment toată ziua?"
+
+#: ../views/community/modules/datepickers.php:56
+msgid "Start Date / Time:"
+msgstr "Începere Dată / Oră:"
+
+#: ../views/community/modules/datepickers.php:60
+#: ../views/community/modules/datepickers.php:71
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+#: ../views/community/modules/datepickers.php:68
+msgid "End Date / Time:"
+msgstr "Finalizare Dată / Ora:"
+
+#: ../views/community/modules/image.php:26
+msgid "Event Image"
+msgstr "Imagine Eveniment:"
+
+#: ../views/community/modules/image.php:32
+msgid "Upload"
+msgstr "Încărcare"
+
+#: ../views/community/modules/image.php:44
+msgid "Images that are not png, jpg, or gif will not be uploaded."
+msgstr "Imaginile cu un alt format decât png, jpg sau gif NU vor fi încărcate."
+
+#: ../views/community/modules/organizer.php:34
+msgid "Event Organizer Details"
+msgstr "Detalii Organizator Eveniment"
+
+#: ../views/community/modules/organizer.php:44
+msgid "Organizer Name"
+msgstr "Nume Organizator"
+
+#: ../views/community/modules/organizer.php:56
+#: ../views/community/modules/venue.php:144
+msgid "Phone"
+msgstr "Telefon"
+
+#: ../views/community/modules/organizer.php:66
+msgid "Website"
+msgstr "Site Web"
+
+#: ../views/community/modules/organizer.php:75
+msgid "Email"
+msgstr "Email"
+
+#: ../views/community/modules/recurrence-dialog.php:23
+msgid "Which events do you wish to update?"
+msgstr "Ce evenimente doriţi să actualizaţi?"
+
+#: ../views/community/modules/recurrence-dialog.php:26
+msgid "Delete Recurring Event"
+msgstr "Ștergeți Eveniment Repetitiv"
+
+#: ../views/community/modules/recurrence-dialog.php:27
+msgid "Select your desired action"
+msgstr "Selectaţi acţiunea dorită"
+
+#: ../views/community/modules/recurrence.php:75
+msgid "Recurrence:"
+msgstr "Repetare:"
+
+#: ../views/community/modules/recurrence.php:82
+msgid "None"
+msgstr "Nimic"
+
+#: ../views/community/modules/recurrence.php:83
+msgid "Every Day"
+msgstr "În fiecare Zi"
+
+#: ../views/community/modules/recurrence.php:84
+msgid "Every Week"
+msgstr "În fiecare Săptămână"
+
+#: ../views/community/modules/recurrence.php:85
+msgid "Every Month"
+msgstr "În fiecare Lună"
+
+#: ../views/community/modules/recurrence.php:86
+msgid "Every Year"
+msgstr "În fiecare An"
+
+#: ../views/community/modules/recurrence.php:87
+msgid "Custom"
+msgstr "Personalizat"
+
+#: ../views/community/modules/recurrence.php:91
+msgid "End"
+msgstr "Finalizare"
+
+#: ../views/community/modules/recurrence.php:94
+msgid "On"
+msgstr "În"
+
+#: ../views/community/modules/recurrence.php:95
+msgid "After"
+msgstr "După"
+
+#: ../views/community/modules/recurrence.php:96
+msgid "Never"
+msgstr "Niciodată"
+
+#: ../views/community/modules/recurrence.php:109
+msgid "You must select a recurrence end date"
+msgstr "Trebuie să selectaţi o dată de finalizare a repetării"
+
+#: ../views/community/modules/recurrence.php:119
+msgid "Frequency"
+msgstr "Frecvenţa"
+
+#: ../views/community/modules/recurrence.php:121
+msgid "Day(s)"
+msgstr "Zi(le)"
+
+#: ../views/community/modules/recurrence.php:121
+msgid "Daily"
+msgstr "Zilnic"
+
+#: ../views/community/modules/recurrence.php:122
+msgid "Week(s) on:"
+msgstr "Săptămâna(i)"
+
+#: ../views/community/modules/recurrence.php:122
+msgid "Weekly"
+msgstr "Săptămânal"
+
+#: ../views/community/modules/recurrence.php:123
+msgid "Month(s) on the:"
+msgstr "Luna(ile) din:"
+
+#: ../views/community/modules/recurrence.php:123
+msgid "Monthly"
+msgstr "Lunar"
+
+#: ../views/community/modules/recurrence.php:124
+msgid "Year(s) on:"
+msgstr "An(i) din:"
+
+#: ../views/community/modules/recurrence.php:124
+msgid "Yearly"
+msgstr "Anual"
+
+#: ../views/community/modules/recurrence.php:127
+msgid "Every"
+msgstr "Fiecare"
+
+#: ../views/community/modules/recurrence.php:139
+msgid "M"
+msgstr "Lu"
+
+#: ../views/community/modules/recurrence.php:140
+msgid "Tu"
+msgstr "Ma"
+
+#: ../views/community/modules/recurrence.php:141
+msgid "W"
+msgstr "Mi"
+
+#: ../views/community/modules/recurrence.php:142
+msgid "Th"
+msgstr "Jo"
+
+#: ../views/community/modules/recurrence.php:143
+msgid "F"
+msgstr "Vi"
+
+#: ../views/community/modules/recurrence.php:144
+msgid "Sa"
+msgstr "Sâ"
+
+#: ../views/community/modules/recurrence.php:145
+msgid "Su"
+msgstr "Du"
+
+#: ../views/community/modules/recurrence.php:154
+#: ../views/community/modules/recurrence.php:204
+msgid "First"
+msgstr "Prima"
+
+#: ../views/community/modules/recurrence.php:155
+#: ../views/community/modules/recurrence.php:205
+msgid "Second"
+msgstr "A doua"
+
+#: ../views/community/modules/recurrence.php:156
+#: ../views/community/modules/recurrence.php:206
+msgid "Third"
+msgstr "A treia"
+
+#: ../views/community/modules/recurrence.php:157
+#: ../views/community/modules/recurrence.php:207
+msgid "Fourth"
+msgstr "A patra"
+
+#: ../views/community/modules/recurrence.php:158
+#: ../views/community/modules/recurrence.php:208
+msgid "Last"
+msgstr "Ultima"
+
+#: ../views/community/modules/recurrence.php:165
+#: ../views/community/modules/recurrence.php:211
+msgid "Monday"
+msgstr "Luni"
+
+#: ../views/community/modules/recurrence.php:166
+#: ../views/community/modules/recurrence.php:212
+msgid "Tuesday"
+msgstr "Marţi"
+
+#: ../views/community/modules/recurrence.php:167
+#: ../views/community/modules/recurrence.php:213
+msgid "Wednesday"
+msgstr "Miercuri"
+
+#: ../views/community/modules/recurrence.php:168
+#: ../views/community/modules/recurrence.php:214
+msgid "Thursday"
+msgstr "Joi"
+
+#: ../views/community/modules/recurrence.php:169
+#: ../views/community/modules/recurrence.php:215
+msgid "Friday"
+msgstr "Vineri"
+
+#: ../views/community/modules/recurrence.php:170
+#: ../views/community/modules/recurrence.php:216
+msgid "Saturday"
+msgstr "Sâmbătă"
+
+#: ../views/community/modules/recurrence.php:171
+#: ../views/community/modules/recurrence.php:217
+msgid "Sunday"
+msgstr "Duminică"
+
+#: ../views/community/modules/recurrence.php:173
+#: ../views/community/modules/recurrence.php:219
+msgid "Day"
+msgstr "Zi"
+
+#: ../views/community/modules/recurrence.php:183
+msgid "Jan"
+msgstr "Ian"
+
+#: ../views/community/modules/recurrence.php:184
+msgid "Feb"
+msgstr "Feb"
+
+#: ../views/community/modules/recurrence.php:185
+msgid "Mar"
+msgstr "Mar"
+
+#: ../views/community/modules/recurrence.php:186
+msgid "Apr"
+msgstr "Apr"
+
+#: ../views/community/modules/recurrence.php:187
+msgid "May"
+msgstr "Mai"
+
+#: ../views/community/modules/recurrence.php:188
+msgid "Jun"
+msgstr "Iun"
+
+#: ../views/community/modules/recurrence.php:192
+msgid "Jul"
+msgstr "Iul"
+
+#: ../views/community/modules/recurrence.php:193
+msgid "Aug"
+msgstr "Aug"
+
+#: ../views/community/modules/recurrence.php:194
+msgid "Sep"
+msgstr "Sep"
+
+#: ../views/community/modules/recurrence.php:195
+msgid "Oct"
+msgstr "Oct"
+
+#: ../views/community/modules/recurrence.php:196
+msgid "Nov"
+msgstr "Nov"
+
+#: ../views/community/modules/recurrence.php:197
+msgid "Dec"
+msgstr "Dec"
+
+#: ../views/community/modules/recurrence.php:202
+msgid "On the:"
+msgstr "Din:"
+
+#: ../views/community/modules/taxonomy.php:37
+msgid "Event Categories:"
+msgstr "Categorii Eveniment:"
+
+#: ../views/community/modules/venue.php:49
+msgid "Event Location Details"
+msgstr "Detalii Locaţie Eveniment"
+
+#: ../views/community/modules/venue.php:59
+msgid "Venue Name"
+msgstr "Numele Locaţiei"
+
+#: ../views/community/modules/venue.php:71
+msgid "Address"
+msgstr "Adresa"
+
+#: ../views/community/modules/venue.php:82
+msgid "City"
+msgstr "Oraşul"
+
+#: ../views/community/modules/venue.php:91
+msgid "Country"
+msgstr "Tara"
+
+#: ../views/community/modules/venue.php:114
+msgid "State or Province"
+msgstr "Statul sau Provincia"
+
+#: ../views/community/modules/venue.php:120
+msgid "Select a State"
+msgstr "Sectaţi un Stat"
+
+#: ../views/community/modules/venue.php:133
+msgid "Postal Code"
+msgstr "Cod Poştal"
+
+#: ../views/community/modules/venue.php:156
+msgid "Show Google Maps Link"
+msgstr "Afişare Legătură Hărţi Google"
+
+#: ../views/community/modules/venue.php:169
+msgid "Show Google Map"
+msgstr "Afişare Hartă Google"
+
+#: ../views/community/modules/website.php:30
+msgid "Event Website"
+msgstr "Website eveniment"
+
+#: ../views/community/modules/website.php:36
+msgid "URL"
+msgstr "URL"
+
+#~ msgctxt "As in \"go back to previous page\""
+#~ msgid "Back"
+#~ msgstr "Înapoi"
+
+#~ msgid ""
+#~ "The original event is saved; recurrences not saved. Please reduce the "
+#~ "number of recurrences to no more than %s.%s"
+#~ msgstr ""
+#~ "Evenimentul original a fost salvat; repetările NU au fost salvate. Vă "
+#~ "rugăm să reduceţi numărul de repetări la nu mai mult de %s.%s"
+
+#~ msgid "Edit event"
+#~ msgstr "Editare eveniment"
+
+#~ msgid "Please check the box below to prove you are not an evil spammer."
+#~ msgstr ""
+#~ "Vă rugăm să bifaţi căsuţa de mai jos pentru a dovedi că nu sunteţi un "
+#~ "spammer diabolic."
+
+#~ msgid "I am not an evil spammer"
+#~ msgstr "Nu sunt un spammer diabolic"
+
+#~ msgid "Event Custom Fields"
+#~ msgstr "Câmpuri Personalizate Eveniment"
+
+#~ msgid "Phone:"
+#~ msgstr "Telefon:"
+
+#~ msgid "Upload New"
+#~ msgstr "Încărcare Nou"
