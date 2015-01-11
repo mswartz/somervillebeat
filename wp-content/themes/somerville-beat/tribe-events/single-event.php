@@ -18,7 +18,6 @@ $event_id = get_the_ID();
 
 ?>
 
-<section class="ui-block-1">
 	<div id="tribe-events-content" class="tribe-events-single vevent hentry">
 
 		<p class="tribe-events-back">
@@ -97,8 +96,3 @@ $event_id = get_the_ID();
 		<!-- #tribe-events-footer -->
 
 	</div><!-- #tribe-events-content -->
-</section>
-
-<section id="sidebar" class="ui-block-2">
-	<?php get_sidebar(); ?>
-</section>
