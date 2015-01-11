@@ -25,4 +25,7 @@ get_header(); ?>
 	<section id="sidebar" class="ui-block-2">
 		<?php get_sidebar(); ?>
 	</section>
+
+</section> <!-- end #main -->
+
 <?php get_footer(); ?>
