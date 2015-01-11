@@ -3,7 +3,7 @@
  * Plugin Name: VaultPress
  * Plugin URI: http://vaultpress.com/?utm_source=plugin-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * Description: Protect your content, themes, plugins, and settings with <strong>realtime backup</strong> and <strong>automated security scanning</strong> from <a href="http://vaultpress.com/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">VaultPress</a>. Activate, enter your registration key, and never worry again. <a href="http://vaultpress.com/help/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">Need some help?</a>
- * Version: 1.6.8
+ * Version: 1.7.0
  * Author: Automattic
  * Author URI: http://vaultpress.com/?utm_source=author-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * License: GPL2+
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) )
 class VaultPress {
 	var $option_name    = 'vaultpress';
 	var $db_version     = 4;
-	var $plugin_version = '1.6.8';
+	var $plugin_version = '1.7.0';
 
 	function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -1465,6 +1465,14 @@ JS;
 					if ( false === strpos( $upload_url, 'http' ) )
 						$upload_url = untrailingslashit( site_url() ) . $upload_url;
 				}
+				
+				if ( defined( 'VP_DISABLE_UNAME' ) && VP_DISABLE_UNAME ) {
+					$uname_a = '';
+					$uname_n = '';
+				} else {
+					$uname_a = @php_uname( 'a' );
+					$uname_n = @php_uname( 'n' );
+				}
 
 				$this->response( array(
 					'vaultpress' => $vaultpress_response_info,
@@ -1488,9 +1496,9 @@ JS;
 					),
 					'server' => array(
 						'host'   => $_SERVER['HTTP_HOST'],
-						'server' => @php_uname( "n" ),
+						'server' => $uname_n,
 						'load'   => $loadavg,
-						'info'   => @php_uname( "a" ),
+						'info'   => $uname_a,
 						'time'   => time(),
 						'php'    => array( 'version' => phpversion(), 'ini' => $ini_vals, 'directory_separator' => DIRECTORY_SEPARATOR ),
 						'httpd'  => array(
