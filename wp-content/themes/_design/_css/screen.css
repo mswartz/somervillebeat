@@ -1393,25 +1393,6 @@ h1 a, .h1 a, .single-content h1 a, .page-content h1 a, .category-content h1 a, .
   border-radius: 5px;
   padding: 10px;
 }
-@media (min-width: 600px) and (max-width: 900px) {
-  #sidebar .xoxo {
-    margin-left: -20px;
-    *zoom: 1;
-  }
-  #sidebar .xoxo:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  #sidebar .xoxo .media-block, #sidebar .xoxo .page-grid .entry-content .grid li, .page-grid .entry-content .grid #sidebar .xoxo li, #sidebar .xoxo .footer .xoxo, .footer #sidebar .xoxo .xoxo {
-    float: left;
-    padding-left: 20px;
-    width: 50%;
-  }
-  #sidebar .xoxo .media-block:nth-child(2n+3), #sidebar .xoxo .page-grid .entry-content .grid li:nth-child(2n+3), .page-grid .entry-content .grid #sidebar .xoxo li:nth-child(2n+3), #sidebar .xoxo .footer .xoxo:nth-child(2n+3), .footer #sidebar .xoxo .xoxo:nth-child(2n+3) {
-    clear: left;
-  }
-}
 @media (min-width: 900px) {
   #sidebar .xoxo {
     border: 0;
