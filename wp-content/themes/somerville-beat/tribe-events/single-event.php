@@ -25,8 +25,6 @@ $event_id = get_the_ID();
 			<a href="<?php echo tribe_get_events_link() ?>"> <?php _e( '&laquo; All Events', 'tribe-events-calendar' ) ?></a>
 		</p>
 
-		<?php echo adrotate_block(1); ?>
-
 		<!-- Notices -->
 		<?php tribe_events_the_notices() ?>
 
