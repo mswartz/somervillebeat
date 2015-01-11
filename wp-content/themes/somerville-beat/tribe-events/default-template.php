@@ -22,9 +22,9 @@ get_header(); ?>
 		<?php tribe_events_after_html(); ?>
 	</div> <!-- #tribe-events-pg-template -->
 
-	<section id="sidebar" class="ui-block-2">
-		<?php get_sidebar(); ?>
-	</section>
+	<?php if ( false === (tribe_is_event_query() && tribe_is_month()) ) echo('<section id="sidebar" class="ui-block-2">') ?>
+		<?php if ( false === (tribe_is_event_query() && tribe_is_month()) ) get_sidebar(); ?>
+	<?php if ( false === (tribe_is_event_query() && tribe_is_month()) ) echo('</section>') ?>
 
 </section> <!-- end #main -->
 
