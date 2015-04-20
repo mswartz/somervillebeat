@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -126,24 +126,30 @@ $data = get_option("adrotate_advert_status");
 								</td>
 							</tr>
 							</tbody>
-						</table>
 
-						<div class="versions">
-							<span id="adrotate-version-message"><?php _e('You are using', 'adrotate'); ?> <strong>AdRotate <?php echo ADROTATE_DISPLAY; ?></strong>.</span>
-							<br class="clear">
-						</div>
+							<thead>
+							<tr class="first">
+								<td colspan="2"><strong><?php _e('Support AdRotate', 'adrotate'); ?></strong></td>
+							</tr>
+							</thead>
+
+							<tbody>
+							<tr class="first">
+								<td colspan="2">
+									<p><center><?php _e('Your gift helps ensure the continued development of AdRotate!', 'adrotate'); ?><br /><?php _e("Can't donate funds? Consider writing a review instead. Thank you!", 'adrotate'); ?></center></p>
+									<p><center><a class="button-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40ajdg%2enet&item_name=AdRotate%20One-time%20Donation&item_number=000&no_shipping=0&no_note=0&tax=0&currency_code=EUR&bn=PP%2dDonationsBF&charset=UTF%2d8" target="_blank">Donate via Paypal</a> <a class="button" target="_blank" href="https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform">Write review on WordPress.org</a></center></p>
+								</td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				
+
 				<h3><?php _e('AdRotate News and Developer Blog', 'adrotate'); ?></h3>
 				<div class="postbox-adrotate">
 					<div class="inside">
 						<?php wp_widget_rss_output(array(
-							'url' => array(
-								'http://feeds.feedburner.com/AdrotatePluginForWordPress', 
-								'http://feeds.feedburner.com/meandmymacnet',
-								'http://ajdg.solutions/news/feed/'
-							), 
+							'url' => array('http://feeds.feedburner.com/meandmymacnet', 'http://ajdg.solutions/feed/'), 
 							'title' => 'AdRotate Development News', 
 							'items' => 4, 
 							'show_summary' => 1, 
@@ -159,32 +165,23 @@ $data = get_option("adrotate_advert_status");
 		<div id="postbox-container-3" class="postbox-container" style="width:50%;">
 			<div id="side-sortables" class="meta-box-sortables ui-sortable">
 						
-				<h3><?php _e('Buy AdRotate Professional', 'adrotate'); ?></h3>
-				<div class="postbox-adrotate">
-					<div class="inside">
-						<a href="https://www.adrotateplugin.com/adrotate-pro/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=compare_license"><img src="<?php echo WP_CONTENT_URL; ?>/plugins/adrotate/images/adrotate-product.png" alt="adrotate-product" width="150" height="150" align="right" style="padding: 0 0 10px 10px;" /></a>
-						<p><h4><?php _e('Singe License', 'adrotate'); ?> (&euro; 29.00)</h4><?php _e('For one WordPress installation.', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/shop/adrotate-plugin/adrotate-pro-single/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_single" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
-						<p><h4><?php _e('Duo License', 'adrotate'); ?> (&euro; 39.00)</h4><?php _e('For two WordPress installations.', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/shop/adrotate-plugin/adrotate-pro-duo/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_duo" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
-						<p><h4><?php _e('Multi License', 'adrotate'); ?> (&euro; 99.00)</h4><?php _e(' For up to five WordPress installations.', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/shop/adrotate-plugin/adrotate-pro-multi/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_multi" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
-						<p><h4><?php _e('Network License', 'adrotate'); ?> (&euro; 199.00)</h4><?php _e('Set up your own advertising network on a WordPress Multisite.', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/shop/adrotate-plugin/adrotate-pro-network/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_network" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
-						<p><h4><?php _e('Developer License', 'adrotate'); ?> (&euro; 299.00)</h4><?php _e('Activate AdRotate on unlimited WordPress installations and/or networks.', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/shop/adrotate-plugin/adrotate-pro-developer/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_developer" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
-						<p><h4><?php _e('Compare licenses', 'adrotate'); ?></h4> <?php _e("Not sure which license is for you? Compare them...", 'adrotate'); ?> <a href="https://www.adrotateplugin.com/adrotate-pro/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=compare_license" target="_blank"><?php _e('All Licenses', 'adrotate'); ?> &raquo;</a></p>
-					</div>
-				</div>
-
 				<h3><?php _e('Get more features with AdRotate Pro', 'adrotate'); ?></h3>
 				<div class="postbox-adrotate">
 					<div class="inside">
-						<p><a href="https://www.adrotateplugin.com/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=upgrade_adrotatefree" title="AdRotate plugin for WordPress"><img src="<?php echo WP_CONTENT_URL; ?>/plugins/adrotate/images/adrotate-logo-60x60.png" alt="adrotate-logo-60x60" width="60" height="60" align="left" style="padding: 0 10px 10px 0;" /></a><?php _e('Benefit from extra features to reinforce your income with advertising campaigns. Make the most of your website with the powerful tools AdRotate Pro offers on top of the trusted features included in the free version.', 'adrotate'); ?></p>
-						<p><?php _e('Learn more about', 'adrotate'); ?> <a href="admin.php?page=adrotate-pro">AdRotate Pro</a> <?php _e('or go to the', 'adrotate'); ?> <a href="https://www.adrotateplugin.com/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=upgrade_adrotatefree" target="_blank">AdRotate <?php _e('website', 'adrotate'); ?> &raquo;</a></p>
+						<p><a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=upgrade_adrotatefree" title="AdRotate plugin for WordPress"><img src="<?php echo WP_CONTENT_URL; ?>/plugins/adrotate/images/adrotate-logo-60x60.png" alt="adrotate-logo-60x60" width="60" height="60" align="left" style="padding: 0 10px 10px 0;" /></a><?php _e('Benefit from extra features to reinforce your income with advertising campaigns. Make the most of your website with the powerful tools AdRotate Pro offers on top of the trusted features included in the free version.', 'adrotate'); ?> <?php _e('Want to know more about', 'adrotate'); ?> <a href="admin.php?page=adrotate-pro">AdRotate Pro</a>? <?php _e('Visit the', 'adrotate'); ?> <a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=upgrade_adrotatefree" target="_blank">AdRotate <?php _e('website', 'adrotate'); ?></a>.</p>
 					</div>
 				</div>
 
-				<h3><?php _e('Support AdRotate', 'adrotate'); ?></h3>
+				<h3><?php _e('Buy AdRotate Professional', 'adrotate'); ?></h3>
 				<div class="postbox-adrotate">
 					<div class="inside">
-						<p><center><?php _e('Your gift will ensure the continued development of AdRotate!', 'adrotate'); ?></center></p>
-						<p><center><a href="https://www.adrotateplugin.com/donate/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=donate" target="_blank"><img src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" /></a></center></p>
+						<a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=compare_license"><img src="<?php echo WP_CONTENT_URL; ?>/plugins/adrotate/images/adrotate-product.png" alt="adrotate-product" width="150" height="150" align="right" style="padding: 0 0 10px 10px;" /></a>
+						<p><h4><?php _e('Singe License', 'adrotate'); ?> (&euro; 29.00)</h4><?php _e('For one WordPress installation.', 'adrotate'); ?> <a href="https://ajdg.solutions/cart/?add-to-cart=1124&utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_single" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
+						<p><h4><?php _e('Duo License', 'adrotate'); ?> (&euro; 39.00)</h4><?php _e('For two WordPress installations.', 'adrotate'); ?> <a href="https://ajdg.solutions/cart/?add-to-cart=1126&utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_duo" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
+						<p><h4><?php _e('Multi License', 'adrotate'); ?> (&euro; 99.00)</h4><?php _e(' For up to five WordPress installations.', 'adrotate'); ?> <a href="https://ajdg.solutions/cart/?add-to-cart=1128&utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_multi" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
+						<p><h4><?php _e('Developer License', 'adrotate'); ?> (&euro; 299.00)</h4><?php _e('Unlimited WordPress installations and/or networks.', 'adrotate'); ?> <a href="https://ajdg.solutions/cart/?add-to-cart=1130&utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_developer" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
+						<p><h4><?php _e('Network License', 'adrotate'); ?> (&euro; 199.00)</h4><?php _e('Set up your own advertising network on a WordPress Multisite.', 'adrotate'); ?> <a href="https://ajdg.solutions/cart/?add-to-cart=1132&utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=buy_network" target="_blank"><?php _e('Buy now', 'adrotate'); ?> &raquo;</a></p>
+						<p><h4><?php _e('Compare licenses', 'adrotate'); ?></h4> <?php _e("Not sure which license is for you? Compare them...", 'adrotate'); ?> <a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_info_page&utm_campaign=compare_license" target="_blank"><?php _e('All Licenses', 'adrotate'); ?> &raquo;</a></p>
 					</div>
 				</div>
 

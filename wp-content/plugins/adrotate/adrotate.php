@@ -1,17 +1,17 @@
 <?php
 /*
 Plugin Name: AdRotate
-Plugin URI: https://www.adrotateplugin.com
-Description: The very best and most convenient way to publish your ads.
+Plugin URI: https://ajdg.solutions/products/adrotate-for-wordpress/
 Author: Arnan de Gans of AJdG Solutions
-Version: 3.10.19
 Author URI: http://ajdg.solutions/
+Description: Used on over a hundred thousand websites and by even more people! AdRotate is the popular choice for monetizing your website with adverts while keeping things simple.
+Version: 3.11.3
 License: GPLv3
 */
 
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -20,9 +20,9 @@ License: GPLv3
 ------------------------------------------------------------------------------------ */
 
 /*--- AdRotate values ---------------------------------------*/
-define("ADROTATE_DISPLAY", '3.10.19');
-define("ADROTATE_VERSION", 376);
-define("ADROTATE_DB_VERSION", 47);
+define("ADROTATE_DISPLAY", '3.11.3');
+define("ADROTATE_VERSION", 378);
+define("ADROTATE_DB_VERSION", 50);
 define("ADROTATE_FOLDER", 'adrotate');
 /*-----------------------------------------------------------*/
 
@@ -75,7 +75,6 @@ if(!is_admin()) {
 /*--- Back End ----------------------------------------------*/
 if(is_admin()) {
 	adrotate_check_config();
-	add_action('admin_init', 'adrotate_check_upgrade');
 	add_action('admin_menu', 'adrotate_dashboard');
 	add_action("admin_enqueue_scripts", 'adrotate_dashboard_scripts');
 	add_action("admin_print_styles", 'adrotate_dashboard_styles');
@@ -101,20 +100,16 @@ if(is_admin()) {
  Return:    -none-
 -------------------------------------------------------------*/
 function adrotate_dashboard() {
-	global $adrotate_config, $adrotate_server;
+	global $adrotate_config;
 
+	$adrotate_page = $adrotate_pro = $adrotate_adverts = $adrotate_groups = $adrotate_schedules = $adrotate_media = $adrotate_settings =  '';
 	$adrotate_page = add_menu_page('AdRotate', 'AdRotate', 'adrotate_ad_manage', 'adrotate', 'adrotate_info', plugins_url('/images/icon.png', __FILE__), '25.8');
 	$adrotate_page = add_submenu_page('adrotate', 'AdRotate > '.__('General Info', 'adrotate'), __('General Info', 'adrotate'), 'adrotate_ad_manage', 'adrotate', 'adrotate_info');
 	$adrotate_pro = add_submenu_page('adrotate', 'AdRotate > '.__('AdRotate Pro', 'adrotate'), __('AdRotate Pro', 'adrotate'), 'adrotate_ad_manage', 'adrotate-pro', 'adrotate_pro');
-	if($adrotate_server['adrotate_server_puppet'] == 0) {
 	$adrotate_adverts = add_submenu_page('adrotate', 'AdRotate > '.__('Manage Ads', 'adrotate'), __('Manage Ads', 'adrotate'), 'adrotate_ad_manage', 'adrotate-ads', 'adrotate_manage');
-	}
 	$adrotate_groups = add_submenu_page('adrotate', 'AdRotate > '.__('Manage Groups', 'adrotate'), __('Manage Groups', 'adrotate'), 'adrotate_group_manage', 'adrotate-groups', 'adrotate_manage_group');
-	if($adrotate_server['adrotate_server_puppet'] == 0) {
-		$adrotate_schedules = add_submenu_page('adrotate', 'AdRotate Pro > '.__('Manage Schedules', 'adrotate'), __('Manage Schedules', 'adrotate'), 'adrotate_schedule_manage', 'adrotate-schedules', 'adrotate_manage_schedules');
-		$adrotate_media = add_submenu_page('adrotate', 'AdRotate Pro > '.__('Manage Media', 'adrotate'), __('Manage Media', 'adrotate'), 'adrotate_ad_manage', 'adrotate-media', 'adrotate_manage_media');
-	}
-//	$adrotate_server = add_submenu_page('adrotate', 'AdRotate > '.__('AdRotate Server', 'adrotate'), __('AdRotate Server', 'adrotate'), 'manage_options', 'adrotate-server', 'adrotate_server');
+	$adrotate_schedules = add_submenu_page('adrotate', 'AdRotate Pro > '.__('Manage Schedules', 'adrotate'), __('Manage Schedules', 'adrotate'), 'adrotate_ad_manage', 'adrotate-schedules', 'adrotate_manage_schedules');
+	$adrotate_media = add_submenu_page('adrotate', 'AdRotate Pro > '.__('Manage Media', 'adrotate'), __('Manage Media', 'adrotate'), 'adrotate_ad_manage', 'adrotate-media', 'adrotate_manage_media');
 	$adrotate_settings = add_submenu_page('adrotate', 'AdRotate > '.__('Settings', 'adrotate'), __('Settings', 'adrotate'), 'manage_options', 'adrotate-settings', 'adrotate_options');
  
 	// Add help tabs
@@ -233,7 +228,7 @@ function adrotate_manage() {
 		<?php if($wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_groups';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_schedule';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_linkmeta';")) { ?>
 
 			<?php
-			$allbanners = $wpdb->get_results("SELECT `id`, `title`, `type`, `tracker`, `weight`, `cbudget`, `ibudget`, `crate`, `irate` FROM `".$wpdb->prefix."adrotate` WHERE `type` = 'active' OR `type` = 'error' OR `type` = 'expired' OR `type` = '2days' OR `type` = '7days' OR `type` = 'disabled' ORDER BY `sortorder` ASC, `id` ASC;");
+			$allbanners = $wpdb->get_results("SELECT `id`, `title`, `type`, `tracker`, `weight` FROM `".$wpdb->prefix."adrotate` WHERE `type` = 'active' OR `type` = 'error' OR `type` = 'expired' OR `type` = '2days' OR `type` = '7days' OR `type` = 'disabled' ORDER BY `sortorder` ASC, `id` ASC;");
 			$activebanners = $errorbanners = $disabledbanners = false;
 			foreach($allbanners as $singlebanner) {
 				$starttime = $stoptime = 0;
@@ -577,103 +572,6 @@ function adrotate_manage_media() {
 }
 
 /*-------------------------------------------------------------
- Name:      adrotate_server
-
- Purpose:   Connect and manage AdRotate server
- Receive:   -none-
- Return:    -none-
--------------------------------------------------------------*/
-function adrotate_server() {
-	global $wpdb, $current_user, $userdata, $blog_id, $adrotate_config, $adrotate_debug;
-
-	$status = $file = $view = '';
-	if(isset($_GET['status'])) $status = esc_attr($_GET['status']);
-	if(isset($_GET['file'])) $file = esc_attr($_GET['file']);
-	if(isset($_GET['view'])) $view = esc_attr($_GET['view']);
-	$now 			= adrotate_now();
-	$today 			= adrotate_date_start('day');
-	$in2days 		= $now + 172800;
-	$in7days 		= $now + 604800;
-	?>
-	<div class="wrap">
-	  	<h2><?php _e('AdRotate Server', 'adrotate'); ?> (BETA)</h2>
-
-		<?php if($status > 0) adrotate_status($status, array('file' => $file)); ?>
-
-		<?php if($wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_groups';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_schedule';") AND $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."adrotate_linkmeta';")) { ?>
-			
-			<?php if($status > 0) adrotate_status($status); ?>
-			
-			<p style="color:#f00;">NOTICE: <?php _e('AdRotate server is currently in development and these menus are not functional yet.', 'adrotate'); ?></p>
-
-			<div class="tablenav">
-				<div class="alignleft actions">
-					<a class="row-title" href="<?php echo admin_url('/admin.php?page=adrotate-server&view=overview');?>"><?php _e('Overview', 'adrotate'); ?></a> | 
-					<a class="row-title" href="<?php echo admin_url('/admin.php?page=adrotate-server&view=settings');?>"><?php _e('Settings', 'adrotate'); ?></a> 
-				</div>
-			</div>
-
-			<?php
-	    	if ($view == "" OR $view == "overview") {
-				$allbanners = $wpdb->get_results("SELECT `id`, `title`, `thetime`, `updated`, `type`, `weight`, `cbudget`, `ibudget`, `crate`, `irate` FROM `".$wpdb->prefix."adrotate` WHERE `type` = 's_active' OR `type` = 's_error' OR `type` = 's_expired' OR `type` = 's_2days' OR `type` = 's_7days' ORDER BY `sortorder` ASC, `id` ASC;");
-				
-				$activebanners = $errorbanners = false;
-				foreach($allbanners as $singlebanner) {
-					$starttime = $stoptime = 0;
-					$starttime = $wpdb->get_var("SELECT `starttime` FROM `".$wpdb->prefix."adrotate_schedule`, `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = '".$singlebanner->id."' AND `schedule` = `".$wpdb->prefix."adrotate_schedule`.`id` ORDER BY `starttime` ASC LIMIT 1;");
-					$stoptime = $wpdb->get_var("SELECT `stoptime` FROM `".$wpdb->prefix."adrotate_schedule`, `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = '".$singlebanner->id."' AND  `schedule` = `".$wpdb->prefix."adrotate_schedule`.`id` ORDER BY `stoptime` DESC LIMIT 1;");
-		
-					$type = $singlebanner->type;
-					if($type == 's_active' AND $stoptime <= $now) $type = 's_expired'; 
-					if($type == 's_active' AND $stoptime <= $in2days) $type = 's_2days';
-					if($type == 's_active' AND $stoptime <= $in7days) $type = 's_7days';
-					if(($singlebanner->crate > 0 AND $singlebanner->cbudget < 1) OR ($singlebanner->irate > 0 AND $singlebanner->ibudget < 1)) $type = 's_expired';
-		
-					if($type == 's_active' OR $type == 's_7days') {
-						$activebanners[$singlebanner->id] = array(
-							'id' => $singlebanner->id,
-							'title' => $singlebanner->title,
-							'type' => $type,
-							'weight' => $singlebanner->weight,
-							'added' => $singlebanner->thetime,
-							'updated' => $singlebanner->updated,
-							'firstactive' => $starttime,
-							'lastactive' => $stoptime
-						);
-					}
-					
-					if($type == 's_error' OR $type == 's_expired' OR $type == 's_2days') {
-						$errorbanners[$singlebanner->id] = array(
-							'id' => $singlebanner->id,
-							'title' => $singlebanner->title,
-							'type' => $type,
-							'weight' => $singlebanner->weight,
-							'updated' => $singlebanner->updated,
-							'firstactive' => $starttime,
-							'lastactive' => $stoptime
-						);
-					}
-				}
-
-				include("dashboard/server/adrotate-active.php");
-				if ($errorbanners) {
-					include("dashboard/server/adrotate-error.php");
-				}
-		   	} else if($view == "settings") { 
-				include("dashboard/server/adrotate-settings.php");
-			}
-		} else {
-			echo adrotate_error('db_error');
-		}
-		?>
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-	</div>
-<?php 
-}
-
-/*-------------------------------------------------------------
  Name:      adrotate_options
 
  Purpose:   Admin options page
@@ -801,7 +699,7 @@ function adrotate_options() {
 					<th valign="top"><?php _e('Impressions timer', 'adrotate'); ?></th>
 					<td>
 						<input name="adrotate_impression_timer" type="text" class="search-input" size="5" value="<?php echo $adrotate_config['impression_timer']; ?>" autocomplete="off" /> <?php _e('Seconds.', 'adrotate'); ?><br />
-						<span class="description"><?php _e('Default: 60.', 'adrotate'); ?><br /><?php _e('This number may not be empty, be lower than 60 or exceed 3600 (1 hour).', 'adrotate'); ?></span>
+						<span class="description"><?php _e('Default: 60.', 'adrotate'); ?><br /><?php _e('This number may not be empty, be lower than 10 or exceed 3600 (1 hour).', 'adrotate'); ?></span>
 					</td>
 				</tr>
 				<tr>
@@ -870,7 +768,7 @@ function adrotate_options() {
 				</tr>
 			</table>
 
-			<h3><?php _e('Javascript Libraries', 'adrotate'); ?></h3>
+			<h3><?php _e('Javascript', 'adrotate'); ?></h3>
 			<table class="form-table">			
 				<tr>
 					<th valign="top"><?php _e('Load jQuery', 'adrotate'); ?></th>

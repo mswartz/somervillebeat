@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -24,8 +24,8 @@
 
 $edit_group = $wpdb->get_row("SELECT * FROM `".$wpdb->prefix."adrotate_groups` WHERE `id` = '$group_edit_id';");
 $groups		= $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."adrotate_groups` WHERE `name` != '' ORDER BY `id` ASC;"); 
-$ads = $wpdb->get_results("SELECT `id`, `title`, `tracker`, `weight`, `crate`, `cbudget`, `irate`, `ibudget`, `type` FROM `".$wpdb->prefix."adrotate` WHERE (`type` != 'empty' AND `type` != 'a_empty') ORDER BY `id` ASC;");
-$linkmeta	= $wpdb->get_results("SELECT `ad` FROM `".$wpdb->prefix."adrotate_linkmeta` WHERE `group` = '$group_edit_id' AND `block` = 0 AND `user` = 0;");
+$ads = $wpdb->get_results("SELECT `id`, `title`, `tracker`, `weight`, `type` FROM `".$wpdb->prefix."adrotate` WHERE (`type` != 'empty' AND `type` != 'a_empty') ORDER BY `id` ASC;");
+$linkmeta	= $wpdb->get_results("SELECT `ad` FROM `".$wpdb->prefix."adrotate_linkmeta` WHERE `group` = '$group_edit_id' AND `user` = 0;");
 
 $meta_array = '';
 foreach($linkmeta as $meta) {
@@ -45,7 +45,6 @@ if(!is_array($meta_array)) $meta_array = array();
 		<h3><?php _e('Edit Group', 'adrotate'); ?></h3>
 	<?php } ?>
 
-	<p><em><?php _e('These are required.', 'adrotate'); ?></em></p>
    	<table class="widefat" style="margin-top: .5em">
 		<tbody>
 	    <tr>
@@ -55,7 +54,7 @@ if(!is_array($meta_array)) $meta_array = array();
 	    <tr>
 			<th width="15%"><?php _e('Name:', 'adrotate'); ?></th>
 			<td colspan="2">
-				<label for="adrotate_groupname"><input tabindex="1" name="adrotate_groupname" type="text" class="search-input" size="80" value="<?php echo $edit_group->name; ?>" autocomplete="off" /></label>
+				<label for="adrotate_groupname"><input tabindex="1" name="adrotate_groupname" type="text" class="search-input" size="50" value="<?php echo $edit_group->name; ?>" autocomplete="off" /></label>
 			</td>
 		</tr>
 	    <tr>
@@ -80,54 +79,24 @@ if(!is_array($meta_array)) $meta_array = array();
    	<table class="widefat" style="margin-top: .5em">
 		<tbody>
 	    <tr>
-			<th width="15%"><?php _e('Block shape and border', 'adrotate'); ?></strong></th>
+			<th width="15%"><?php _e('Block size', 'adrotate'); ?></strong></th>
 			<td width="35%">
 		       	<label for="adrotate_gridrows"><select tabindex="3" name="adrotate_gridrows">
-		        	<option value="1" <?php if($edit_group->gridrows == 1) { echo 'selected'; } ?>>1</option>
-		        	<option value="2" <?php if($edit_group->gridrows == 2) { echo 'selected'; } ?>>2</option>
-		        	<option value="3" <?php if($edit_group->gridrows == 3) { echo 'selected'; } ?>>3</option>
-		        	<option value="4" <?php if($edit_group->gridrows == 4) { echo 'selected'; } ?>>4</option>
-		        	<option value="5" <?php if($edit_group->gridrows == 5) { echo 'selected'; } ?>>5</option>
-		        	<option value="6" <?php if($edit_group->gridrows == 6) { echo 'selected'; } ?>>6</option>
-		        	<option value="7" <?php if($edit_group->gridrows == 7) { echo 'selected'; } ?>>7</option>
-		        	<option value="8" <?php if($edit_group->gridrows == 8) { echo 'selected'; } ?>>8</option>
-		        	<option value="9" <?php if($edit_group->gridrows == 9) { echo 'selected'; } ?>>9</option>
-		        	<option value="10" <?php if($edit_group->gridrows == 10) { echo 'selected'; } ?>>10</option>
-		        	<option value="11" <?php if($edit_group->gridrows == 11) { echo 'selected'; } ?>>11</option>
-		        	<option value="12" <?php if($edit_group->gridrows == 12) { echo 'selected'; } ?>>12</option>
-		        	<option value="13" <?php if($edit_group->gridrows == 13) { echo 'selected'; } ?>>13</option>
-		        	<option value="14" <?php if($edit_group->gridrows == 14) { echo 'selected'; } ?>>14</option>
-		        	<option value="15" <?php if($edit_group->gridrows == 15) { echo 'selected'; } ?>>15</option>
-		        	<option value="16" <?php if($edit_group->gridrows == 16) { echo 'selected'; } ?>>16</option>
-		        	<option value="17" <?php if($edit_group->gridrows == 17) { echo 'selected'; } ?>>17</option>
-		        	<option value="18" <?php if($edit_group->gridrows == 18) { echo 'selected'; } ?>>18</option>
-		        	<option value="19" <?php if($edit_group->gridrows == 19) { echo 'selected'; } ?>>19</option>
-		        	<option value="20" <?php if($edit_group->gridrows == 20) { echo 'selected'; } ?>>20</option>
-		        	<option value="21" <?php if($edit_group->gridrows == 21) { echo 'selected'; } ?>>21</option>
-		        	<option value="22" <?php if($edit_group->gridrows == 22) { echo 'selected'; } ?>>22</option>
-		        	<option value="23" <?php if($edit_group->gridrows == 23) { echo 'selected'; } ?>>23</option>
-		        	<option value="24" <?php if($edit_group->gridrows == 24) { echo 'selected'; } ?>>24</option>
+			       	<?php for($rows=1;$rows<=32;$rows++) { ?>
+		        	<option value="<?php echo $rows; ?>" <?php if($edit_group->gridrows == $rows) { echo 'selected'; } ?>><?php echo $rows; ?></option>
+					<?php } ?>			       	
 		        </select> <?php _e('rows', 'adrotate'); ?>,</label> <label for="adrotate_gridcolumns"><select tabindex="4" name="adrotate_gridcolumns">
-		        	<option value="1" <?php if($edit_group->gridcolumns == 1) { echo 'selected'; } ?>>1</option>
-		        	<option value="2" <?php if($edit_group->gridcolumns == 2) { echo 'selected'; } ?>>2</option>
-		        	<option value="3" <?php if($edit_group->gridcolumns == 3) { echo 'selected'; } ?>>3</option>
-		        	<option value="4" <?php if($edit_group->gridcolumns == 4) { echo 'selected'; } ?>>4</option>
-		        	<option value="5" <?php if($edit_group->gridcolumns == 5) { echo 'selected'; } ?>>5</option>
-		        	<option value="6" <?php if($edit_group->gridcolumns == 6) { echo 'selected'; } ?>>6</option>
-		        	<option value="7" <?php if($edit_group->gridcolumns == 7) { echo 'selected'; } ?>>7</option>
-		        	<option value="8" <?php if($edit_group->gridcolumns == 8) { echo 'selected'; } ?>>8</option>
-		        	<option value="9" <?php if($edit_group->gridcolumns == 9) { echo 'selected'; } ?>>9</option>
-		        	<option value="10" <?php if($edit_group->gridcolumns == 10) { echo 'selected'; } ?>>10</option>
-		        	<option value="11" <?php if($edit_group->gridcolumns == 11) { echo 'selected'; } ?>>11</option>
-		        	<option value="12" <?php if($edit_group->gridcolumns == 12) { echo 'selected'; } ?>>12</option>
+			       	<?php for($columns=1;$columns<=12;$columns++) { ?>
+		        	<option value="<?php echo $columns; ?>" <?php if($edit_group->gridcolumns == $columns) { echo 'selected'; } ?>><?php echo $columns; ?></option>
+					<?php } ?>			       	
 		        </select> <?php _e('columns', 'adrotate'); ?>.</label>
 			</td>
 			<td colspan="2">
-		        <p><em><?php _e('Block Mode', 'adrotate'); ?> - <?php _e('Make a grid for your ads. Selecting 3 and 2 makes a grid with 2 columns showing a maximum of 6 ads. Default: 2x2.', 'adrotate'); ?></em></p>
+		        <p><em><?php _e('Block Mode', 'adrotate'); ?> - <?php _e('Larger blocks will degrade your sites performance! Default: 2/2.', 'adrotate'); ?></em></p>
 			</td>
 		</tr>
 	    <tr>
-			<th valign="top"><?php _e('Advert Width and Height', 'adrotate'); ?></strong></th>
+			<th valign="top"><?php _e('Advert size', 'adrotate'); ?></strong></th>
 			<td>
 				<label for="adrotate_adwidth"><input tabindex="5" name="adrotate_adwidth" type="text" class="search-input" size="3" value="<?php echo $edit_group->adwidth; ?>" autocomplete="off" /> <?php _e('pixel(s) wide', 'adrotate'); ?>,</label> <label for="adrotate_adheight"><input tabindex="6" name="adrotate_adheight" type="text" class="search-input" size="3" value="<?php echo $edit_group->adheight; ?>" autocomplete="off" /> <?php _e('pixel(s) high.', 'adrotate'); ?></label>
 			</td>
@@ -165,9 +134,12 @@ if(!is_array($meta_array)) $meta_array = array();
 	</table>
 
 	<h3><?php _e('Usage', 'adrotate'); ?></h3>
-	<p><em><?php _e('Copy the shortcode in a post or page. The PHP code goes in a theme file where you want the advert to show up.', 'adrotate'); ?></em></p>
    	<table class="widefat" style="margin-top: .5em">
 		<tbody>
+      	<tr>
+	        <th width="15%"><?php _e('Widget:', 'adrotate'); ?></th>
+	        <td colspan="3"><?php _e('Drag the AdRotate widget to the sidebar you want it in, select "Group of Ads" and enter ID', 'adrotate'); ?> "<?php echo $edit_group->id; ?>".</td>
+      	</tr>
       	<tr>
 	        <th width="15%"><?php _e('In a post or page:', 'adrotate'); ?></th>
 	        <td width="35%">[adrotate group="<?php echo $edit_group->id; ?>"]</td>
@@ -191,7 +163,7 @@ if(!is_array($meta_array)) $meta_array = array();
 				<label for="adrotate_admargin"><input tabindex="9" name="adrotate_admargin" type="text" class="search-input" size="5" value="<?php echo $edit_group->admargin; ?>" autocomplete="off" /> <?php _e('pixel(s)', 'adrotate'); ?>.</label>
 				</td>
 			<td colspan="2">
-		        <p><em><?php _e('A transparent area outside the advert in pixels. Default: 0.', 'adrotate'); ?> <?php _e('Set to 0 to disable.', 'adrotate'); ?></em></p>
+		        <p><em><?php _e('A transparent area outside the advert in pixels. Default: 0.', 'adrotate'); ?> <?php _e('Set to 0 to disable.', 'adrotate'); ?> <?php _e('Margins are automatically disabled for blocks where required.', 'adrotate'); ?></em></p>
 			</td>
 		</tr>
 	    <tr>
@@ -210,7 +182,7 @@ if(!is_array($meta_array)) $meta_array = array();
 		</tr>
       	<tr>
 	        <th valign="top"><?php _e('Sortorder:', 'adrotate'); ?></th>
-	        <td><label for="adrotate_sortorder"><input tabindex="12" name="adrotate_sortorder" type="text" size="5" class="search-input" autocomplete="off" value="<?php echo $edit_group->sortorder;?>" /></label></td>
+	        <td><label for="adrotate_sortorder"><input tabindex="11" name="adrotate_sortorder" type="text" size="5" class="search-input" autocomplete="off" value="<?php echo $edit_group->sortorder;?>" /></label></td>
 	        <td><em><?php _e('For administrative purposes set a sortorder.', 'adrotate'); ?> <?php _e('Leave empty or 0 to skip this. Will default to group id.', 'adrotate'); ?></em></td>
       	</tr>
 		</tbody>
@@ -218,13 +190,12 @@ if(!is_array($meta_array)) $meta_array = array();
 	<center><?php _e('Set up a fallback group and use Geo Location in AdRotate Pro', 'adrotate'); ?> <a href="admin.php?page=adrotate-pro"><?php _e('Upgrade today', 'adrotate'); ?></a>.</center>
 	
    	<h3><?php _e('Post Injection', 'adrotate'); ?></h3>
-   	<p><em><?php _e('Insert ads to the begin or end of a post/page.', 'adrotate'); ?></em></p>
    	<table class="widefat" style="margin-top: .5em">
       	<tr>
 	        <th width="15%"><?php _e('Include ads in categories?', 'adrotate'); ?></th>
 	        <td>
 	        <label for="adrotate_cat_location">
-		        <select tabindex="13" name="adrotate_cat_location">
+		        <select tabindex="12" name="adrotate_cat_location">
 		        	<option value="0" <?php if($edit_group->cat_loc == 0) { echo 'selected'; } ?>><?php _e('Disabled', 'adrotate'); ?></option>
 		        	<option value="1" <?php if($edit_group->cat_loc == 1) { echo 'selected'; } ?>><?php _e('Before content', 'adrotate'); ?></option>
 		        	<option value="2" <?php if($edit_group->cat_loc == 2) { echo 'selected'; } ?>><?php _e('After content', 'adrotate'); ?></option>
@@ -233,7 +204,7 @@ if(!is_array($meta_array)) $meta_array = array();
 		        </select>
 			</label>
 	        <label for="adrotate_cat_paragraph">
-		        <select tabindex="14" name="adrotate_cat_paragraph">
+		        <select tabindex="13" name="adrotate_cat_paragraph">
 		        	<option value="0" <?php if($edit_group->cat_par == 0) { echo 'selected'; } ?>>...</option>
 		        	<option value="1" <?php if($edit_group->cat_par == 1) { echo 'selected'; } ?>><?php _e('the first paragraph', 'adrotate'); ?></option>
 		        	<option value="20" <?php if($edit_group->cat_par == 20) { echo 'selected'; } ?>><?php _e('the 2nd paragraph', 'adrotate'); ?></option>
@@ -265,7 +236,7 @@ if(!is_array($meta_array)) $meta_array = array();
 	        <th valign="top"><?php _e('Include ads in pages?', 'adrotate'); ?></th>
 	        <td>
 	        <label for="adrotate_page_location">
-		        <select tabindex="15" name="adrotate_page_location">
+		        <select tabindex="14" name="adrotate_page_location">
 		        	<option value="0" <?php if($edit_group->page_loc == 0) { echo 'selected'; } ?>><?php _e('Disabled', 'adrotate'); ?></option>
 		        	<option value="1" <?php if($edit_group->page_loc == 1) { echo 'selected'; } ?>><?php _e('Before content', 'adrotate'); ?></option>
 		        	<option value="2" <?php if($edit_group->page_loc == 2) { echo 'selected'; } ?>><?php _e('After content', 'adrotate'); ?></option>
@@ -274,7 +245,7 @@ if(!is_array($meta_array)) $meta_array = array();
 		        </select>
 			</label>
 	        <label for="adrotate_page_paragraph">
-		        <select tabindex="16" name="adrotate_page_paragraph">
+		        <select tabindex="15" name="adrotate_page_paragraph">
 		        	<option value="0" <?php if($edit_group->page_par == 0) { echo 'selected'; } ?>>...</option>
 		        	<option value="1" <?php if($edit_group->page_par == 1) { echo 'selected'; } ?>><?php _e('the first paragraph', 'adrotate'); ?></option>
 		        	<option value="20" <?php if($edit_group->page_par == 20) { echo 'selected'; } ?>><?php _e('the 2nd paragraph', 'adrotate'); ?></option>
@@ -306,9 +277,12 @@ if(!is_array($meta_array)) $meta_array = array();
 	</table>
 	
 	<h3><?php _e('Usage', 'adrotate'); ?></h3>
-	<p><em><?php _e('Copy the shortcode in a post or page. The PHP code goes in a theme file where you want the advert to show up.', 'adrotate'); ?></em></p>
    	<table class="widefat" style="margin-top: .5em">
 		<tbody>
+      	<tr>
+	        <th width="15%"><?php _e('Widget:', 'adrotate'); ?></th>
+	        <td colspan="3"><?php _e('Drag the AdRotate widget to the sidebar you want it in, select "Group of Ads" and enter ID', 'adrotate'); ?> "<?php echo $edit_group->id; ?>".</td>
+      	</tr>
       	<tr>
 	        <th width="15%"><?php _e('In a post or page:', 'adrotate'); ?></th>
 	        <td width="35%">[adrotate group="<?php echo $edit_group->id; ?>"]</td>
@@ -319,26 +293,25 @@ if(!is_array($meta_array)) $meta_array = array();
 	</table>
 
 	<p class="submit">
-		<input tabindex="17" type="submit" name="adrotate_group_submit" class="button-primary" value="<?php _e('Save Group', 'adrotate'); ?>" />
+		<input tabindex="16" type="submit" name="adrotate_group_submit" class="button-primary" value="<?php _e('Save Group', 'adrotate'); ?>" />
 		<a href="admin.php?page=adrotate-groups&view=manage" class="button"><?php _e('Cancel', 'adrotate'); ?></a>
 	</p>
 
    	<h3><?php _e('Wrapper code', 'adrotate'); ?></h3>
-   	<p><em><?php _e('Wraps around each ad.', 'adrotate'); ?></em></p>
+   	<p><em><?php _e('Wraps around each ad. HTML/JavaScript allowed, use with care!', 'adrotate'); ?></em></p>
    	<table class="widefat" style="margin-top: .5em">
 		<tbody>
 	    <tr>
 			<th width="15%" valign="top"><?php _e('Before ad', 'adrotate'); ?></strong></th>
-			<td colspan="2"><textarea tabindex="18" name="adrotate_wrapper_before" cols="65" rows="3"><?php echo stripslashes($edit_group->wrapper_before); ?></textarea></td>
+			<td colspan="2"><textarea tabindex="17" name="adrotate_wrapper_before" cols="65" rows="3"><?php echo stripslashes($edit_group->wrapper_before); ?></textarea></td>
 			<td width="35%">
 		        <p><strong><?php _e('Example:', 'adrotate'); ?></strong> <em>&lt;span style="background-color:#aaa;"&gt;</em></p>
 		        <p><strong><?php _e('Options:', 'adrotate'); ?></strong> <em>%id%</em></p>
-				<p><em><?php _e('HTML/JavaScript allowed, use with care!', 'adrotate'); ?></em></p>
 			</td>
 		</tr>
 	    <tr>
 			<th valign="top"><?php _e('After ad', 'adrotate'); ?></strong></th>
-			<td colspan="2"><textarea tabindex="19" name="adrotate_wrapper_after" cols="65" rows="3"><?php echo stripslashes($edit_group->wrapper_after); ?></textarea></td>
+			<td colspan="2"><textarea tabindex="18" name="adrotate_wrapper_after" cols="65" rows="3"><?php echo stripslashes($edit_group->wrapper_after); ?></textarea></td>
 			<td>
 				<p><strong><?php _e('Example:', 'adrotate'); ?></strong> <em>&lt;/span&gt;</em></p>
 			</td>
@@ -401,7 +374,7 @@ if(!is_array($meta_array)) $meta_array = array();
 	</center></p>
 
 	<p class="submit">
-		<input tabindex="20" type="submit" name="adrotate_group_submit" class="button-primary" value="<?php _e('Save Group', 'adrotate'); ?>" />
+		<input tabindex="19" type="submit" name="adrotate_group_submit" class="button-primary" value="<?php _e('Save Group', 'adrotate'); ?>" />
 		<a href="admin.php?page=adrotate-groups&view=manage" class="button"><?php _e('Cancel', 'adrotate'); ?></a>
 	</p>
 </form>

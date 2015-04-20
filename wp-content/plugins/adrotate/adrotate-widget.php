@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -32,11 +32,14 @@ class adrotate_widgets extends WP_Widget {
 	 Purpose:   Display the widget
 	-------------------------------------------------------------*/
 	function widget($args, $instance) {
-		global $adrotate_config;
+		global $adrotate_config, $blog_id;
 
 		extract($args);
-        $title = apply_filters('widget_title', $instance['title']);
 		if(empty($instance['adid'])) $instance['adid'] = 0;
+		if(empty($instance['siteid'])) $instance['siteid'] = $blog_id;
+		if(empty($instance['title'])) $instance['title'] = '';
+
+        $title = apply_filters('widget_title', $instance['title']);
 
 		echo $before_widget;
 		if($title) {
@@ -47,13 +50,13 @@ class adrotate_widgets extends WP_Widget {
 		if($adrotate_config['w3caching'] == 'Y') echo '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 		
 		if($instance['type'] == "single") {
-			if($adrotate_config['supercache'] == "Y") echo '<!--mfunc echo adrotate_ad('.$instance['adid'].', true, 0, 0, 0) -->';
+			if($adrotate_config['supercache'] == "Y") echo '<!--mfunc echo adrotate_ad('.$instance['adid'].', true, 0, 0, '.$instance['siteid'].') -->';
 			echo adrotate_ad($instance['adid'], true, 0, 0, 0);
 			if($adrotate_config['supercache'] == "Y") echo '<!--/mfunc-->';
 		}
 
 		if($instance['type'] == "group") {
-			if($adrotate_config['supercache'] == "Y") echo '<!--mfunc echo adrotate_group('.$instance['adid'].', 0, 0, 0) -->';
+			if($adrotate_config['supercache'] == "Y") echo '<!--mfunc echo adrotate_group('.$instance['adid'].', 0, 0, '.$instance['siteid'].') -->';
 			echo adrotate_group($instance['adid'], 0, 0, 0);
 			if($adrotate_config['supercache'] == "Y") echo '<!--/mfunc-->';
 		}
@@ -79,8 +82,7 @@ class adrotate_widgets extends WP_Widget {
 		} else {
 			$new_instance['adid'] = strip_tags($new_instance['adid']);
 		}
-
-		$new_instance['siteid'] = 0;
+		$new_instance['siteid'] = strip_tags($new_instance['siteid']);
 
 		$instance = wp_parse_args($new_instance, $old_instance);
 
@@ -92,11 +94,12 @@ class adrotate_widgets extends WP_Widget {
 	 Purpose:   Display the widget options for admins
 	-------------------------------------------------------------*/
 	function form($instance) {
+		global $blog_id;
 
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
-		$title = $description = $type = $adid = $siteid = '';
+		$title = $description = $type = $adid = '';
 		extract($instance);
 		$title = esc_attr( $title );
 		$description = esc_attr( $description );
@@ -108,8 +111,6 @@ class adrotate_widgets extends WP_Widget {
 		} else {
 			$adid = esc_attr( $adid );
 		}
-
-		$siteid = esc_attr( $siteid );
 ?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title (optional):', 'adrotate' ); ?></label>
@@ -138,6 +139,7 @@ class adrotate_widgets extends WP_Widget {
 			<br />
 			<small><?php _e( 'Fill in the ID of the type you want to display!', 'adrotate' ); ?></small>
 		</p>
+		<input id="<?php echo $this->get_field_id('siteid'); ?>" name="<?php echo $this->get_field_name('siteid'); ?>" type="hidden" value="<?php echo $blog_id; ?>" />
 <?php
 	}
 

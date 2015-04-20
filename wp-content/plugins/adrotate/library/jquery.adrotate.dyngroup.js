@@ -1,7 +1,7 @@
 /****************************************************************************************
  * Dynamic advert rotation for AdRotate													*
  * Arnan de Gans from AJdG Solutions (http://meandmymac.net, https://ajdg.solutions/)	*
- * Version: 0.8														   					*
+ * Version: 0.8.1														   				*
  * With help from: Mathias Joergensen (http://www.moofy.me), Fraser Munro				*
  * Original code: Arnan de Gans															*
  ****************************************************************************************/
@@ -35,17 +35,18 @@ speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
 
 			if(length == 1) {
 				// Impression tracker (Single ad)
-	            var tracker = $cont.find(".c-" + counter + ' a').attr("data-track");
+	            var tracker = $cont.find(".c-1 a").attr("data-track");
 				if(typeof tracker !== 'undefined') {
 					impressiontracker(tracker);
 				}
 			}
 			
 			if(length > 1) {
-				for(n = 1; n < length; n++) {
+				$cont.find(".c-1").show();
+				for(n = 2; n <= length; n++) {
 					$cont.find(".c-" + n).hide();
 				}
-				$cont.find(".c-" + Math.floor(Math.random()*length+1)).show();				
+				
 				timer = setInterval(function(){ play(); }, config.speed);
 			}
 
@@ -63,10 +64,7 @@ speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
 				if(typeof tracker !== 'undefined') {
 					impressiontracker(tracker);
 				}
-
-				if(length > 1) {
-					$cont.find(".c-" + index).fadeOut(300);
-				}
+				$cont.find(".c-" + index).fadeOut(300);
 			}
 			
 			function play() {
@@ -79,12 +77,7 @@ speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
 				var unixtime = now - admeta[3];
 
 				cookietime = readCookie('adrotate-'+admeta[0]);
-				if(!cookietime) cookietime = 0;
-
-//console.log('ad: ' + admeta[0] + ', cookietime: ' + cookietime + ', unixtime: ' + unixtime);
-
 				if(cookietime <= unixtime) {
-//console.log('tracker: ' + tracker);
 					$.post(
 						impression_object.ajax_url, 
 						{'action': 'adrotate_impression','track': tracker}
@@ -100,7 +93,6 @@ speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
 
 		        date.setTime(date.getTime() + 86400000);
 		        expires = "; expires=" + date.toGMTString();
-
 			    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
 			}
 			
@@ -112,7 +104,7 @@ speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
 			        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
 			        if (c.indexOf(nameEQ) === 0) return unescape(c.substring(nameEQ.length, c.length));
 			    }
-			    return null;
+			    return 0;
 			}
 		});
 		return this;

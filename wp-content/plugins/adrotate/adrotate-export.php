@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -33,6 +33,9 @@ function adrotate_export_ads($ids) {
 			$starttime = $wpdb->get_var("SELECT `starttime` FROM `".$wpdb->prefix."adrotate_schedule`, `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = '".$single['id']."' AND `schedule` = `".$wpdb->prefix."adrotate_schedule`.`id` ORDER BY `starttime` ASC LIMIT 1;");
 			$stoptime = $wpdb->get_var("SELECT `stoptime` FROM `".$wpdb->prefix."adrotate_schedule`, `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = '".$single['id']."' AND  `schedule` = `".$wpdb->prefix."adrotate_schedule`.`id` ORDER BY `stoptime` DESC LIMIT 1;");
 
+			if(!is_array($single['cities'])) $single['cities'] = array();
+			if(!is_array($single['countries'])) $single['countries'] = array();
+			
 			$node = $xml->addChild('advert');
 			$node->addChild('title', $single['title']);
 			$node->addChild('bannercode', stripslashes($single['bannercode']));
@@ -42,8 +45,7 @@ function adrotate_export_ads($ids) {
 			$node->addChild('tracker', $single['tracker']);
 			$node->addChild('responsive', $single['responsive']);
 			$node->addChild('weight', $single['weight']);
-			$node->addChild('cbudget', $single['cbudget']);
-			$node->addChild('ibudget', $single['ibudget']);
+			$node->addChild('budget', $single['budget']);
 			$node->addChild('crate', $single['crate']);
 			$node->addChild('irate', $single['irate']);
 			$node->addChild('cities', implode(',', unserialize($single['cities'])));

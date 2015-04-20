@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2014 AJdG Solutions (Arnan de Gans). All Rights Reserved.
+*  Copyright 2008-2015 AJdG Solutions (Arnan de Gans). All Rights Reserved.
 *  ADROTATE is a trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -25,8 +25,7 @@ function adrotate_ad($banner_id, $individual = true, $group = 0, $block = 0, $si
 	if($banner_id) {			
 		$banner = $wpdb->get_row($wpdb->prepare(
 			"SELECT 
-				`id`, `bannercode`, `tracker`, `link`, `image`, `responsive`,
-				`crate`, `irate`, `cbudget`, `ibudget` 
+				`id`, `bannercode`, `tracker`, `link`, `image`, `responsive`
 			FROM 
 				`".$wpdb->prefix."adrotate` 
 			WHERE 
@@ -45,10 +44,6 @@ function adrotate_ad($banner_id, $individual = true, $group = 0, $block = 0, $si
 			
 			$selected = array($banner->id => 0);			
 			$selected = adrotate_filter_schedule($selected, $banner);
-
-			if($adrotate_config['enable_advertisers'] > 0 AND ($banner->crate > 0 OR $banner->irate > 0)) {
-				$selected = adrotate_filter_budget($selected, $banner);
-			}
 		} else {
 			$selected = false;
 		}
@@ -92,11 +87,11 @@ function adrotate_group($group_ids, $fallback = 0, $weight = 0, $site = 0) {
 		(!is_array($group_ids)) ? $group_array = explode(",", $group_ids) : $group_array = $group_ids;
 
 		foreach($group_array as $key => $value) {
-			$group_select .= ' `'.$wpdb->prefix.'adrotate_linkmeta`.`group` = '.$value.' OR';
+			$group_select .= " `{$wpdb->prefix}adrotate_linkmeta`.`group` = {$value} OR";
 		}
 		$group_select = rtrim($group_select, " OR");
 
-		$group = $wpdb->get_row($wpdb->prepare("SELECT * FROM `".$wpdb->prefix."adrotate_groups` WHERE `name` != '' AND `id` = %d;", $group_array[0]));
+		$group = $wpdb->get_row($wpdb->prepare("SELECT * FROM `{$wpdb->prefix}adrotate_groups` WHERE `name` != '' AND `id` = %d;", $group_array[0]));
 
 		if($adrotate_debug['general'] == true) {
 			echo "<p><strong>[DEBUG][adrotate_group] Selected group</strong><pre>"; 
@@ -106,31 +101,31 @@ function adrotate_group($group_ids, $fallback = 0, $weight = 0, $site = 0) {
 
 		if($group) {
 			if($fallback == 0) $fallback = $group->fallback;
-			if($weight > 0) $weightoverride = "	AND `".$wpdb->prefix."adrotate`.`weight` >= '$weight'";
-	
+			if($weight > 0) $weightoverride = "	AND `{$wpdb->prefix}adrotate`.`weight` >= '{$weight}'";
+
+			// Get all ads in all selected groups
 			$ads = $wpdb->get_results(
 				"SELECT 
-					`".$wpdb->prefix."adrotate`.`id`, 
-					`".$wpdb->prefix."adrotate`.`bannercode`, 
-					`".$wpdb->prefix."adrotate`.`link`, 
-					`".$wpdb->prefix."adrotate`.`image`, 
-					`".$wpdb->prefix."adrotate`.`responsive`, 
-					`".$wpdb->prefix."adrotate`.`tracker`, 
-					`".$wpdb->prefix."adrotate_linkmeta`.`group`
+					`{$wpdb->prefix}adrotate`.`id`, 
+					`{$wpdb->prefix}adrotate`.`bannercode`, 
+					`{$wpdb->prefix}adrotate`.`link`, 
+					`{$wpdb->prefix}adrotate`.`image`, 
+					`{$wpdb->prefix}adrotate`.`responsive`, 
+					`{$wpdb->prefix}adrotate`.`tracker`, 
+					`{$wpdb->prefix}adrotate_linkmeta`.`group`
 				FROM 
-					`".$wpdb->prefix."adrotate`, 
-					`".$wpdb->prefix."adrotate_linkmeta` 
+					`{$wpdb->prefix}adrotate`, 
+					`{$wpdb->prefix}adrotate_linkmeta` 
 				WHERE 
-					(".$group_select.") 
-					AND `".$wpdb->prefix."adrotate_linkmeta`.`block` = 0 
-					AND `".$wpdb->prefix."adrotate_linkmeta`.`user` = 0 
-					AND `".$wpdb->prefix."adrotate`.`id` = `".$wpdb->prefix."adrotate_linkmeta`.`ad` 
-					AND (`".$wpdb->prefix."adrotate`.`type` = 'active' 
-						OR `".$wpdb->prefix."adrotate`.`type` = '2days'
-						OR `".$wpdb->prefix."adrotate`.`type` = '7days')
-					".$weightoverride."
-				GROUP BY `".$wpdb->prefix."adrotate`.`id` 
-				ORDER BY `".$wpdb->prefix."adrotate`.`id`;");
+					({$group_select}) 
+					AND `{$wpdb->prefix}adrotate_linkmeta`.`user` = 0 
+					AND `{$wpdb->prefix}adrotate`.`id` = `{$wpdb->prefix}adrotate_linkmeta`.`ad` 
+					AND (`{$wpdb->prefix}adrotate`.`type` = 'active' 
+						OR `{$wpdb->prefix}adrotate`.`type` = '2days'
+						OR `{$wpdb->prefix}adrotate`.`type` = '7days')
+					{$weightoverride}
+				GROUP BY `{$wpdb->prefix}adrotate`.`id`
+				ORDER BY `{$wpdb->prefix}adrotate`.`id`;");
 		
 			if($ads) {
 				if($adrotate_debug['general'] == true) {
@@ -161,13 +156,21 @@ function adrotate_group($group_ids, $fallback = 0, $weight = 0, $site = 0) {
 
 					if($group->modus == 1) { // Dynamic ads
 						$i = 1;
-						foreach($selected as $key => $banner) {
-							$image = str_replace('%folder%', $adrotate_config['banner_folder'], $banner->image);
 
-							$output .= '<div class="g-dyn a-'.$banner->id.' c-'.$i.'">';
-							$output .= $before.adrotate_ad_output($banner->id, $group->id, $banner->bannercode, $banner->tracker, $banner->link, $image, $banner->responsive).$after;
-							$output .= '</div>';
-							$i++;
+						// Limit group to save resources
+						$amount = ($group->adspeed >= 10000) ? 10 : 20;
+						
+						// Randomize and trim output
+						$selected = adrotate_shuffle($selected);
+						foreach($selected as $key => $banner) {
+							if($i <= $amount) {
+								$image = str_replace('%folder%', $adrotate_config['banner_folder'], $banner->image);
+	
+								$output .= '<div class="g-dyn a-'.$banner->id.' c-'.$i.'">';
+								$output .= $before.adrotate_ad_output($banner->id, $group->id, $banner->bannercode, $banner->tracker, $banner->link, $image, $banner->responsive).$after;
+								$output .= '</div>';
+								$i++;
+							}
 						}
 					} else if($group->modus == 2) { // Block of ads
 						$block_count = $group->gridcolumns * $group->gridrows;
@@ -269,7 +272,7 @@ function adrotate_inject_pages($post_content) {
 					$paragraph_count = $group_count;
 				}
 				$group_choice = array_rand($group_array, $paragraph_count);
-				if(!is_array($group_choice)) $group_choice = array($page_choice);
+				if(!is_array($group_choice)) $group_choice = array($group_choice);
 
 				shuffle($group_choice);
 			} else {
@@ -278,8 +281,7 @@ function adrotate_inject_pages($post_content) {
 
 			if($adrotate_debug['general'] == true) {
 				echo "<p><strong>[DEBUG][adrotate_inject_posts()] Choices</strong><pre>"; 
-				echo "Paragraph count: ".$paragraph_count;
-				echo "<br />Group count: ".$group_count."</br>";
+				echo "Group count: ".$group_count."</br>";
 				print_r($group_choice); 
 				echo "</pre></p>"; 
 			}
@@ -441,21 +443,8 @@ function adrotate_inject_posts($post_content) {
  Return:    $output
  Since:		3.0
 -------------------------------------------------------------*/
-function adrotate_block($block_id, $weight = 0) {
-	global $wpdb;
-
-	$output = '';
-	if($block_id) {
-		$groups = $wpdb->get_results($wpdb->prepare("SELECT `group` FROM `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = 0 AND `block` = %d AND `user` = 0;", $block_id));
-		if($groups) {
-			foreach($groups as $group) {
-				$group_ids[] = $group->group;
-			}
-			$output .= adrotate_group($group_ids);
-		}			
-	}
-
-	return $output;
+function adrotate_block($block_id = 0, $weight = 0) {
+	return null;
 }
 
 /*-------------------------------------------------------------
@@ -657,11 +646,12 @@ function adrotate_custom_javascript() {
 function adrotate_custom_css() {
 	global $wpdb, $adrotate_config;
 	
-	$output = "\n<!-- This site is using AdRotate v".ADROTATE_DISPLAY." to display their advertisements - https://www.adrotateplugin.com/ -->\n";
+	$output = "\n<!-- This site is using AdRotate v".ADROTATE_DISPLAY." to display their advertisements - https://ajdg.solutions/products/adrotate-for-wordpress/ -->\n";
 
 	$groups = $wpdb->get_results("SELECT `id`, `modus`, `gridrows`, `gridcolumns`, `adwidth`, `adheight`, `admargin`, `align` FROM `".$wpdb->prefix."adrotate_groups` WHERE `name` != '' ORDER BY `id` ASC;");
 	if($groups) {
 		$output_css = "\t.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }\n";
+		$output_css .= "\t.g img { height:auto; }\n";
 		$output_css .= "\t.g-col { position:relative; float:left; }\n";
 		$output_css .= "\t.g-col:first-child { margin-left: 0; }\n";
 		$output_css .= "\t.g-col:last-child { margin-right: 0; }\n";
@@ -755,7 +745,7 @@ function adrotate_nonce_error() {
 	echo '	<h2 style="text-align: center;">'.__('Oh no! Something went wrong!', 'adrotate').'</h2>';
 	echo '	<p style="text-align: center;">'.__('WordPress was unable to verify the authenticity of the url you have clicked. Verify if the url used is valid or log in via your browser.', 'adrotate').'</p>';
 	echo '	<p style="text-align: center;">'.__('If you have received the url you want to visit via email, you are being tricked!', 'adrotate').'</p>';
-	echo '	<p style="text-align: center;">'.__('Contact support if the issue persists:', 'adrotate').' <a href="https://www.adrotateplugin.com/support/" title="AdRotate Support" target="_blank">AdRotate Support</a>.</p>';
+	echo '	<p style="text-align: center;">'.__('Contact support if the issue persists:', 'adrotate').' <a href="https://ajdg.solutions/forums/" title="AdRotate Support" target="_blank">AJdG Solutions Support</a>.</p>';
 }
 
 /*-------------------------------------------------------------
@@ -807,7 +797,7 @@ function adrotate_error($action, $arg = null) {
 
 		// Database
 		case "db_error" :
-			$result = '<span style="font-weight: bold; color: #f00;">'.__('There was an error locating the database tables for AdRotate. Please deactivate and re-activate AdRotate from the plugin page!!', 'adrotate').'<br />'.__('If this does not solve the issue please seek support at', 'adrotate').' <a href="https://www.adrotateplugin.com/support/">www.adrotateplugin.com/support/</a></span>';
+			$result = '<span style="font-weight: bold; color: #f00;">'.__('There was an error locating the database tables for AdRotate. Please deactivate and re-activate AdRotate from the plugin page!!', 'adrotate').'<br />'.__('If this does not solve the issue please seek support at', 'adrotate').' <a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/">ajdg.solutions/forums/forum/adrotate-for-wordpress/</a></span>';
 			return $result;
 		break;
 
@@ -830,7 +820,6 @@ function adrotate_error($action, $arg = null) {
 function adrotate_notifications_dashboard() {
 	global $adrotate_advert_status;
 	if(current_user_can('adrotate_ad_manage')) {
-
 		if(!is_array($adrotate_advert_status)) {
 			$data = unserialize($adrotate_advert_status);
 		} else {
@@ -849,26 +838,46 @@ function adrotate_notifications_dashboard() {
 			}
 		}
 
-		if(isset($_GET['hide'])) update_option('adrotate_hide_banner', 1);
+		if(isset($_GET['hide']) AND $_GET['hide'] == 1) update_option('adrotate_hide_banner', 1);
+		if(isset($_GET['hide']) AND $_GET['hide'] == 2) update_option('adrotate_hide_review', 1);
 		if(isset($_GET['page'])) { $page = $_GET['page']; } else { $page = ''; }
 
-		$banner = get_option('adrotate_hide_banner');
-		if($banner != 1 AND $banner < (adrotate_now() - 604800) AND strpos($page, 'adrotate') !== false) {
+		$pro_banner = get_option('adrotate_hide_banner');
+		if($pro_banner != 1 AND $pro_banner < (adrotate_now() - 604800) AND strpos($page, 'adrotate') !== false) {
 			echo '<div class="updated" style="padding: 0; margin: 0; border-left: none;">';
-			echo '	<div class="adrotate_pro_banner">';
-			echo '		<div class="button_div">';
-			echo '			<a class="button" target="_blank" href="https://www.adrotateplugin.com/adrotate-pro/?utm_source=adrotate_free&utm_medium=adrotate_free_banner&utm_campaign=upgrade_adrotatefree">'.__('Learn More', 'adrotate').'</a>';
-			echo '		</div>';
-			echo '		<div class="text">'.__("You've been using <strong>AdRotate</strong> for a while now. Why not upgrade to the <strong>PRO</strong> version", 'adrotate').'?<br />';
-			echo '			<span>'.__('Get more features to even better run your advertising campaigns.', 'adrotate' ).' '.__('Thank you for your consideration!', 'adrotate' ).'</span>';
-			echo '		</div>';
-			echo '		<a class="close_banner" href="admin.php?page=adrotate-pro&hide=1"><small>dismiss</small></a>';
-			echo '		<div class="icon">';
-			echo '			<img  title="" src="'.plugins_url('images/adrotate-logo-60x60.png', __FILE__).'" alt=""/>';
-			echo '		</div>';
+			echo '	<div class="adrotate_banner">';
+			echo '		<div class="button_div"><a class="button" target="_blank" href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_free_banner&utm_campaign=upgrade_adrotatefree">'.__('Learn More', 'adrotate').'</a></div>';
+			echo '		<div class="text">'.__("You've been using <strong>AdRotate</strong> for a while now. Why not upgrade to the <strong>PRO</strong> version", 'adrotate').'?<br /><span>'.__('Get more features to even better run your advertising campaigns.', 'adrotate' ).' '.__('Thank you for your consideration!', 'adrotate' ).'</span></div>';
+			echo '		<a class="close_banner" href="admin.php?page=adrotate-pro&hide=1"><img title="Close" src="'.plugins_url('images/close-icon.png', __FILE__).'" alt=""/></a>';
+			echo '		<div class="icon"><img title="" src="'.plugins_url('images/adrotate-logo-60x60.png', __FILE__).'" alt=""/></div>';
 			echo '	</div>';
 			echo '</div>';
 		}
+
+		$review_banner = get_option('adrotate_hide_review');
+		if($review_banner != 1 AND $review_banner < (adrotate_now() - 2419200) AND strpos($page, 'adrotate') !== false) {
+			echo '<div class="updated" style="padding: 0; margin: 0; border-left: none;">';
+			echo '	<div class="adrotate_banner">';
+			echo '		<div class="button_div"><a class="button" target="_blank" href="https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform">Rate AdRotate</a></div>';
+			echo '		<div class="text">If you like <strong>AdRotate</strong> please let the world know that you do. Thanks for your support!<br /><span>If you have questions, suggestions or something else that doesn\'t belong in a review, please <a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_review_banner&utm_campaign=get_help" target="_blank">get in touch</a>!</span></div>';
+			echo '		<a class="close_banner" href="admin.php?page=adrotate&hide=2"><img title="Close" src="'.plugins_url('images/close-icon.png', __FILE__).'" alt=""/></a>';
+			echo '		<div class="icon"><img title="" src="'.plugins_url('images/adrotate-logo-60x60.png', __FILE__).'" alt=""/></div>';
+			echo '	</div>';
+			echo '</div>';
+		}
+	}
+
+	if(isset($_GET['upgrade']) AND $_GET['upgrade'] == 1) adrotate_check_upgrade();
+	$adrotate_db_version = get_option("adrotate_db_version");
+	$adrotate_version = get_option("adrotate_version");
+	if($adrotate_db_version['current'] < ADROTATE_DB_VERSION OR $adrotate_version['current'] < ADROTATE_VERSION) {
+		echo '<div class="updated" style="padding: 0; margin: 0; border-left: none;">';
+		echo '	<div class="adrotate_banner">';
+		echo '		<div class="button_div"><a class="button" href="admin.php?page=adrotate&upgrade=1">Upgrade Now</a></div>';
+		echo '		<div class="text">You have almost finished upgrading <strong>AdRotate</strong> to version <strong>'.ADROTATE_DISPLAY.'</strong>!<br /><span>To complete the update click the button on the left. This may take a few seconds to complete!</span></div>';
+		echo '		<div class="icon"><img title="" src="'.plugins_url('images/adrotate-logo-60x60.png', __FILE__).'" alt=""/></div>';
+		echo '	</div>';
+		echo '</div>';
 	}
 }
 
@@ -882,8 +891,8 @@ function adrotate_notifications_dashboard() {
 -------------------------------------------------------------*/
 function adrotate_welcome_pointer() {
     $pointer_content = '<h3>AdRotate '.ADROTATE_DISPLAY.'</h3>';
-    $pointer_content .= '<p><strong>Welcome</strong><br />Thank you for using AdRotate. Everything related to AdRotate is in this menu. Check out the <a href="https:\/\/www.adrotateplugin.com\/support\/knowledgebase\/" target="_blank">knowledgebase</a> and <a href="https:\/\/www.adrotateplugin.com\/support\/forums\/" target="_blank">forums</a> if you get stuck with something.</p>';
-    $pointer_content .= '<p><strong>AdRotate Professional</strong><br />Did you know there is also a premium version of AdRotate? Learn how you can benefit from the <a href="admin.php?page=adrotate-pro" target="_blank">extra features</a>.</p>';
+    $pointer_content .= '<p>'.__('Welcome, and thanks for using AdRotate. Everything related to AdRotate is in this menu. Check out the', 'adrotate').' <a href="http:\/\/ajdg.solutions\/manuals\/adrotate\/" target="_blank">'.__('manuals', 'adrotate').'</a> '.__('and', 'adrotate').' <a href="https:\/\/ajdg.solutions\/forums\/forum\/adrotate-for-wordpress\/" target="_blank">'.__('forums', 'adrotate').'</a>.</p>';
+    $pointer_content .= '<p><strong>AdRotate Professional</strong><br />Did you know there is also a premium version of AdRotate? Find out how you can benefit from the <a href="admin.php?page=adrotate-pro" target="_blank">extra features</a>.</p>';
 ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
@@ -921,10 +930,10 @@ function adrotate_help_info() {
         'title' => __('Useful Links'),
         'content' => '<h4>'.__('Useful links to learn more about AdRotate', 'adrotate').'</h4>'.
 			'<ul>'.
-			'<li><a href="https://www.adrotateplugin.com" target="_blank">'.__('AdRotate Website', 'adrotate').'</a>.</li>'.
-			'<li><a href="https://www.adrotateplugin.com/support/knowledgebase/getting-started-with-adrotate/" target="_blank">'.__('Getting Started With AdRotate', 'adrotate').'</a>.</li>'.
-			'<li><a href="https://www.adrotateplugin.com/support/knowledgebase/" target="_blank">'.__('AdRotate Knowledge base and manuals', 'adrotate').'</a>.</li>'.
-			'<li><a href="https://www.adrotateplugin.com/support/forums/" target="_blank">'.__('AdRotate Support Forum', 'adrotate').'</a>.</li>'.
+			'<li><a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_help_tab&utm_campaign=adrotate_link" target="_blank">'.__('AdRotate Page', 'adrotate').'</a>.</li>'.
+			'<li><a href="https://ajdg.solutions/manuals/adrotate/getting-started-with-adrotate/?utm_source=adrotate_free&utm_medium=adrotate_help_tab&utm_campaign=manuals" target="_blank">'.__('Getting Started With AdRotate', 'adrotate').'</a>.</li>'.
+			'<li><a href="https://ajdg.solutions/manuals/adrotate/?utm_source=adrotate_free&utm_medium=adrotate_help_tab&utm_campaign=manuals" target="_blank">'.__('AdRotate manuals', 'adrotate').'</a>.</li>'.
+			'<li><a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_help_tab&utm_campaign=support" target="_blank">'.__('AdRotate Support Forum', 'adrotate').'</a>.</li>'.
 			'<li><a href="http://wordpress.org/support/plugin/adrotate" target="_blank">'.__('WordPress.org Forum', 'adrotate').'</a>.</li>'.
 			'</ul>'
 		) 
@@ -933,28 +942,9 @@ function adrotate_help_info() {
         'id' => 'adrotate_thanks',
         'title' => 'Thank You',
         'content' => '<h4>Thank you for using AdRotate</h4><p>AdRotate is growing to be one of the most popular WordPress plugins for Advertising and is a household name for many companies around the world. AdRotate wouldn\'t be possible without your support and my life wouldn\'t be what it is today without your help.</p><p><em>- Arnan from AJdG Solutions</em></p>'.
-        '<p><strong>Add me:</strong> <a href="http://twitter.com/ajdgsolutions/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/adrotate" target="_blank">Facebook</a>. <strong>Read me:</strong> <a href="https://ajdg.solutions/" target="_blank">ajdg.solutions</a>, <a href="http://meandmymac.net/" target="_blank">meandmymac.net</a> and <a href="http://www.floatingcoconut.net/" target="_blank">floatingcoconut.net</a>.</p>'
+        '<p><strong>Add me:</strong> <a href="http://twitter.com/ajdgsolutions/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/AJdgSolutions" target="_blank">Facebook</a>. <strong>Business:</strong> <a href="https://ajdg.solutions/" target="_blank">ajdg.solutions</a> <strong>Blog:</strong> <a href="http://meandmymac.net/" target="_blank">meandmymac.net</a> and <strong>adventure:</strong> <a href="http://www.floatingcoconut.net/" target="_blank">floatingcoconut.net</a>.</p>'
 		)
     );
-}
-
-/*-------------------------------------------------------------
- Name:      adrotate_credits
-
- Purpose:   Promotional stuff shown throughout the plugin
- Receive:   -none-
- Return:    -none-
- Since:		3.7
--------------------------------------------------------------*/
-function adrotate_help_links() {
-	echo '<h4>'.__('Useful links to learn more about AdRotate', 'adrotate').'</h4>';
-	echo '<ul>';
-	echo '<li><a href="https://www.adrotateplugin.com" target="_blank">'.__('AdRotate Website.', 'adrotate').'</a></li>';
-	echo '<li><a href="https://www.adrotateplugin.com/support/knowledgebase/getting-started-with-adrotate/" target="_blank">'.__('AdRotate Getting Started.', 'adrotate').'</a></li>';
-	echo '<li><a href="https://www.adrotateplugin.com/support/knowledgebase/" target="_blank">'.__('AdRotate Knoweledge base and manuals.', 'adrotate').'</a></li>';
-	echo '<li><a href="https://www.adrotateplugin.com/support/forums/" target="_blank">'.__('AdRotate Website Forum.', 'adrotate').'</a></li>';
-	echo '<li><a href="http://wordpress.org/support/plugin/adrotate" target="_blank">'.__('WordPress.org Forum.', 'adrotate').'</a></li>';
-	echo '</ul>';
 }
 
 /*-------------------------------------------------------------
@@ -977,11 +967,11 @@ function adrotate_credits() {
 
 	echo '<tbody>';
 	echo '<tr>';
-	echo '<td><center><a href="https://www.adrotateplugin.com/?utm_source=adrotate_free&utm_medium=adrotate_credits&utm_campaign=adrotatefree" title="AdRotate plugin for WordPress"><img src="'.plugins_url('/images/adrotate-logo-60x60.png', __FILE__).'" alt="adrotate-logo-60x60" width="60" height="60" /></a></center></td>';
+	echo '<td><center><a href="https://ajdg.solutions/products/adrotate-for-wordpress/?utm_source=adrotate_free&utm_medium=adrotate_credits&utm_campaign=adrotatefree" title="AdRotate plugin for WordPress"><img src="'.plugins_url('/images/adrotate-logo-60x60.png', __FILE__).'" alt="adrotate-logo-60x60" width="60" height="60" /></a></center></td>';
 	echo '<td>'.__("A lot of users only think to review AdRotate when something goes wrong while thousands of people use AdRotate satisfactory. Don't let this go unnoticed.", 'adrotate').' <strong>'. __("If you find AdRotate useful please leave your honest", 'adrotate').' <a href="https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform" target="_blank">'.__('rating','adrotate').'</a> '.__('and','adrotate').' <a href="https://wordpress.org/support/view/plugin-reviews/adrotate" target="_blank">'.__('review','adrotate').'</a> '.__('on WordPress.org to help AdRotate grow in a positive way', 'adrotate').'!</strong></td>';
 
-	echo '<td><center><a href="https://ajdg.solutions/" title="AJdG Solutions"><img src="'.plugins_url('/images/ajdg-logo-100x60.png', __FILE__).'" alt="ajdg-logo-100x60" width="100" height="60" /></a></center></td>';
-	echo '<td><a href="https://ajdg.solutions/" title="AJdG Solutions">AJdG Solutions</a> - '.__('Your one stop for Webdevelopment, consultancy and anything WordPress! Find out more about what I can do for you!', 'adrotate').' '.__('Visit the', 'adrotate').' <a href="https://ajdg.solutions/" target="_blank">AJdG Solutions</a> '.__('website', 'adrotate').'</td>';
+	echo '<td><center><a href="https://ajdg.solutions/?utm_source=adrotate_free&utm_medium=adrotate_credits&utm_campaign=ajdg_link" title="AJdG Solutions"><img src="'.plugins_url('/images/ajdg-logo-100x60.png', __FILE__).'" alt="ajdg-logo-100x60" width="100" height="60" /></a></center></td>';
+	echo '<td><a href="https://ajdg.solutions/?utm_source=adrotate_free&utm_medium=adrotate_credits&utm_campaign=ajdg_link" title="AJdG Solutions">AJdG Solutions</a> - '.__('Your one stop for Webdevelopment, consultancy and anything WordPress! Find out more about what I can do for you!', 'adrotate').' '.__('Visit the', 'adrotate').' <a href="https://ajdg.solutions/?utm_source=adrotate_free&utm_medium=adrotate_credits&utm_campaign=ajdg_link" target="_blank">AJdG Solutions</a> '.__('website', 'adrotate').'</td>';
 	echo '</tr>';
 	echo '</tbody>';
 
