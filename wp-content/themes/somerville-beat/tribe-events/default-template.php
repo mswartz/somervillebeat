@@ -16,8 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<div class="calendar-ad">
-TEST ADS
+<div class="calendar-sponsor-ad">
 <?php echo adrotate_group(3); ?>
 </div>
 
