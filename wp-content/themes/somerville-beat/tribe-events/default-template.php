@@ -18,7 +18,7 @@ get_header(); ?>
 
 <div class="calendar-ad">
 TEST ADS
-[adrotate group="3"]
+<?php echo adrotate_group(3); ?>
 </div>
 
 
