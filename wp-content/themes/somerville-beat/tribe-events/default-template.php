@@ -15,6 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
+<div class="calendar-ad">
+TEST ADS
+[adrotate group="3"]
+</div>
+
 	<div id="tribe-events-pg-template" <?php if ( false === (tribe_is_event_query() && tribe_is_month()) ) echo('class="ui-block-1"') ?>
 >
 		<?php tribe_events_before_html(); ?>
